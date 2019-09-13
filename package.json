@@ -1,0 +1,33 @@
+{
+  "name": "pet-grooming-booking-app",
+  "version": "1.0.0",
+  "description": "This is an app for booking grooming services for your beloved pets.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/betoarpi/pet-grooming-booking-app.git"
+  },
+  "keywords": [
+    "pets",
+    "grooming",
+    "maps",
+    "booking"
+  ],
+  "author": "Rob Arroyo & Carlos García",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/betoarpi/pet-grooming-booking-app/issues"
+  },
+  "homepage": "https://github.com/betoarpi/pet-grooming-booking-app#readme",
+  "devDependencies": {
+    "eslint": "^6.3.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.14.3",
+    "eslint-plugin-react-hooks": "^1.7.0"
+  }
+}
