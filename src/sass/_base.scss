@@ -6,6 +6,139 @@ html {
 }
 
 body {
+  color: $gray;
   margin: 0;
   font-size: 1rem;
+  @extend .font-regular;
+  line-height: 1.5;
 }
+
+h2 {
+  @extend .font-title;
+  @include text-shadow(0.1em, $cyan);
+}
+
+h3,
+h4,
+h5,
+h6 {
+  @extend .font-bold;
+}
+
+h1 {
+  font-size: 4.209rem;
+  @include text-shadow(0.1em, $yellow);
+  line-height: 1.15;
+}
+
+h2 {
+  font-size: 3.157rem;
+}
+
+h3 {
+  font-size: 2.369rem;
+}
+
+h4 {
+  font-size: 1.777rem;
+}
+
+h5 {
+  font-size: 1.333rem;
+}
+
+h5 {
+  font-size: 1rem;
+}
+
+a {
+  color: $purple;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+    text-shadow: 0.1em 0.1em 0 $orange;
+  }
+}
+
+.btn {
+  background: $white;
+  border: 2px solid $purple;
+  @include border-radius-all(2rem);
+  @include box-shadow(3px, $orange);
+  color: $purple;
+  cursor: pointer;
+  @extend .font-bold;
+  outline: none;
+  padding: 0.5rem 1rem;
+  position: relative;
+  text-align: center;
+  z-index: 0;
+  &:hover {
+    border-color: darken($cyan, 45%);
+    @include box-shadow(3px, $cyan);
+    color: darken($cyan, 45%);
+    text-decoration: none;
+    text-shadow: none;
+  }
+}
+
+.no-style-lists {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.position-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.rating {
+  color: darken($yellow, 10%);
+}
+
+/// Referencia para los media queries
+///*******************************************************************
+/* @media screen and (max-width: 479px){
+  //este lo uso para dispositivos móviles
+}
+
+@media screen and (max-width: 767px){
+  //este lo uso para dispositivos móviles de pantalla
+  //más grande, pero más chicos que una tablet
+}
+
+@media screen and (max-width: 1023px){
+  //este lo uso para tablets
+}
+
+@media screen and (max-width: 1365px) {
+  //para tablets grandes o laptops pequeñas
+} */
+
+// para mobile first, se supone que los estilos sin media queries
+// están enfocados a dispositivos móviles, menores de 480px, por
+// lo que los media queries se declararían con min-width, para
+// modificar la apariencia en dispositivos conforme va creciendo la pantalla
+
+/* @media screen and (min-width: 480px){
+  //este lo uso para dispositivos móviles de pantalla
+  //más grande, pero más chicos que una tablet
+}
+
+@media screen and (min-width: 768px){
+  //este lo uso para tablets
+}
+
+@media screen and (min-width: 1024px){
+  //para tablets grandes o laptops pequeñas
+}
+
+@media screen and (min-width: 1366px) {
+  //para dispositivos desktop
+} */
+
+// nótese que varía un px porque quieres afectar el tamaño mínimo de pantalla del
+// dispositivo que estás fijando como objetivo

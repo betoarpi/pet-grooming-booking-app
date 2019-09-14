@@ -10,14 +10,17 @@
   <body>
     <header class="header">
       <a href="" class="logo"
-        ><img src="" alt="Pet Grooming App Logo" class="logo__img"
+        ><img
+          src="./src/img/groomerly-logo.svg"
+          alt="Pet Grooming App Logo"
+          class="logo__img"
       /></a>
 
       <nav class="navigation">
         <ul class="navigation__website">
           <li><a href="#">About</a></li>
           <li><a href="#">Find a Groomer</a></li>
-          <li><a href="#">Register Now</a></li>
+          <li><a href="#" id="register-now">Register Now</a></li>
         </ul>
 
         <div class="navigation__user">
@@ -36,19 +39,22 @@
 
     <main class="main">
       <div class="hero">
-        <h1 class="hero__title">Awesome title here</h1>
+        <h1 class="hero__title">Find a grooming salon near you</h1>
         <p class="hero__description">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque,
-          exercitationem libero illo ratione ipsa, itaque praesentium culpa unde
-          quia amet assumenda quisquam maiores magni? Et ducimus sequi itaque at
-          explicabo!
+          Register now and find your favorite groom around the corner. Schedule
+          your pet's bath, grooming session or spa with a finger tap.
         </p>
-        <img src="" alt="Pet Grooming App image" class="hero__img" />
+        <a href="#" class="hero__btn">Start here</a>
+        <img
+          src="/src/img/wet-dog.jpg"
+          alt="Pet Grooming App image"
+          class="hero__img"
+        />
       </div>
       <!-- /hero -->
 
       <div class="groomers-filter">
-        //options
+        //filter options
       </div>
 
       <div class="groomers-grid">
@@ -57,114 +63,174 @@
         <div class="groomers-grid__container">
           <div class="groomers-grid__item">
             <div class="groomers-grid__item__thumbnail">
-              <div class="fav">add to favorites icon</div>
-              <img src="" alt="Groomers cover image" />
+              <div class="fav">
+                <i class="fa fa-heart" aria-hidden="true"></i>
+              </div>
+              <img
+                src="./src/img/grooming-salon.jpg"
+                alt="Groomers cover image"
+              />
             </div>
-            <article class="groomers-grid__description">
-              <h3 class="groomers-grid__item__title">
-                Grommer's business name
-              </h3>
-              <div class="rating">*****</div>
+            <article class="groomers-grid__item__description">
+              <h4 class="groomers-grid__item__title">
+                Petly Salon
+              </h4>
+              <div class="rating">
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+              </div>
               <p>
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                 Officia at repudiandae inventore exercitationem consequatur
                 labore reprehenderit.
               </p>
+              <button class="btn">Book now</button>
             </article>
           </div>
           <!-- /item -->
 
           <div class="groomers-grid__item">
             <div class="groomers-grid__item__thumbnail">
-              <div class="fav">add to favorites icon</div>
-              <img src="" alt="Groomers cover image" />
+              <div class="fav">
+                <i class="fa fa-heart" aria-hidden="true"></i>
+              </div>
+              <img src="./src/img/dog-comb.jpg" alt="Groomers cover image" />
             </div>
-            <article class="groomers-grid__description">
-              <h3 class="groomers-grid__item__title">
-                Grommer's business name
-              </h3>
-              <div class="rating">*****</div>
+            <article class="groomers-grid__item__description">
+              <h4 class="groomers-grid__item__title">
+                Petly Salon
+              </h4>
+              <div class="rating">
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+              </div>
               <p>
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                 Officia at repudiandae inventore exercitationem consequatur
                 labore reprehenderit.
               </p>
+              <button class="btn">Book now</button>
             </article>
           </div>
           <!-- /item -->
 
           <div class="groomers-grid__item">
             <div class="groomers-grid__item__thumbnail">
-              <div class="fav">add to favorites icon</div>
-              <img src="" alt="Groomers cover image" />
+              <div class="fav">
+                <i class="fa fa-heart" aria-hidden="true"></i>
+              </div>
+              <img src="./src/img/dog-bath.jpg" alt="Groomers cover image" />
             </div>
-            <article class="groomers-grid__description">
-              <h3 class="groomers-grid__item__title">
-                Grommer's business name
-              </h3>
-              <div class="rating">*****</div>
+            <article class="groomers-grid__item__description">
+              <h4 class="groomers-grid__item__title">
+                Petly Salon
+              </h4>
+              <div class="rating">
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+              </div>
               <p>
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                 Officia at repudiandae inventore exercitationem consequatur
                 labore reprehenderit.
               </p>
+              <button class="btn">Book now</button>
             </article>
           </div>
           <!-- /item -->
 
           <div class="groomers-grid__item">
             <div class="groomers-grid__item__thumbnail">
-              <div class="fav">add to favorites icon</div>
-              <img src="" alt="Groomers cover image" />
+              <div class="fav">
+                <i class="fa fa-heart" aria-hidden="true"></i>
+              </div>
+              <img
+                src="./src/img/grooming-salon.jpg"
+                alt="Groomers cover image"
+              />
             </div>
-            <article class="groomers-grid__description">
-              <h3 class="groomers-grid__item__title">
-                Grommer's business name
-              </h3>
-              <div class="rating">*****</div>
+            <article class="groomers-grid__item__description">
+              <h4 class="groomers-grid__item__title">
+                Petly Salon
+              </h4>
+              <div class="rating">
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+              </div>
               <p>
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                 Officia at repudiandae inventore exercitationem consequatur
                 labore reprehenderit.
               </p>
+              <button class="btn">Book now</button>
             </article>
           </div>
           <!-- /item -->
 
           <div class="groomers-grid__item">
             <div class="groomers-grid__item__thumbnail">
-              <div class="fav">add to favorites icon</div>
-              <img src="" alt="Groomers cover image" />
+              <div class="fav">
+                <i class="fa fa-heart" aria-hidden="true"></i>
+              </div>
+              <img src="./src/img/dog-drying.jpg" alt="Groomers cover image" />
             </div>
-            <article class="groomers-grid__description">
-              <h3 class="groomers-grid__item__title">
-                Grommer's business name
-              </h3>
-              <div class="rating">*****</div>
+            <article class="groomers-grid__item__description">
+              <h4 class="groomers-grid__item__title">
+                Petly Salon
+              </h4>
+              <div class="rating">
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+              </div>
               <p>
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                 Officia at repudiandae inventore exercitationem consequatur
                 labore reprehenderit.
               </p>
+              <button class="btn">Book now</button>
             </article>
           </div>
           <!-- /item -->
 
           <div class="groomers-grid__item">
             <div class="groomers-grid__item__thumbnail">
-              <div class="fav">add to favorites icon</div>
-              <img src="" alt="Groomers cover image" />
+              <div class="fav">
+                <i class="fa fa-heart" aria-hidden="true"></i>
+              </div>
+              <img src="./src/img/dog-comb.jpg" alt="Groomers cover image" />
             </div>
-            <article class="groomers-grid__description">
-              <h3 class="groomers-grid__item__title">
-                Grommer's business name
-              </h3>
-              <div class="rating">*****</div>
+            <article class="groomers-grid__item__description">
+              <h4 class="groomers-grid__item__title">
+                Petly Salon
+              </h4>
+              <div class="rating">
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+              </div>
               <p>
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                 Officia at repudiandae inventore exercitationem consequatur
                 labore reprehenderit.
               </p>
+              <button class="btn">Book now</button>
             </article>
           </div>
           <!-- /item -->
@@ -181,7 +247,7 @@
         <li>
           <a href="#">Terms</a>
           <a href="#">Privacy Policy</a>
-          <a href="#">Instagram icon</a>
+          <a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a>
         </li>
       </ul>
     </footer>

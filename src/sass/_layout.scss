@@ -1,0 +1,17 @@
+.header,
+.main,
+.footer,
+.hero,
+.groomers-filter,
+.groomers-grid {
+  display: grid;
+}
+
+.header {
+  align-items: center;
+  grid-template-columns: 300px 1fr;
+  grid-template-rows: 1fr;
+  .navigation {
+    justify-self: end;
+  }
+}

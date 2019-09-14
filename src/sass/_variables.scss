@@ -1,0 +1,24 @@
+/* Color Variables */
+$cyan: #d3f6f3;
+$gray: #444b54;
+$lemon: #f9fce1;
+$orange: #fbd1b7;
+$purple: #4a148c;
+$yellow: #fee9b2;
+$white: #ffffff;
+
+/* Font Variables */
+$font-cortado: cortado, sans-serif;
+$font-montserrat: montserrat, sans-serif;
+
+.font-title {
+  @include font-family($font-cortado, 400, normal);
+}
+
+.font-regular {
+  @include font-family($font-montserrat, 400, normal);
+}
+
+.font-bold {
+  @include font-family($font-montserrat, 700, normal);
+}
