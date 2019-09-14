@@ -1,0 +1,31 @@
+.header {
+  margin-bottom: 2rem;
+  padding: 1rem 2rem;
+}
+
+.logo {
+  max-width: 300px;
+}
+
+.navigation {
+  @extend .font-bold;
+  &__website {
+    @extend .no-style-lists;
+    li {
+      display: inline-block;
+      margin: 0.5rem;
+    }
+  }
+  &__user {
+    display: none;
+  }
+}
+
+#register-now {
+  background: $orange;
+  @include border-radius-all(1rem);
+  padding: 0.5rem 1rem;
+  &:hover {
+    background: $yellow;
+  }
+}

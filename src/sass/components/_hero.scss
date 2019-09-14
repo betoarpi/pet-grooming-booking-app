@@ -1,0 +1,29 @@
+.hero {
+  justify-self: center;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr min-content max-content max-content 1fr;
+  max-width: 1200px;
+  &__title {
+    align-self: end;
+    grid-row: 2 / 3;
+    margin-bottom: 0;
+    padding: 0 2rem 0 0;
+  }
+  &__description {
+    grid-row: 3 / 4;
+    font-size: 1.125rem;
+    padding: 0 2rem 0 0;
+  }
+  &__btn {
+    grid-row: 4 / 5;
+    @extend .btn;
+    max-width: 280px;
+  }
+  &__img {
+    grid-column: 2 / 3;
+    grid-row: 1 / 6;
+    max-width: 600px;
+    @include box-shadow(1rem, $cyan);
+    @include border-radius-all(1rem);
+  }
+}

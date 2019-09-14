@@ -1,0 +1,15 @@
+.footer {
+  justify-self: center;
+  border-top: 2px solid lighten($gray, 60%);
+  grid-template-columns: 1fr max-content;
+  margin: 4rem auto 0;
+  padding: 2rem 0;
+  max-width: 1200px;
+  &__nav {
+    @extend .no-style-lists;
+    li {
+      display: inline-block;
+      margin: 0 1rem;
+    }
+  }
+}
