@@ -5867,10 +5867,52 @@ h5 {
   font-size: 1.333rem;
 }
 
-h5 {
+h6 {
   font-size: 1rem;
 }
 
+@media screen and (max-width: 1023px) {
+  h1 {
+    font-size: 3.052rem;
+  }
+
+  h2 {
+    font-size: 2.441rem;
+  }
+
+  h3 {
+    font-size: 1.9531rem;
+  }
+
+  h4 {
+    font-size: 1.563rem;
+  }
+
+  h5 {
+    font-size: 1.25rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  h1 {
+    font-size: 2.488rem;
+  }
+
+  h2 {
+    font-size: 2.047rem;
+  }
+
+  h3 {
+    font-size: 1.728rem;
+  }
+
+  h4 {
+    font-size: 1.44rem;
+  }
+
+  h5 {
+    font-size: 1.2rem;
+  }
+}
 a {
   color: #4a148c;
   text-decoration: none;
@@ -6012,6 +6054,7 @@ a:hover {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr min-content max-content max-content 1fr;
   max-width: 1200px;
+  padding: 0 1.5rem;
 }
 .hero__title {
   align-self: end;
@@ -6034,6 +6077,50 @@ a:hover {
   max-width: 600px;
   box-shadow: 1rem 1rem 0 #d3f6f3;
   border-radius: 1rem;
+  width: 100%;
+}
+@media screen and (max-width: 767px) {
+  .hero {
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: max-content 2rem max-content max-content;
+  }
+  .hero__title {
+    align-self: center;
+    grid-row: 1/2;
+    text-align: right;
+  }
+  .hero__description {
+    grid-column: 1/span 3;
+    grid-row: 3/4;
+  }
+  .hero__btn {
+    grid-row: 4/5;
+  }
+  .hero__img {
+    grid-column: 2/span 2;
+    grid-row: 1/2;
+  }
+}
+@media screen and (max-width: 479px) {
+  .hero {
+    grid-template-columns: 1fr;
+    grid-template-rows: initial;
+  }
+  .hero__title {
+    align-self: initial;
+    grid-row: initial;
+    margin: 0 0 2rem 0;
+    text-align: initial;
+  }
+  .hero__description, .hero__btn {
+    grid-column: initial;
+    grid-row: initial;
+  }
+  .hero__img {
+    grid-column: initial;
+    grid-row: 2/3;
+    margin-bottom: 1rem;
+  }
 }
 
 .groomers-filter {
