@@ -6005,26 +6005,28 @@ a:hover {
   align-items: center;
   grid-template-columns: 300px 1fr;
   grid-template-rows: 1fr;
+  margin-bottom: 2rem;
+  padding: 1rem 1.5rem;
 }
-.header .navigation {
+
+.logo img {
+  max-width: 300px;
+  width: 100%;
+}
+
+.navigation {
   justify-self: end;
 }
-
-.header {
-  margin-bottom: 2rem;
-  padding: 1rem 2rem;
-}
-
-.logo {
-  max-width: 300px;
-}
-
 .navigation__website li {
   display: inline-block;
   margin: 0.5rem;
 }
 .navigation__user {
   display: none;
+}
+.navigation__mobile {
+  display: none;
+  font-size: 2rem;
 }
 
 #register-now {
@@ -6036,6 +6038,23 @@ a:hover {
   background: #fee9b2;
 }
 
+@media screen and (max-width: 1023px) {
+  .header {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .navigation__website {
+    display: none;
+  }
+  .navigation__mobile {
+    display: inline-block;
+  }
+}
+@media screen and (max-width: 479px) {
+  .header {
+    grid-template-columns: 200px 1fr;
+  }
+}
 .footer {
   justify-self: center;
   border-top: 2px solid #e2e5e8;

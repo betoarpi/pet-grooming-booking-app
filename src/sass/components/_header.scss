@@ -1,13 +1,20 @@
 .header {
+  align-items: center;
+  grid-template-columns: 300px 1fr;
+  grid-template-rows: 1fr;
   margin-bottom: 2rem;
-  padding: 1rem 2rem;
+  padding: 1rem 1.5rem;
 }
 
 .logo {
-  max-width: 300px;
+  img {
+    max-width: 300px;
+    width: 100%;
+  }
 }
 
 .navigation {
+  justify-self: end;
   @extend .font-bold;
   &__website {
     @extend .no-style-lists;
@@ -19,6 +26,10 @@
   &__user {
     display: none;
   }
+  &__mobile {
+    display: none;
+    font-size: 2rem;
+  }
 }
 
 #register-now {
@@ -27,5 +38,27 @@
   padding: 0.5rem 1rem;
   &:hover {
     background: $yellow;
+  }
+}
+
+// Responsive para elementos del header
+@media screen and (max-width: 1023px){
+  .header {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .navigation {
+    &__website {
+      display: none;
+    }
+    &__mobile {
+      display: inline-block;
+    }
+  }
+}
+
+@media screen and (max-width: 479px){
+  .header {
+    grid-template-columns: 200px 1fr;
   }
 }
