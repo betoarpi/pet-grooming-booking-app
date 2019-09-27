@@ -5943,7 +5943,7 @@ a:hover {
   text-shadow: none;
 }
 
-.no-style-lists, .footer__nav, .navigation__website {
+.no-style-lists, .footer__nav, .navigation__user__options, .navigation__website {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -6015,6 +6015,9 @@ a:hover {
 }
 
 .navigation {
+  display: grid;
+  grid-template-columns: 1fr 40px;
+  gap: 1.5rem;
   justify-self: end;
 }
 .navigation__website li {
@@ -6022,7 +6025,50 @@ a:hover {
   margin: 0.5rem;
 }
 .navigation__user {
+  position: relative;
+}
+.navigation__user__profile {
+  border-radius: 0.5rem;
+  cursor: pointer;
+  height: 40px;
+  overflow: hidden;
+  width: 40px;
+}
+.navigation__user__profile img {
+  max-width: 100%;
+}
+.navigation__user__options {
+  background: #d3f6f3;
+  border-radius: 0.75rem;
+  cursor: pointer;
   display: none;
+  right: 0;
+  padding: 1rem 2rem;
+  position: absolute;
+  text-align: right;
+  top: 56px;
+  width: 210px;
+}
+.navigation__user__options:before {
+  content: " ";
+  display: block;
+  left: 0;
+  height: 2rem;
+  position: absolute;
+  top: -2rem;
+  width: 100%;
+}
+.navigation__user__options li {
+  margin-bottom: 0.5rem;
+}
+.navigation__user__options li i {
+  margin-left: 1rem;
+}
+.navigation__user__options li:last-child {
+  margin: 0;
+}
+.navigation__user:hover .navigation__user__options {
+  display: block;
 }
 .navigation__mobile {
   display: none;
@@ -6198,6 +6244,16 @@ a:hover {
 .groomers-grid__item__title {
   color: #4a148c;
   margin: 0 0 0.25rem 0;
+}
+@media screen and (max-width: 1023px) {
+  .groomers-grid__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 767px) {
+  .groomers-grid__container {
+    grid-template-columns: 1fr;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
