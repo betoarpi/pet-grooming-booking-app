@@ -9,7 +9,14 @@
     @extend .no-style-lists;
     li {
       display: inline-block;
-      margin: 0 1rem;
+      margin: 0 0.3rem;
     }
+  }
+
+  @media screen and (max-width: 767px) {
+    gap: 1rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr max-content;
+    text-align: center;
   }
 }
