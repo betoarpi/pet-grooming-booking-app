@@ -3,4 +3,18 @@
   color: $purple;
   margin: 3rem 0 2rem 0;
   padding: 2rem;
+  &__form {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(3, 1fr) 220px;
+    div {
+      align-items: center;
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: max-content 1fr;
+    }
+    button {
+      @extend .btn--dark;
+    }
+  }
 }

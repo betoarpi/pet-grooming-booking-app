@@ -5818,7 +5818,9 @@ readers do not read off random characters that represent icons */
   font-style: normal;
 }
 
-.font-bold, .navigation, .btn, .hero__btn, h3,
+.font-bold, .navigation, .btn, .hero__btn, input,
+select,
+textarea, .btn--dark, .groomers-filter__form button, h3,
 h4,
 h5,
 h6 {
@@ -5922,25 +5924,52 @@ a:hover {
   text-shadow: 0.1em 0.1em 0 #fbd1b7;
 }
 
-.btn, .hero__btn {
+.btn, .hero__btn, input,
+select,
+textarea, .btn--dark, .groomers-filter__form button {
   background: #ffffff;
   border: 2px solid #4a148c;
   border-radius: 2rem;
   box-shadow: 3px 3px 0 #fbd1b7;
   color: #4a148c;
   cursor: pointer;
+  font-size: 1rem;
   outline: none;
   padding: 0.5rem 1rem;
   position: relative;
   text-align: center;
   z-index: 0;
 }
-.btn:hover, .hero__btn:hover {
+.btn:hover, .hero__btn:hover, input:hover,
+select:hover,
+textarea:hover, .btn--dark:hover, .groomers-filter__form button:hover {
   border-color: #27bdb0;
   box-shadow: 3px 3px 0 #d3f6f3;
   color: #27bdb0;
   text-decoration: none;
   text-shadow: none;
+}
+.btn--dark, .groomers-filter__form button {
+  background: #4a148c;
+  color: #ffffff;
+}
+.btn--dark:hover, .groomers-filter__form button:hover {
+  background: #27bdb0;
+  color: #ffffff;
+}
+
+input,
+select,
+textarea {
+  font-size: 1rem;
+  text-align: left;
+  width: 100%;
+}
+
+fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
 }
 
 .no-style-lists, .footer__nav, .navigation__user__options, .navigation__website {
@@ -6211,7 +6240,17 @@ a:hover {
   margin: 3rem 0 2rem 0;
   padding: 2rem;
 }
-
+.groomers-filter__form {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(3, 1fr) 220px;
+}
+.groomers-filter__form div {
+  align-items: center;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: max-content 1fr;
+}
 .groomers-grid {
   justify-content: center;
 }

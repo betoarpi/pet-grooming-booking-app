@@ -65,7 +65,27 @@
       <!-- /hero -->
 
       <div class="groomers-filter">
-        //filter options
+        <form action="" class="groomers-filter__form">
+          <div>
+            <label for="date">Date:</label>
+            <input type="date" name="date" id="date" />
+          </div>
+          <div>
+            <label for="city">City</label>
+            <input type="text" name="city" id="city" />
+          </div>
+          <div>
+            <label for="pet">Pet</label>
+            <select name="pet" id="pet">
+              <option value="none">Select an Option</option>
+              <option value="dog">Dog</option>
+              <option value="cat">Cat</option>
+            </select>
+          </div>
+          <button type="submit">
+            Find a groomer <i class="fas fa-paw"></i>
+          </button>
+        </form>
       </div>
 
       <div class="groomers-grid">

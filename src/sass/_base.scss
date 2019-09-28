@@ -52,7 +52,7 @@ h6 {
 }
 
 // Estilos responsive para tipografía
-@media screen and (max-width: 1023px){
+@media screen and (max-width: 1023px) {
   h1 {
     font-size: 3.052rem;
   }
@@ -70,7 +70,7 @@ h6 {
   }
 }
 
-@media screen and (max-width: 767px){
+@media screen and (max-width: 767px) {
   h1 {
     font-size: 2.488rem;
   }
@@ -105,6 +105,7 @@ a {
   color: $purple;
   cursor: pointer;
   @extend .font-bold;
+  font-size: 1rem;
   outline: none;
   padding: 0.5rem 1rem;
   position: relative;
@@ -117,6 +118,30 @@ a {
     text-decoration: none;
     text-shadow: none;
   }
+  &--dark {
+    background: $purple;
+    color: $white;
+    @extend .btn;
+    &:hover {
+      background: darken($cyan, 45%);
+      color: $white;
+    }
+  }
+}
+
+// Form elements
+input,
+select,
+textarea {
+  @extend .btn;
+  font-size: 1rem;
+  text-align: left;
+  width: 100%;
+}
+fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
 }
 
 .no-style-lists {
