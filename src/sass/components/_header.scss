@@ -28,6 +28,7 @@
   }
   &__user {
     position: relative;
+    align-self: center;
     &__profile {
       @include border-radius-all(0.5rem);
       cursor: pointer;
@@ -48,12 +49,12 @@
       padding: 1rem 2rem;
       position: absolute;
       text-align: right;
-      top:56px;
+      top: 56px;
       width: 210px;
       &:before {
-        content: " ";
+        content: ' ';
         display: block;
-        left: 0;;
+        left: 0;
         height: 2rem;
         position: absolute;
         top: -2rem;
@@ -92,7 +93,7 @@
 }
 
 // Responsive para elementos del header
-@media screen and (max-width: 1023px){
+@media screen and (max-width: 1023px) {
   .header {
     grid-template-columns: 1fr 1fr;
   }
@@ -107,8 +108,18 @@
   }
 }
 
-@media screen and (max-width: 479px){
+@media screen and (max-width: 479px) {
   .header {
-    grid-template-columns: 200px 1fr;
+    grid-template-columns: 160px 1fr;
+  }
+
+  .navigation {
+    grid-template-columns: 1fr 32px;
+    &__user {
+      &__profile {
+        height: 32px;
+        width: 32px;
+      }
+    }
   }
 }

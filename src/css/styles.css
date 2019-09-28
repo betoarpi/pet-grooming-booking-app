@@ -6026,6 +6026,7 @@ a:hover {
 }
 .navigation__user {
   position: relative;
+  align-self: center;
 }
 .navigation__user__profile {
   border-radius: 0.5rem;
@@ -6098,7 +6099,15 @@ a:hover {
 }
 @media screen and (max-width: 479px) {
   .header {
-    grid-template-columns: 200px 1fr;
+    grid-template-columns: 160px 1fr;
+  }
+
+  .navigation {
+    grid-template-columns: 1fr 32px;
+  }
+  .navigation__user__profile {
+    height: 32px;
+    width: 32px;
   }
 }
 .footer {
