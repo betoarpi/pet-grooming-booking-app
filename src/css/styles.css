@@ -5894,7 +5894,7 @@ body {
   line-height: 1.5;
   margin: 0;
   max-width: 100%;
-  overflow: hidden;
+  overflow-x: hidden;
   width: 100%;
 }
 
@@ -6388,6 +6388,36 @@ fieldset {
   gap: 1rem;
   grid-template-columns: max-content 1fr;
 }
+.groomers-filter__form button {
+  align-self: end;
+  max-height: 40px;
+}
+@media screen and (max-width: 1365px) {
+  .groomers-filter form div {
+    gap: 0;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .groomers-filter form {
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+}
+@media screen and (max-width: 767px) {
+  .groomers-filter form {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+  .groomers-filter form div {
+    gap: 1rem;
+    grid-template-columns: 80px 1fr;
+    grid-template-rows: 1fr;
+  }
+}
+
 .groomers-grid {
   justify-content: center;
 }

@@ -1,4 +1,4 @@
-// eslint-disable-next-line camelcase
+/* eslint-disable camelcase */
 const $main = document.querySelector('.main');
 const $navigation__mobile = document.querySelector('.navigation__mobile');
 const $navigation__website = document.querySelector('.navigation__website');
@@ -11,7 +11,7 @@ $navigation__mobile.addEventListener('click', event => {
       $navigation__mobile.classList.remove('active', 'inactive')
       $navigation__website.classList.remove('active');
       $main.classList.remove('mobile-active');
-    }, 600)
+    }, 600);
   } else {
     $navigation__mobile.classList.add('active');
     $navigation__website.classList.add('active');
