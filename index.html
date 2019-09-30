@@ -19,13 +19,15 @@
 
       <nav class="navigation">
         <ul class="navigation__website">
-          <li><a href="#">About</a></li>
-          <li><a href="#">Find a Groomer</a></li>
-          <li><a href="#" id="register-now">Register Now</a></li>
+          <li><a href="#">Acerca de Groomerly</a></li>
+          <li><a href="#">Encuentra un Grooming Salón</a></li>
+          <li><a href="#" id="register-now">Regístrate</a></li>
         </ul>
 
         <a href="#" class="navigation__mobile">
-          <i class="fa fa-bars" aria-hidden="true"></i>
+          <span class="bars bars__1"></span>
+          <span class="bars bars__2"></span>
+          <span class="bars bars__3"></span>
         </a>
 
         <div class="navigation__user">
@@ -34,13 +36,16 @@
           </div>
           <ul class="navigation__user__options">
             <li>
-              <a href="#">My profile<i class="fas fa-user-circle"></i></a>
+              <a href="#">Mi Perfil<i class="fas fa-user-circle"></i></a>
             </li>
             <li>
-              <a href="#">My bookings<i class="fas fa-calendar-alt"></i></a>
+              <a href="#">Mis Reservas<i class="fas fa-calendar-alt"></i></a>
             </li>
             <li>
-              <a href="#">Log out<i class="fas fa-sign-out-alt"></i> </a>
+              <a href="#">Mis Favoritos<i class="fas fa-heart"></i></a>
+            </li>
+            <li>
+              <a href="#">Cerrar Sesión<i class="fas fa-sign-out-alt"></i> </a>
             </li>
           </ul>
         </div>
@@ -50,12 +55,12 @@
 
     <main class="main">
       <div class="hero">
-        <h1 class="hero__title">Find a grooming salon near you</h1>
+        <h1 class="hero__title">Encuentra un Grooming Salón cerca de tí</h1>
         <p class="hero__description">
-          Register now and find your favorite groomer around the corner.
-          Schedule your pet's bath, grooming session or spa with a finger tap.
+          Regístrate ya y encuentra el Grooming Salón ideal. Reserva servicios
+          de baño para tu mascota, cortes de pelo, SPA y cervicios premium.
         </p>
-        <a href="#" class="hero__btn">Start here</a>
+        <a href="#" class="hero__btn">Reservar ahora</a>
         <img
           src="/src/img/wet-dog.jpg"
           alt="Pet Grooming App image"
@@ -67,29 +72,29 @@
       <div class="groomers-filter">
         <form action="" class="groomers-filter__form">
           <div>
-            <label for="date">Date:</label>
+            <label for="date">Fecha:</label>
             <input type="date" name="date" id="date" />
           </div>
           <div>
-            <label for="city">City</label>
+            <label for="city">Ciudad</label>
             <input type="text" name="city" id="city" />
           </div>
           <div>
-            <label for="pet">Pet</label>
+            <label for="pet">Mascota</label>
             <select name="pet" id="pet">
-              <option value="none">Select an Option</option>
-              <option value="dog">Dog</option>
-              <option value="cat">Cat</option>
+              <option value="none">Selecciona una opción</option>
+              <option value="dog">Perro</option>
+              <option value="cat">Gato</option>
             </select>
           </div>
           <button type="submit">
-            Find a groomer <i class="fas fa-paw"></i>
+            Encuentra un salón <i class="fas fa-paw"></i>
           </button>
         </form>
       </div>
 
       <div class="groomers-grid">
-        <h2>These are some groomers near your location</h2>
+        <h2>Estos son los salones de Grooming que encontramos para tí</h2>
 
         <div class="groomers-grid__container">
           <div class="groomers-grid__item">
@@ -272,14 +277,14 @@
     <!-- /main -->
 
     <footer class="footer">
-      &copy; Pet Grooming App 2019. All rights reserved
+      &copy; Pet Grooming App 2019. Todos los derechos reservados
 
       <ul class="footer__nav">
         <li>
-          <a href="#">Terms</a>
+          <a href="#">Terminos y Condiciones</a>
         </li>
         <li>
-          <a href="#">Privacy Policy</a>
+          <a href="#">Aviso de Privacidad</a>
         </li>
         <li>
           <a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a>
@@ -287,5 +292,7 @@
       </ul>
     </footer>
     <!-- /footer -->
+
+    <script src="./src/js/index.js"></script>
   </body>
 </html>
