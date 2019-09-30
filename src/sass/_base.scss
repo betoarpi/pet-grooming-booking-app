@@ -7,10 +7,13 @@ html {
 
 body {
   color: $gray;
-  margin: 0;
   font-size: 1rem;
   @extend .font-regular;
   line-height: 1.5;
+  margin: 0;
+  max-width: 100%;
+  overflow: hidden;
+  width: 100%;
 }
 
 h2 {

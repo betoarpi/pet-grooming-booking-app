@@ -103,6 +103,7 @@
       }
     }
     &.active {
+      z-index: 1;
       .bars {
         &__1 {
           animation: x-animation-1 1s ease;
@@ -155,6 +156,12 @@
   }
 }
 
+.mobile-active {
+  transform: scale(0.9) translateZ(-100px);
+  opacity: 0.05;
+  z-index: -1;
+}
+
 // Responsive para elementos del header
 @media screen and (max-width: 1023px) {
   .header {
@@ -163,13 +170,24 @@
 
   .navigation {
     &__website {
-      display: none;
-      /* background: white;
+      background: white;
+      font-size: 1.25rem;
       height: 100vh;
-      left: 0;
+      left: -200%;
+      opacity: 0;
+      padding-top:5rem;
       position: absolute;
       top: 0;
-      width: 100vw; */
+      transition: all 0.5s ease;
+      width: 100vw;
+      li {
+        display: block;
+        margin: 0 0 1rem 2rem;
+      }
+      &.active {
+        opacity: 1;
+        left:0;
+      }
     }
     &__mobile {
       display: inline-block;

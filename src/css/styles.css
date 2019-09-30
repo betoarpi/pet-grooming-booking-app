@@ -5890,9 +5890,12 @@ html * {
 
 body {
   color: #444b54;
-  margin: 0;
   font-size: 1rem;
   line-height: 1.5;
+  margin: 0;
+  max-width: 100%;
+  overflow: hidden;
+  width: 100%;
 }
 
 h2 {
@@ -6080,6 +6083,7 @@ fieldset {
 .groomers-filter,
 .groomers-grid {
   display: grid;
+  transition: all 0.5s ease;
 }
 
 .header {
@@ -6178,6 +6182,9 @@ fieldset {
   bottom: 20%;
   top: initial;
 }
+.navigation__mobile.active {
+  z-index: 1;
+}
 .navigation__mobile.active .bars__1 {
   animation: x-animation-1 1s ease;
   animation-fill-mode: forwards;
@@ -6221,19 +6228,36 @@ fieldset {
   background: #fee9b2;
 }
 
+.mobile-active {
+  transform: scale(0.9) translateZ(-100px);
+  opacity: 0.05;
+  z-index: -1;
+}
+
 @media screen and (max-width: 1023px) {
   .header {
     grid-template-columns: 1fr 1fr;
   }
 
   .navigation__website {
-    display: none;
-    /* background: white;
+    background: white;
+    font-size: 1.25rem;
     height: 100vh;
-    left: 0;
+    left: -200%;
+    opacity: 0;
+    padding-top: 5rem;
     position: absolute;
     top: 0;
-    width: 100vw; */
+    transition: all 0.5s ease;
+    width: 100vw;
+  }
+  .navigation__website li {
+    display: block;
+    margin: 0 0 1rem 2rem;
+  }
+  .navigation__website.active {
+    opacity: 1;
+    left: 0;
   }
   .navigation__mobile {
     display: inline-block;
