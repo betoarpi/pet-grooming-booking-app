@@ -1,0 +1,56 @@
+// Animations for the hamburger icon for the mobile menu
+@keyframes x-animation-1 {
+  0% {
+    top: 20%;
+  }
+  50% {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  100% {
+    top: 50%;
+    transform: translateY(-50%) rotateZ(45deg);
+  }
+}
+
+@keyframes x-animation-1-reverse {
+  0% {
+    top: 50%;
+    transform: translateY(-50%) rotateZ(45deg);
+  }
+  50% {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  100% {
+    top: 20%;
+  }
+}
+
+@keyframes x-animation-2 {
+  0% {
+    bottom: 20%;
+  }
+  50% {
+    bottom: 50%;
+    transform: translateY(50%);
+  }
+  100% {
+    bottom: 50%;
+    transform: translateY(50%) rotateZ(-45deg);
+  }
+}
+
+@keyframes x-animation-2-reverse {
+  0% {
+    bottom: 50%;
+    transform: translateY(50%) rotateZ(-45deg);
+  }
+  50% {
+    bottom: 50%;
+    transform: translateY(50%);
+  }
+  100% {
+    bottom: 20%;
+  }
+}

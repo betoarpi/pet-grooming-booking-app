@@ -123,34 +123,26 @@
         }
       }
     }
-  }
-}
-
-@keyframes x-animation-1 {
-  0% {
-    top: 20%;
-  }
-  50% {
-    top: 50%;
-    transform: translateY(-50%);
-  }
-  100% {
-    top: 50%;
-    transform: translateY(-50%) rotateZ(45deg);
-  }
-}
-
-@keyframes x-animation-2 {
-  0% {
-    bottom: 20%;
-  }
-  50% {
-    bottom: 50%;
-    transform: translateY(50%);
-  }
-  100% {
-    bottom: 50%;
-    transform: translateY(50%) rotateZ(-45deg);
+    &.inactive {
+      .bars {
+        &__1 {
+          animation: x-animation-1-reverse 1s ease;
+          animation-iteration-count: 1;
+          transition: all 0.1s ease-in-out;
+        }
+        &__2 {
+          left: 0;
+          transition: all 0.3s ease-in-out;
+          transition-delay: 0.5s;
+          opacity: 1;
+        }
+        &__3 {
+          animation: x-animation-2-reverse 1s ease;
+          animation-iteration-count: 1;
+          transition: all 0.1s ease-in-out;
+        }
+      }
+    }
   }
 }
 
