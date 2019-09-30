@@ -19,6 +19,15 @@
     display: grid;
     grid-template-rows: 1fr max-content;
     overflow: hidden;
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: scale(1.03);
+      ~ .groomers-grid__item {
+        opacity: 0.5;
+      }
+    }
+
     &__thumbnail {
       position: relative;
       height: 360px;

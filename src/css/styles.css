@@ -6440,6 +6440,13 @@ fieldset {
   display: grid;
   grid-template-rows: 1fr max-content;
   overflow: hidden;
+  transition: all 0.3s ease;
+}
+.groomers-grid__item:hover {
+  transform: scale(1.03);
+}
+.groomers-grid__item:hover ~ .groomers-grid__item {
+  opacity: 0.5;
 }
 .groomers-grid__item__thumbnail {
   position: relative;
