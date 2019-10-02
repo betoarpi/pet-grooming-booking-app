@@ -54,6 +54,33 @@ h6 {
   font-size: 1rem;
 }
 
+.main {
+  position: relative;
+  &::before {
+    background: url(../img/geometric-items.svg) center center no-repeat;
+    background-size: contain;
+    content: " ";
+    height: 296px;
+    left: -134px;
+    position: absolute;
+    top: 0;
+    width: 360px;
+    z-index: -1;
+  }
+  &::after {
+    background: url(../img/zig-zag.svg) center center no-repeat;
+    background-size: contain;
+    content: " ";
+    height: 71px;
+    right: -50px;
+    opacity: 0.8;
+    position: absolute;
+    bottom: 250px;
+    width: 300px;
+    z-index: -1;
+  }
+}
+
 // Estilos responsive para tipografía
 @media screen and (max-width: 1023px) {
   h1 {
