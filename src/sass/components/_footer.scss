@@ -4,8 +4,9 @@
   grid-template-columns: 1fr max-content;
   justify-self: center;
   margin: 4rem auto;
-  max-width: 1200px;
+  max-width: calc(100% - 4rem);
   padding: 2rem;
+  width: 1400px;
   &__nav {
     @extend .no-style-lists;
     li {

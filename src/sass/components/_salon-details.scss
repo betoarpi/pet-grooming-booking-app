@@ -1,0 +1,109 @@
+.salon-details {
+  gap: 2rem;
+  grid-template-columns: 1fr 480px;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: calc(100% - 4rem);
+  &__info {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: 482px max-content;
+    &__card {
+      align-content: start;
+      display: grid;
+      grid-row: 2 / 3;
+      header {
+        display: grid;
+        grid-template-columns: max-content 160px max-content max-content;
+        grid-template-rows: max-content max-content;
+        margin-bottom: 2rem;
+        h1 {
+          display: grid;
+          font-size: 1.77rem;
+          grid-column: 1 / 2;
+          grid-row: 1 /2;
+          margin: 0 0 0.5rem;
+          //text-shadow: none;
+        }
+        .rating-info {
+          grid-column: 1 / 2;
+          grid-row: 2 /3;
+          font-size: 0.9rem;
+          margin-bottom: 1rem;
+          span {
+            color: lighten($gray, 30%);
+          }
+        }
+        .share {
+          align-content: center;
+          display: flex;
+          grid-column: 2 / 3;
+          grid-row: 1 /2;
+          &__like, &__share {
+            align-self: center;
+            align-content: center;
+            display: inline-flex;
+          }
+          &__like {
+            font-size: 1.125rem;
+            margin-right: 1rem;
+          }
+          .fa-share {
+            background: $orange;
+            color: white;
+            @include border-radius-all(50%);
+            height: 24px;
+            margin-right: 0.5rem;
+            position: relative;
+            width: 24px;
+            &:before {
+              left: 50%;
+              position: absolute;
+              top:50%;
+              transform: translate(-50%, -50%);
+            }
+          }
+        }
+        address {
+          grid-column: 1 / span 2;
+          grid-row: 3 / 4;
+          margin: 1rem 0;
+          font-style: normal;
+          a {
+            color: $gray;
+            &:hover {
+              text-decoration: none;
+              text-shadow: none;
+              color: $gray;
+            }
+  
+            i {
+              width: 20px;
+            }
+          }
+        }
+        button {
+          grid-column: 1 / span 2;
+          grid-row: 4 / 5;
+          @extend .btn--dark;
+          max-width: 220px;
+        }
+      }
+    }
+    &__gallery {
+      border:1px solid $cyan;
+      display: grid;
+      grid-row: 1 / 2;
+    }
+  }
+  &__map {
+    @include border-radius-all(1rem);
+    display: grid;
+    height: 1200px;
+    overflow: hidden;
+    img {
+      @extend .img-cover;
+    }
+  }
+}

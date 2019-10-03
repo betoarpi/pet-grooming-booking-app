@@ -5804,6 +5804,23 @@ readers do not read off random characters that represent icons */
   font-family: "Font Awesome 5 Brands";
 }
 
+/*!
+ * Font Awesome Free 5.10.1 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+ */
+@font-face {
+  font-family: "Font Awesome 5 Free";
+  font-style: normal;
+  font-weight: 400;
+  font-display: auto;
+  src: url("../../src/webfonts/fa-regular-400.eot");
+  src: url("../../src/webfonts/fa-regular-400.eot?#iefix") format("embedded-opentype"), url("../../src/webfonts/fa-regular-400.woff2") format("woff2"), url("../../src/webfonts/fa-regular-400.woff") format("woff"), url("../../src/webfonts/fa-regular-400.ttf") format("truetype"), url("../../src/webfonts/fa-regular-400.svg#fontawesome") format("svg");
+}
+.far {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 400;
+}
+
 /* Color Variables */
 /* Font Variables */
 .font-title, h2 {
@@ -5820,7 +5837,7 @@ readers do not read off random characters that represent icons */
 
 .font-bold, .navigation, .btn, .hero__btn, input,
 select,
-textarea, .btn--dark, .groomers-filter__form button, h3,
+textarea, button, .btn--dark, .salon-details__info__card header button, .groomers-filter__form button, h3,
 h4,
 h5,
 h6 {
@@ -6002,13 +6019,12 @@ a {
   text-decoration: none;
 }
 a:hover {
-  text-decoration: underline;
-  text-shadow: 0.1em 0.1em 0 #fbd1b7;
+  color: #27bdb0;
 }
 
 .btn, .hero__btn, input,
 select,
-textarea, .btn--dark, .groomers-filter__form button {
+textarea, button, .btn--dark, .salon-details__info__card header button, .groomers-filter__form button {
   background: #ffffff;
   border: 2px solid #4a148c;
   border-radius: 2rem;
@@ -6024,20 +6040,27 @@ textarea, .btn--dark, .groomers-filter__form button {
 }
 .btn:hover, .hero__btn:hover, input:hover,
 select:hover,
-textarea:hover, .btn--dark:hover, .groomers-filter__form button:hover {
+textarea:hover, button:hover, .btn--dark:hover, .salon-details__info__card header button:hover {
   border-color: #27bdb0;
   box-shadow: 3px 3px 0 #d3f6f3;
   color: #27bdb0;
   text-decoration: none;
   text-shadow: none;
 }
-.btn--dark, .groomers-filter__form button {
+.btn--dark, .salon-details__info__card header button, .groomers-filter__form button {
   background: #4a148c;
   color: #ffffff;
 }
-.btn--dark:hover, .groomers-filter__form button:hover {
+.btn--dark:hover, .salon-details__info__card header button:hover, .groomers-filter__form button:hover {
   background: #27bdb0;
   color: #ffffff;
+}
+
+.img-cover, .gallery * img, .salon-details__map img {
+  height: 100%;
+  max-width: 100%;
+  object-fit: cover;
+  width: 100%;
 }
 
 input,
@@ -6108,7 +6131,8 @@ fieldset {
 .footer,
 .hero,
 .groomers-filter,
-.groomers-grid {
+.groomers-grid,
+.salon-details {
   display: grid;
   transition: all 0.5s ease;
 }
@@ -6252,7 +6276,8 @@ fieldset {
   padding: 0.5rem 1rem;
 }
 #register-now:hover {
-  background: #fee9b2;
+  background: #4a148c;
+  color: #ffffff;
 }
 
 .mobile-active {
@@ -6309,8 +6334,9 @@ fieldset {
   grid-template-columns: 1fr max-content;
   justify-self: center;
   margin: 4rem auto;
-  max-width: 1200px;
+  max-width: calc(100% - 4rem);
   padding: 2rem;
+  width: 1400px;
 }
 .footer__nav li {
   display: inline-block;
@@ -6329,7 +6355,7 @@ fieldset {
   justify-self: center;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr min-content max-content max-content 1fr;
-  max-width: 1200px;
+  max-width: 1400px;
   padding: 0 1.5rem;
 }
 .hero__title {
@@ -6460,7 +6486,7 @@ fieldset {
   grid-template-columns: repeat(3, 1fr);
   padding: 0 2rem;
   row-gap: 2rem;
-  max-width: 1200px;
+  max-width: 1400px;
 }
 .groomers-grid__item {
   border: 2px solid #e2e5e8;
@@ -6513,6 +6539,137 @@ fieldset {
   .groomers-grid__container {
     grid-template-columns: 1fr;
   }
+}
+
+.salon-details {
+  gap: 2rem;
+  grid-template-columns: 1fr 480px;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: calc(100% - 4rem);
+}
+.salon-details__info {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr;
+  grid-template-rows: 482px max-content;
+}
+.salon-details__info__card {
+  align-content: start;
+  display: grid;
+  grid-row: 2/3;
+}
+.salon-details__info__card header {
+  display: grid;
+  grid-template-columns: max-content 160px max-content max-content;
+  grid-template-rows: max-content max-content;
+  margin-bottom: 2rem;
+}
+.salon-details__info__card header h1 {
+  display: grid;
+  font-size: 1.77rem;
+  grid-column: 1/2;
+  grid-row: 1/2;
+  margin: 0 0 0.5rem;
+}
+.salon-details__info__card header .rating-info {
+  grid-column: 1/2;
+  grid-row: 2/3;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+.salon-details__info__card header .rating-info span {
+  color: #8e97a3;
+}
+.salon-details__info__card header .share {
+  align-content: center;
+  display: flex;
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+.salon-details__info__card header .share__like, .salon-details__info__card header .share__share {
+  align-self: center;
+  align-content: center;
+  display: inline-flex;
+}
+.salon-details__info__card header .share__like {
+  font-size: 1.125rem;
+  margin-right: 1rem;
+}
+.salon-details__info__card header .share .fa-share {
+  background: #fbd1b7;
+  color: white;
+  border-radius: 50%;
+  height: 24px;
+  margin-right: 0.5rem;
+  position: relative;
+  width: 24px;
+}
+.salon-details__info__card header .share .fa-share:before {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.salon-details__info__card header address {
+  grid-column: 1/span 2;
+  grid-row: 3/4;
+  margin: 1rem 0;
+  font-style: normal;
+}
+.salon-details__info__card header address a {
+  color: #444b54;
+}
+.salon-details__info__card header address a:hover {
+  text-decoration: none;
+  text-shadow: none;
+  color: #444b54;
+}
+.salon-details__info__card header address a i {
+  width: 20px;
+}
+.salon-details__info__card header button {
+  grid-column: 1/span 2;
+  grid-row: 4/5;
+  max-width: 220px;
+}
+.salon-details__info__gallery {
+  border: 1px solid #d3f6f3;
+  display: grid;
+  grid-row: 1/2;
+}
+.salon-details__map {
+  border-radius: 1rem;
+  display: grid;
+  height: 1200px;
+  overflow: hidden;
+}
+.gallery {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr 160px;
+  grid-template-rows: repeat(3, 150px);
+}
+.gallery__featured {
+  background: #f9fce1;
+  border-radius: 1rem;
+  grid-column: 1/2;
+  display: grid;
+  grid-row: 1/span 3;
+  overflow: hidden;
+}
+.gallery__grid {
+  gap: 1rem;
+  grid-column: 2/3;
+  grid-row: 1/span 3;
+  grid-template-rows: repeat(3, 150px);
+  display: grid;
+}
+.gallery__grid__item {
+  background: #fbd1b7;
+  border-radius: 1rem;
+  display: grid;
+  overflow: hidden;
 }
 
 /*# sourceMappingURL=styles.css.map */

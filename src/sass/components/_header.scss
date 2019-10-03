@@ -152,7 +152,8 @@
   @include border-radius-all(1rem);
   padding: 0.5rem 1rem;
   &:hover {
-    background: $yellow;
+    background: $purple;
+    color: $white;
   }
 }
 

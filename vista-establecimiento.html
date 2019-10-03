@@ -50,215 +50,71 @@
   <!-- /header -->
 
   <main class="main">
-    <div class="hero">
-      <h1 class="hero__title">Encuentra una estética canina cerca de tí</h1>
-      <p class="hero__description">
-        Regístrate ya y encuentra el Grooming Salón ideal. Reserva servicios
-        de baño para tu mascota, cortes de pelo, SPA y servicios premium.
-      </p>
-      <a href="#" class="hero__btn">Reservar ahora</a>
-      <img src="/src/img/wet-dog.jpg" alt="Pet Grooming App image" class="hero__img" />
-    </div>
-    <!-- /hero -->
-
-    <div class="groomers-filter">
-      <form action="" class="groomers-filter__form">
-        <div>
-          <label for="date">Fecha:</label>
-          <input type="date" name="date" id="date" />
-        </div>
-        <div>
-          <label for="city">Ciudad</label>
-          <input type="text" name="city" id="city" />
-        </div>
-        <div>
-          <label for="pet">Mascota</label>
-          <select name="pet" id="pet">
-            <option value="none">Selecciona una opción</option>
-            <option value="dog">Perro</option>
-            <option value="cat">Gato</option>
-          </select>
-        </div>
-        <button type="submit">
-          Buscar estética <i class="fas fa-paw"></i>
-        </button>
-      </form>
-    </div>
-
-    <div class="groomers-grid">
-      <h2>Estas son las estéticas caninas que encontramos para tí</h2>
-
-      <div class="groomers-grid__container">
-        <div class="groomers-grid__item">
-          <div class="groomers-grid__item__thumbnail">
-            <div class="fav">
-              <i class="fa fa-heart" aria-hidden="true"></i>
+    <section class="salon-details">
+      <article class="salon-details__info">
+        <div class="salon-details__info__card">
+          <header>
+            <h1>Nombre de Estética Canina</h1>
+            <div class="rating-info">
+              <i class="fas fa-star rating"></i> <b>5.0</b> <span>(100 Evaluaciones)</span>
             </div>
-            <img src="./src/img/grooming-salon.jpg" alt="Groomers cover image" />
+            <div class="share">
+              <a href="/" class="share__like">
+                <i class="far fa-heart"></i>
+              </a>
+              <a href="/" class="share__share">
+                <i class="fas fa-share" aria-hidden="true"></i> Compártelo
+              </a>
+            </div>
+            <address class="address">
+              <a href="/" class="address__street"><i class="fas fa-map-marker-alt"></i> 742 Evergreen Terrace,
+                Springfield, 58008, United States - <b>Agrandar Mapa</b></a><br />
+              <a href="tel:+1234567890" class="address__phone"><i class="fas fa-phone"></i> Teléfono: (123) 456-7890</a>
+            </address>
+            <button>Reservar ahora <i class="fas fa-paw"></i></button>
+          </header>
+
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. In est ante in nibh mauris. Sit amet venenatis urna cursus eget nunc scelerisque
+            viverra mauris.</p>
+          <p>Turpis cursus in hac habitasse platea dictumst quisque sagittis purus. Amet facilisis magna etiam tempor
+            orci. Viverra adipiscing at in tellus integer feugiat. Risus commodo viverra maecenas accumsan lacus vel
+            facilisis volutpat est. Sagittis orci a scelerisque purus semper eget duis at. Purus in mollis nunc sed id
+            semper risus in hendrerit. Eleifend donec pretium vulputate sapien nec sagittis.</p>
+
+          <div class="salon-details__info__card__services">
+            <div class="services">
+              <h5>Servicios</h5>
+            </div>
+            <div class="availability">
+              <h5>Disponibilidad</h5>
+            </div>
           </div>
-          <article class="groomers-grid__item__description">
-            <h4 class="groomers-grid__item__title">
-              Petly Salon
-            </h4>
-            <div class="rating">
-              <i class="fa fa-star" aria-hidden="true"></i>
-              <i class="fa fa-star" aria-hidden="true"></i>
-              <i class="fa fa-star" aria-hidden="true"></i>
-              <i class="fa fa-star" aria-hidden="true"></i>
-              <i class="fa fa-star" aria-hidden="true"></i>
-            </div>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Officia at repudiandae inventore exercitationem consequatur
-              labore reprehenderit.
-            </p>
-            <button class="btn">Book now</button>
-          </article>
         </div>
-        <!-- /item -->
 
-        <div class="groomers-grid__item">
-          <div class="groomers-grid__item__thumbnail">
-            <div class="fav">
-              <i class="fa fa-heart" aria-hidden="true"></i>
-            </div>
-            <img src="./src/img/dog-comb.jpg" alt="Groomers cover image" />
-          </div>
-          <article class="groomers-grid__item__description">
-            <h4 class="groomers-grid__item__title">
-              Petly Salon
-            </h4>
-            <div class="rating">
-              <i class="fa fa-star" aria-hidden="true"></i>
-              <i class="fa fa-star" aria-hidden="true"></i>
-              <i class="fa fa-star" aria-hidden="true"></i>
-              <i class="fa fa-star" aria-hidden="true"></i>
-              <i class="fa fa-star" aria-hidden="true"></i>
-            </div>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Officia at repudiandae inventore exercitationem consequatur
-              labore reprehenderit.
-            </p>
-            <button class="btn">Book now</button>
-          </article>
-        </div>
-        <!-- /item -->
+        <div class="salon__details__info__gallery gallery">
+          <a href="/" class="gallery__featured">
+            <img src="/src/img/gallery__featured.jpg" alt="title">
+          </a>
 
-        <div class="groomers-grid__item">
-          <div class="groomers-grid__item__thumbnail">
-            <div class="fav">
-              <i class="fa fa-heart" aria-hidden="true"></i>
-            </div>
-            <img src="./src/img/dog-bath.jpg" alt="Groomers cover image" />
+          <div class="gallery__grid">
+            <a href="/" class="gallery__grid__item">
+              <img src="/src/img/gallery__grid__item-1.jpg" alt="title">
+            </a>
+            <a href="/" class="gallery__grid__item">
+              <img src="/src/img/gallery__grid__item-2.jpg" alt="title">
+            </a>
+            <a href="/" class="gallery__grid__item">
+              <img src="/src/img/gallery__grid__item-3.jpg" alt="title">
+            </a>
           </div>
-          <article class="groomers-grid__item__description">
-            <h4 class="groomers-grid__item__title">
-              Petly Salon
-            </h4>
-            <div class="rating">
-              <i class="fa fa-star" aria-hidden="true"></i>
-              <i class="fa fa-star" aria-hidden="true"></i>
-              <i class="fa fa-star" aria-hidden="true"></i>
-              <i class="fa fa-star" aria-hidden="true"></i>
-              <i class="fa fa-star" aria-hidden="true"></i>
-            </div>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Officia at repudiandae inventore exercitationem consequatur
-              labore reprehenderit.
-            </p>
-            <button class="btn">Book now</button>
-          </article>
         </div>
-        <!-- /item -->
-
-        <div class="groomers-grid__item">
-          <div class="groomers-grid__item__thumbnail">
-            <div class="fav">
-              <i class="fa fa-heart" aria-hidden="true"></i>
-            </div>
-            <img src="./src/img/grooming-salon.jpg" alt="Groomers cover image" />
-          </div>
-          <article class="groomers-grid__item__description">
-            <h4 class="groomers-grid__item__title">
-              Petly Salon
-            </h4>
-            <div class="rating">
-              <i class="fa fa-star" aria-hidden="true"></i>
-              <i class="fa fa-star" aria-hidden="true"></i>
-              <i class="fa fa-star" aria-hidden="true"></i>
-              <i class="fa fa-star" aria-hidden="true"></i>
-              <i class="fa fa-star" aria-hidden="true"></i>
-            </div>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Officia at repudiandae inventore exercitationem consequatur
-              labore reprehenderit.
-            </p>
-            <button class="btn">Book now</button>
-          </article>
-        </div>
-        <!-- /item -->
-
-        <div class="groomers-grid__item">
-          <div class="groomers-grid__item__thumbnail">
-            <div class="fav">
-              <i class="fa fa-heart" aria-hidden="true"></i>
-            </div>
-            <img src="./src/img/dog-drying.jpg" alt="Groomers cover image" />
-          </div>
-          <article class="groomers-grid__item__description">
-            <h4 class="groomers-grid__item__title">
-              Petly Salon
-            </h4>
-            <div class="rating">
-              <i class="fa fa-star" aria-hidden="true"></i>
-              <i class="fa fa-star" aria-hidden="true"></i>
-              <i class="fa fa-star" aria-hidden="true"></i>
-              <i class="fa fa-star" aria-hidden="true"></i>
-              <i class="fa fa-star" aria-hidden="true"></i>
-            </div>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Officia at repudiandae inventore exercitationem consequatur
-              labore reprehenderit.
-            </p>
-            <button class="btn">Book now</button>
-          </article>
-        </div>
-        <!-- /item -->
-
-        <div class="groomers-grid__item">
-          <div class="groomers-grid__item__thumbnail">
-            <div class="fav">
-              <i class="fa fa-heart" aria-hidden="true"></i>
-            </div>
-            <img src="./src/img/dog-comb.jpg" alt="Groomers cover image" />
-          </div>
-          <article class="groomers-grid__item__description">
-            <h4 class="groomers-grid__item__title">
-              Petly Salon
-            </h4>
-            <div class="rating">
-              <i class="fa fa-star" aria-hidden="true"></i>
-              <i class="fa fa-star" aria-hidden="true"></i>
-              <i class="fa fa-star" aria-hidden="true"></i>
-              <i class="fa fa-star" aria-hidden="true"></i>
-              <i class="fa fa-star" aria-hidden="true"></i>
-            </div>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Officia at repudiandae inventore exercitationem consequatur
-              labore reprehenderit.
-            </p>
-            <button class="btn">Book now</button>
-          </article>
-        </div>
-        <!-- /item -->
+      </article>
+      <div class="salon-details__map">
+        <img src="/src/img/map-placeholder.png" alt="map">
       </div>
-    </div>
-    <!-- /groomers-grid -->
+      <!-- /map -->
+    </section>
   </main>
   <!-- /main -->
 

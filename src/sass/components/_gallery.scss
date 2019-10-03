@@ -1,0 +1,32 @@
+.gallery {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr 160px;
+  grid-template-rows: repeat(3, 150px);
+  &__featured {
+    background: $lemon;
+    @include border-radius-all(1rem);
+    grid-column: 1 /2;
+    display: grid;
+    grid-row: 1 / span 3;
+    overflow: hidden;
+  }
+  &__grid {
+    gap: 1rem;
+    grid-column: 2 / 3;
+    grid-row: 1 / span 3;
+    grid-template-rows: repeat(3, 150px);
+    display: grid;
+    &__item {
+      background: $orange;
+      @include border-radius-all(1rem);
+      display: grid;
+      overflow: hidden;
+    }
+  }
+  * {
+    img {
+      @extend .img-cover;
+    }
+  }
+}

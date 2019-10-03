@@ -122,8 +122,8 @@ a {
   color: $purple;
   text-decoration: none;
   &:hover {
-    text-decoration: underline;
-    text-shadow: 0.1em 0.1em 0 $orange;
+    color:$link-hover;
+    //text-shadow: 0.1em 0.1em 0 $orange;
   }
 }
 
@@ -142,9 +142,9 @@ a {
   text-align: center;
   z-index: 0;
   &:hover {
-    border-color: darken($cyan, 45%);
+    border-color: $link-hover;
     @include box-shadow(3px, $cyan);
-    color: darken($cyan, 45%);
+    color: $link-hover;
     text-decoration: none;
     text-shadow: none;
   }
@@ -153,10 +153,22 @@ a {
     color: $white;
     @extend .btn;
     &:hover {
-      background: darken($cyan, 45%);
+      background: $link-hover;
       color: $white;
     }
   }
+}
+
+button {
+  @extend .btn;
+}
+
+// images
+.img-cover {
+  height: 100%;
+  max-width: 100%;
+  object-fit: cover;
+  width: 100%;
 }
 
 // Form elements
