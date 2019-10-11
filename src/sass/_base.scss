@@ -55,7 +55,11 @@ h6 {
 }
 
 .main {
+  box-sizing: border-box;
+  max-width: 100%;
+  overflow-x: hidden;
   position: relative;
+  width: 100%;
   &::before {
     background: url(../img/geometric-items.svg) center center no-repeat;
     background-size: contain;
@@ -164,9 +168,12 @@ button {
 }
 
 // images
+img {
+  max-width: 100%;
+}
+
 .img-cover {
   height: 100%;
-  max-width: 100%;
   object-fit: cover;
   width: 100%;
 }

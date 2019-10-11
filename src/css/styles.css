@@ -5946,7 +5946,11 @@ h6 {
 }
 
 .main {
+  box-sizing: border-box;
+  max-width: 100%;
+  overflow-x: hidden;
   position: relative;
+  width: 100%;
 }
 .main::before {
   background: url(../img/geometric-items.svg) center center no-repeat;
@@ -6056,9 +6060,12 @@ textarea:hover, button:hover, .btn--dark:hover, .salon-details__info__card heade
   color: #ffffff;
 }
 
+img {
+  max-width: 100%;
+}
+
 .img-cover, .gallery * img, .salon-details__map img {
   height: 100%;
-  max-width: 100%;
   object-fit: cover;
   width: 100%;
 }
@@ -6342,7 +6349,7 @@ fieldset {
   display: inline-block;
   margin: 0 0.3rem;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1023px) {
   .footer {
     gap: 1rem;
     grid-template-columns: 1fr;
@@ -6561,20 +6568,16 @@ fieldset {
 }
 .salon-details__info__card header {
   display: grid;
-  grid-template-columns: max-content 160px max-content max-content;
-  grid-template-rows: max-content max-content;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(5, max-content);
   margin-bottom: 2rem;
 }
 .salon-details__info__card header h1 {
   display: grid;
   font-size: 1.77rem;
-  grid-column: 1/2;
-  grid-row: 1/2;
-  margin: 0 0 0.5rem;
+  margin-bottom: 0.5rem;
 }
 .salon-details__info__card header .rating-info {
-  grid-column: 1/2;
-  grid-row: 2/3;
   font-size: 0.9rem;
   margin-bottom: 1rem;
 }
@@ -6584,7 +6587,6 @@ fieldset {
 .salon-details__info__card header .share {
   align-content: center;
   display: flex;
-  grid-column: 2/3;
   grid-row: 1/2;
 }
 .salon-details__info__card header .share__like, .salon-details__info__card header .share__share {
@@ -6612,13 +6614,14 @@ fieldset {
   transform: translate(-50%, -50%);
 }
 .salon-details__info__card header address {
-  grid-column: 1/span 2;
-  grid-row: 3/4;
+  display: grid;
   margin: 1rem 0;
   font-style: normal;
 }
 .salon-details__info__card header address a {
+  display: grid;
   color: #444b54;
+  grid-template-columns: 26px 1fr;
 }
 .salon-details__info__card header address a:hover {
   text-decoration: none;
@@ -6629,9 +6632,11 @@ fieldset {
   width: 20px;
 }
 .salon-details__info__card header button {
-  grid-column: 1/span 2;
-  grid-row: 4/5;
   max-width: 220px;
+}
+.salon-details__info__card__services {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 .salon-details__info__gallery {
   border: 1px solid #d3f6f3;
@@ -6644,6 +6649,77 @@ fieldset {
   height: 1200px;
   overflow: hidden;
 }
+@media screen and (max-width: 767px) {
+  .salon-details__info {
+    grid-template-rows: max-content max-content;
+  }
+  .salon-details__info__card__services {
+    grid-template-columns: 1fr;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .salon-details__info__card header {
+    grid-template-columns: 1fr max-content;
+    grid-template-rows: repeat(4, max-content);
+  }
+  .salon-details__info__card header h1 {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    margin-top: 0;
+  }
+  .salon-details__info__card header .rating-info {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+  .salon-details__info__card header .share {
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+  .salon-details__info__card header address {
+    grid-column: 1/span 2;
+    grid-row: 3/4;
+  }
+  .salon-details__info__card header button {
+    grid-column: 1/span 2;
+    grid-row: 4/5;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .salon-details {
+    grid-template-columns: 1fr;
+  }
+  .salon-details__map {
+    height: 380px;
+  }
+}
+@media screen and (min-width: 1366px) {
+  .salon-details__info__card header {
+    grid-template-columns: 1fr max-content;
+    grid-template-rows: repeat(4, max-content);
+  }
+  .salon-details__info__card header h1 {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    margin-top: 0;
+  }
+  .salon-details__info__card header .rating-info {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+  .salon-details__info__card header .share {
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+  .salon-details__info__card header address {
+    grid-column: 1/span 2;
+    grid-row: 3/4;
+  }
+  .salon-details__info__card header button {
+    grid-column: 1/span 2;
+    grid-row: 4/5;
+  }
+}
+
 .gallery {
   display: grid;
   gap: 1rem;
@@ -6653,23 +6729,43 @@ fieldset {
 .gallery__featured {
   background: #f9fce1;
   border-radius: 1rem;
-  grid-column: 1/2;
   display: grid;
+  grid-column: 1/2;
   grid-row: 1/span 3;
   overflow: hidden;
 }
 .gallery__grid {
+  display: grid;
   gap: 1rem;
   grid-column: 2/3;
   grid-row: 1/span 3;
   grid-template-rows: repeat(3, 150px);
-  display: grid;
 }
 .gallery__grid__item {
   background: #fbd1b7;
   border-radius: 1rem;
   display: grid;
   overflow: hidden;
+}
+@media screen and (max-width: 767px) {
+  .gallery {
+    grid-template-columns: 1fr;
+    grid-template-rows: 450px 150px;
+  }
+  .gallery__featured {
+    grid-row: 1/2;
+  }
+  .gallery__grid {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+  }
+}
+@media screen and (max-width: 479px) {
+  .gallery {
+    grid-template-rows: 320px 85px;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

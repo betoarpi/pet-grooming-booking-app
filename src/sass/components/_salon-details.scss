@@ -15,20 +15,15 @@
       grid-row: 2 / 3;
       header {
         display: grid;
-        grid-template-columns: max-content 160px max-content max-content;
-        grid-template-rows: max-content max-content;
+        grid-template-columns: 1fr ;
+        grid-template-rows: repeat(5, max-content);
         margin-bottom: 2rem;
         h1 {
           display: grid;
           font-size: 1.77rem;
-          grid-column: 1 / 2;
-          grid-row: 1 /2;
-          margin: 0 0 0.5rem;
-          //text-shadow: none;
+          margin-bottom: 0.5rem;
         }
         .rating-info {
-          grid-column: 1 / 2;
-          grid-row: 2 /3;
           font-size: 0.9rem;
           margin-bottom: 1rem;
           span {
@@ -38,8 +33,7 @@
         .share {
           align-content: center;
           display: flex;
-          grid-column: 2 / 3;
-          grid-row: 1 /2;
+          grid-row: 1 / 2;
           &__like, &__share {
             align-self: center;
             align-content: center;
@@ -66,12 +60,13 @@
           }
         }
         address {
-          grid-column: 1 / span 2;
-          grid-row: 3 / 4;
+          display: grid;
           margin: 1rem 0;
           font-style: normal;
           a {
+            display: grid;
             color: $gray;
+            grid-template-columns: 26px 1fr;
             &:hover {
               text-decoration: none;
               text-shadow: none;
@@ -84,11 +79,13 @@
           }
         }
         button {
-          grid-column: 1 / span 2;
-          grid-row: 4 / 5;
           @extend .btn--dark;
           max-width: 220px;
         }
+      }
+      &__services {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
       }
     }
     &__gallery {
@@ -104,6 +101,88 @@
     overflow: hidden;
     img {
       @extend .img-cover;
+    }
+  }
+
+  @media screen and (max-width: 767px){
+    &__info{
+      grid-template-rows: max-content max-content;
+      &__card {
+        &__services {
+          grid-template-columns: 1fr;
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1023px){
+    &__info {
+      &__card {
+        header {
+          grid-template-columns: 1fr max-content;
+          grid-template-rows: repeat(4, max-content);
+          h1 {
+            grid-column: 1 / 2;
+            grid-row: 1 /2;
+            margin-top: 0;
+          }
+          .rating-info {
+            grid-column: 1 / 2;
+            grid-row: 2 /3;
+          }
+          .share {
+            grid-column: 2 / 3;
+            grid-row: 1 /2;
+          }
+          address {
+            grid-column: 1 / span 2;
+            grid-row: 3 / 4;
+          }
+          button {
+            grid-column: 1 / span 2;
+            grid-row: 4 / 5;
+          }
+        }
+      }
+    }
+  }
+  
+  @media screen and (max-width: 1023px){
+    grid-template-columns: 1fr;
+    &__map{
+      height: 380px;
+    }
+  }
+
+  @media screen and (min-width: 1366px) {
+    &__info {
+      &__card {
+        header {
+          grid-template-columns: 1fr max-content;
+          grid-template-rows: repeat(4, max-content);
+          h1 {
+            grid-column: 1 / 2;
+            grid-row: 1 /2;
+            margin-top: 0;
+          }
+          .rating-info {
+            grid-column: 1 / 2;
+            grid-row: 2 /3;
+          }
+          .share {
+            grid-column: 2 / 3;
+            grid-row: 1 /2;
+          }
+          address {
+            grid-column: 1 / span 2;
+            grid-row: 3 / 4;
+          }
+          button {
+            grid-column: 1 / span 2;
+            grid-row: 4 / 5;
+          }
+        }
+      }
     }
   }
 }
