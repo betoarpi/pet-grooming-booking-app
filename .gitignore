@@ -36,7 +36,7 @@ build/Release
 node_modules/
 jspm_packages/
 
-# TypeScript v1 declaration files
+# Typescript v1 declaration files
 typings/
 
 # Optional npm cache directory
@@ -57,8 +57,18 @@ typings/
 # dotenv environment variables file
 .env
 
-# next.js build output
-.next
+# IDE
+.idea/*
+*.iml
+*.sublime-*
 
-#graphic assets
-graphic-assets/
+# OSX
+.DS_Store
+.vscode
+
+# Docs Custom
+.cache/
+yarn-error.log
+
+# Build
+dist/
