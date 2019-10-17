@@ -61,7 +61,7 @@ h6 {
   position: relative;
   width: 100%;
   &::before {
-    background: url(../img/geometric-items.svg) center center no-repeat;
+    //background: url('../../static/img/geometric-items.svg') center center no-repeat;
     background-size: contain;
     content: " ";
     height: 296px;
@@ -72,7 +72,7 @@ h6 {
     z-index: -1;
   }
   &::after {
-    background: url(../img/zig-zag.svg) center center no-repeat;
+    //background: url('../../static/img/zig-zag.svg') center center no-repeat;
     background-size: contain;
     content: " ";
     height: 71px;

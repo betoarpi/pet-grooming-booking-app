@@ -1,5 +1,7 @@
+@import './../styles.scss';
+
 .groomers-filter {
-  background: $orange url('../img/geometric-patterns.png') repeat center center;
+  background: $orange url('../../../static/img/geometric-patterns.png') repeat center center;
   background-size: 200px 200px;
   color: $purple;
   margin: 3rem 0 2rem 0;
