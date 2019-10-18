@@ -49,6 +49,7 @@
     "webpack-dev-server": "^3.8.2"
   },
   "dependencies": {
+    "google-maps-react": "^2.0.2",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
     "react-redux": "^7.1.1",

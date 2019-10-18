@@ -1,5 +1,10 @@
 import React from 'react';
 import SalonMap from '../components/SalonMap';
+import CalendarPlaceholder from '../assets/static/img/calendar-placeholder.jpg';
+import GalleryFeatured from '../assets/static/img/gallery__featured.jpg';
+import GridItem1 from '../assets/static/img/gallery__grid__item-1.jpg';
+import GridItem2 from '../assets/static/img/gallery__grid__item-2.jpg';
+import GridItem3 from '../assets/static/img/gallery__grid__item-3.jpg';
 
 const Salon = () => (
   <section className='salon-details'>
@@ -70,25 +75,25 @@ const Salon = () => (
           </div>
           <div className='availability'>
             <h5>Disponibilidad</h5>
-            <img src='/src/img/calendar-placeholder.jpg' alt='Calendar placeholder' />
+            <img src={CalendarPlaceholder} alt='Calendar placeholder' />
           </div>
         </div>
       </div>
 
       <div className='salon__details__info__gallery gallery'>
         <a href='/' className='gallery__featured'>
-          <img src='/src/img/gallery__featured.jpg' alt='title' />
+          <img src={GalleryFeatured} alt='title' />
         </a>
 
         <div className='gallery__grid'>
           <a href='/' className='gallery__grid__item'>
-            <img src='/src/img/gallery__grid__item-1.jpg' alt='title' />
+            <img src={GridItem1} alt='title' />
           </a>
           <a href='/' className='gallery__grid__item'>
-            <img src='/src/img/gallery__grid__item-2.jpg' alt='title' />
+            <img src={GridItem2} alt='title' />
           </a>
           <a href='/' className='gallery__grid__item'>
-            <img src='/src/img/gallery__grid__item-3.jpg' alt='title' />
+            <img src={GridItem3} alt='title' />
           </a>
         </div>
       </div>

@@ -5,6 +5,7 @@
   grid-template-columns: 1fr 480px;
   max-width: 1400px;
   margin: 0 auto;
+  padding-bottom: 1rem;
   width: calc(100% - 4rem);
   &__info {
     display: grid;
@@ -98,11 +99,18 @@
   }
   &__map {
     @include border-radius-all(1rem);
+    @include box-shadow(1rem, $orange);
     display: grid;
-    height: 1200px;
+    height: 100%;
+    margin-right:1rem;
+    min-height: 100vh;
     overflow: hidden;
+    position: relative;
     img {
       @extend .img-cover;
+    }
+    .gm-control-active {
+      box-shadow: none;
     }
   }
 
