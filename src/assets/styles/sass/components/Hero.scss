@@ -33,7 +33,6 @@
 
   // Responsive de los elementos del hero
   @media screen and (max-width: 767px){
-    grid-template-columns: 1fr 2fr;
     grid-template-rows: max-content 2rem max-content max-content;
 
     &__title {
@@ -54,7 +53,7 @@
     }
   }
 
-  @media screen and (max-width: 479px){
+  @media screen and (max-width: 489px){
     grid-template-columns: 1fr;
     grid-template-rows: initial;
 
@@ -62,7 +61,7 @@
       align-self: initial;
       grid-row: initial;
       margin: 0 0 2rem 0;
-      text-align: initial;
+      text-align: center;
     }
     &__description,
     &__btn {

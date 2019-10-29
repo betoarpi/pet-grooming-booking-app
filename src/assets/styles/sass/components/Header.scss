@@ -53,6 +53,7 @@
       text-align: right;
       top: 56px;
       width: 210px;
+      z-index: 1;
       &:before {
         content: ' ';
         display: block;
@@ -80,11 +81,19 @@
     }
   }
   &__mobile {
+    border: none;
+    border-radius: none;
+    box-shadow: none;
     display: none;
     font-size: 2rem;
     height: 40px;
     position: relative;
     width: 32px;
+    &:hover {
+      border: none;
+      border-radius: none;
+      box-shadow: none;
+    }
     .bars {
       background: $purple;
       @include border-radius-all(2px);
