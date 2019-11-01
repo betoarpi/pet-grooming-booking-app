@@ -1,6 +1,5 @@
 import React from 'react';
 import SalonMap from '../components/SalonMap';
-import CalendarPlaceholder from '../assets/static/img/calendar-placeholder.jpg';
 import GalleryFeatured from '../assets/static/img/gallery__featured.jpg';
 import GridItem1 from '../assets/static/img/gallery__grid__item-1.jpg';
 import GridItem2 from '../assets/static/img/gallery__grid__item-2.jpg';
@@ -65,6 +64,8 @@ const Salon = () => (
               <li>Baño y corte</li>
               <li>Limpieza Dental</li>
             </ul>
+          </div>
+          <div className='services'>
             <h6>Servicios Adicionales</h6>
             <ul>
               <li>Veterinaria</li>
@@ -72,10 +73,6 @@ const Salon = () => (
               <li>Pensión</li>
               <li>Transporte de tu mascota para servicios veterinarios y estéticos</li>
             </ul>
-          </div>
-          <div className='availability'>
-            <h5>Disponibilidad</h5>
-            <img src={CalendarPlaceholder} alt='Calendar placeholder' />
           </div>
         </div>
       </div>
