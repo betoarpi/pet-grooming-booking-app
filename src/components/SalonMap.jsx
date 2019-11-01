@@ -1,8 +1,6 @@
 import React from 'react';
 import { Map, GoogleApiWrapper } from 'google-maps-react';
-import '../assets/styles/sass/components/Salon.scss';
-import '../assets/styles/sass/components/Gallery.scss';
-import CalendarPlaceholder from '../assets/static/img/calendar-placeholder.jpg';
+import AvailabilityCalendar from './AvailabilityCalendar';
 
 const SalonMap = ({ google }) => {
   return (
@@ -14,7 +12,7 @@ const SalonMap = ({ google }) => {
       />
       <div className='availability'>
         <h5 className='availability__title'>Disponibilidad</h5>
-        <img src={CalendarPlaceholder} alt='Calendar placeholder' />
+        <AvailabilityCalendar />
       </div>
     </div>
   );

@@ -1,0 +1,117 @@
+@import './../styles.scss';
+
+.availability {
+  background: white;
+  @include border-radius-all(1rem);
+  bottom: 1rem;
+  box-shadow: 0 0 1rem rgba($gray, 0.25);
+  left: 50%;
+  padding:2rem;
+  position: absolute;
+  transform: translateX(-50%);
+  width: calc(100% - 2rem);
+  &__title {
+    margin:0 0 1.125rem;
+    @include text-shadow(0.1em, $yellow);
+  }
+
+  .rbc-calendar {
+    min-height: 300px;
+  }
+
+  .rbc-toolbar {
+    padding: 0 2rem;
+    position: relative;
+    .rbc-btn-group {
+      button {
+        border: none;
+        @include border-radius-all(0);
+        box-shadow: none;
+        font-size: 0;
+        font-weight: normal;
+        padding:0;
+        &:before {
+          font-size: 1rem;
+        }
+        &:hover {
+          background: none;
+        }
+      }
+
+      &:first-child {
+        button {
+          &:first-child {
+            font-size: 0.85rem;
+            &:before {
+              content:none;
+            }
+          }
+          &:nth-child(2){
+            left: 0;
+            position: absolute;
+            &:before {
+              color: lighten($gray, 50%);
+              content: '\f053';
+              font-family: 'Font Awesome 5 Free';
+              font-weight: 900;
+              -moz-osx-font-smoothing: grayscale;
+              -webkit-font-smoothing: antialiased;
+              font-style: normal;
+              font-variant: normal;
+              text-rendering: auto;
+              line-height: 1;
+              font-size: 1.5rem;
+            }
+          }
+          &:nth-child(3){
+            right: 0;
+            position: absolute;
+            &:before {
+              color: lighten($gray, 50%);
+              content: '\f054';
+              font-family: 'Font Awesome 5 Free';
+              font-weight: 900;
+              -moz-osx-font-smoothing: grayscale;
+              -webkit-font-smoothing: antialiased;
+              font-style: normal;
+              font-variant: normal;
+              text-rendering: auto;
+              line-height: 1;
+              font-size: 1.5rem;
+            }
+          }
+        }
+      }
+      &:last-child {
+        button {
+          &:nth-child(1){
+            &:before {
+              content: 'M';
+            }
+          }
+          &:nth-child(2){
+            &:before {
+              content: 'S';
+            }
+          }
+          &:nth-child(3){
+            &:before {
+              content: 'D';
+            }
+          }
+          &:last-child {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  .rbc-off-range-bg {
+    background: lighten($gray, 65%);
+  }
+  
+  .rbc-today {
+    background: $cyan;
+  }
+}

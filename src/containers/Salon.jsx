@@ -1,5 +1,7 @@
 import React from 'react';
 import SalonMap from '../components/SalonMap';
+import '../assets/styles/sass/components/Salon.scss';
+import '../assets/styles/sass/components/Gallery.scss';
 import GalleryFeatured from '../assets/static/img/gallery__featured.jpg';
 import GridItem1 from '../assets/static/img/gallery__grid__item-1.jpg';
 import GridItem2 from '../assets/static/img/gallery__grid__item-2.jpg';
