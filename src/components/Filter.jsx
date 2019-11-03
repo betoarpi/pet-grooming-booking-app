@@ -3,7 +3,7 @@ import '../assets/styles/sass/components/Filter.scss';
 
 const Filter = () => {
   return (
-    <div className='groomers-filter'>
+    <div id='filter' className='groomers-filter'>
       <form action='' className='groomers-filter__form'>
         <div>
           <span>
