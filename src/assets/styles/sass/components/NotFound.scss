@@ -1,0 +1,34 @@
+.not-found {
+  margin: 0 auto;
+  max-width: 1400px;
+  padding-bottom: 2rem;
+  position: relative;
+  width: 100%;
+  h1 {
+    left: 22%;
+    line-height: 1;
+    position: absolute;
+    top: 0;
+    span {
+      font-size: 2em;
+      line-height: 1;
+    }
+  }
+  img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    width: 800px;
+  }
+  @media screen and (max-width: 1024px) {
+    padding: 0 2rem;
+    h1 {
+      left: 2rem;
+    }
+  }
+  @media screen and (max-width: 479px) {
+    h1 {
+      position: relative;
+    }
+  }
+}

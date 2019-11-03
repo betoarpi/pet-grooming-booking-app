@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Home from '../containers/Home';
 import Salon from '../containers/Salon';
+import NotFound from '../containers/NotFound';
 import Layout from '../containers/Layout';
 
 const App = () => (
@@ -10,6 +11,7 @@ const App = () => (
       <Switch>
         <Route exact path='/' component={Home} />
         <Route exact path='/salon' component={Salon} />
+        <Route component={NotFound} />
       </Switch>
     </Layout>
   </BrowserRouter>

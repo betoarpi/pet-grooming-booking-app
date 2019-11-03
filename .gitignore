@@ -72,3 +72,6 @@ yarn-error.log
 
 # Build
 dist/
+
+#Graphic Assets
+graphic-assets/
