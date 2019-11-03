@@ -1,21 +1,16 @@
-import React from 'react';
-import { Calendar, momentLocalizer } from 'react-big-calendar';
-import moment from 'moment';
-import '../assets/styles/sass/components/AvailabilityCalendar.scss';
-
-const localizer = momentLocalizer(moment);
-const myEventsList = [];
-const getNow = () => new Date();
+import React, { useState } from 'react';
+import DatePicker from 'react-datepicker';
+import '../assets/styles/sass/components/DatePicker.scss';
 
 const AvailabilityCalendar = (props) => {
+  const [pickedDate, setPickedDate] = useState(new Date());
+
   return (
-    <Calendar
-      defaultView='month'
-      localizer={localizer}
-      events={myEventsList}
-      startAccessor='start'
-      endAccessor='end'
-      getNow={getNow}
+    <DatePicker
+      showPopperArrow={false}
+      selected={pickedDate}
+      onChange={(date) => setPickedDate(date)}
+      inline
     />
   );
 };

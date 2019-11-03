@@ -19,5 +19,5 @@ const SalonMap = ({ google }) => {
 };
 
 export default GoogleApiWrapper({
-  apiKey: 'AIzaSyBvLWZ8AczyW_kcKg5hPa-N18vaNTUXkcA',
+  apiKey: 'AIzaSyAvW5LdyKj_QPEn57wSrqUFIVM9TdPk_xs',
 })(SalonMap);
