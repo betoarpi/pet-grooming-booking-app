@@ -49,7 +49,7 @@ class Header extends React.Component {
         <nav className='navigation'>
           <ul className='navigation__website'>
             <li>
-              <a href='/'>¿Qué es Groomerly?</a>
+              <a href='/acerca-de-groomerly'>¿Qué es Groomerly?</a>
             </li>
             <li>
               <a href='/'>Encuentra una estética</a>
