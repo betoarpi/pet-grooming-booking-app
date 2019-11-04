@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import GroomingSalon from '../assets/static/img/grooming-salon.jpg';
 import DogComb from '../assets/static/img/dog-comb.jpg';
 import DogBath from '../assets/static/img/dog-bath.jpg';
@@ -11,7 +12,7 @@ const Grid = () => {
       <h2>Estas son las estéticas caninas que encontramos para tí</h2>
 
       <div className='groomers-grid__container'>
-        <div className='groomers-grid__item'>
+        <Link to='/salon' className='groomers-grid__item'>
           <div className='groomers-grid__item__thumbnail'>
             <div className='fav'>
               <i className='fa fa-heart' aria-hidden='true'> </i>
@@ -38,9 +39,9 @@ const Grid = () => {
               Book now
             </button>
           </article>
-        </div>
+        </Link>
 
-        <div className='groomers-grid__item'>
+        <Link to='/salon' className='groomers-grid__item'>
           <div className='groomers-grid__item__thumbnail'>
             <div className='fav'>
               <i className='fa fa-heart' aria-hidden='true'> </i>
@@ -67,9 +68,9 @@ const Grid = () => {
               Book now
             </button>
           </article>
-        </div>
+        </Link>
 
-        <div className='groomers-grid__item'>
+        <Link to='/salon' className='groomers-grid__item'>
           <div className='groomers-grid__item__thumbnail'>
             <div className='fav'>
               <i className='fa fa-heart' aria-hidden='true'> </i>
@@ -96,9 +97,9 @@ const Grid = () => {
               Book now
             </button>
           </article>
-        </div>
+        </Link>
 
-        <div className='groomers-grid__item'>
+        <Link to='/salon' className='groomers-grid__item'>
           <div className='groomers-grid__item__thumbnail'>
             <div className='fav'>
               <i className='fa fa-heart' aria-hidden='true'> </i>
@@ -125,9 +126,9 @@ const Grid = () => {
               Book now
             </button>
           </article>
-        </div>
+        </Link>
 
-        <div className='groomers-grid__item'>
+        <Link to='/salon' className='groomers-grid__item'>
           <div className='groomers-grid__item__thumbnail'>
             <div className='fav'>
               <i className='fa fa-heart' aria-hidden='true'> </i>
@@ -154,9 +155,9 @@ const Grid = () => {
               Book now
             </button>
           </article>
-        </div>
+        </Link>
 
-        <div className='groomers-grid__item'>
+        <Link to='/salon' className='groomers-grid__item'>
           <div className='groomers-grid__item__thumbnail'>
             <div className='fav'>
               <i className='fa fa-heart' aria-hidden='true'> </i>
@@ -183,7 +184,7 @@ const Grid = () => {
               Book now
             </button>
           </article>
-        </div>
+        </Link>
       </div>
     </section>
   );

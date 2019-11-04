@@ -1,0 +1,205 @@
+@import './../styles.scss';
+
+.salon-details {
+  gap: 2rem;
+  grid-template-columns: 1fr 480px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding-bottom: 1rem;
+  width: calc(100% - 4rem);
+  &__info {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: 482px max-content;
+    &__card {
+      align-content: start;
+      display: grid;
+      grid-row: 2 / 3;
+      header {
+        display: grid;
+        grid-template-columns: 1fr ;
+        grid-template-rows: repeat(5, max-content);
+        margin-bottom: 2rem;
+        h1 {
+          display: grid;
+          font-size: 1.77rem;
+          margin-bottom: 0.5rem;
+        }
+        .rating-info {
+          font-size: 0.9rem;
+          margin-bottom: 1rem;
+          span {
+            color: lighten($gray, 30%);
+          }
+        }
+        .share {
+          align-content: center;
+          display: flex;
+          grid-row: 1 / 2;
+          &__like, &__share {
+            align-self: center;
+            align-content: center;
+            display: inline-flex;
+          }
+          &__like {
+            font-size: 1.125rem;
+            margin-right: 1rem;
+          }
+          .fa-share {
+            background: $orange;
+            color: white;
+            @include border-radius-all(50%);
+            height: 24px;
+            margin-right: 0.5rem;
+            position: relative;
+            width: 24px;
+            &:before {
+              left: 50%;
+              position: absolute;
+              top:50%;
+              transform: translate(-50%, -50%);
+            }
+          }
+        }
+        address {
+          display: grid;
+          margin: 1rem 0;
+          font-style: normal;
+          a {
+            display: grid;
+            color: $gray;
+            grid-template-columns: 26px 1fr;
+            &:hover {
+              text-decoration: none;
+              text-shadow: none;
+              color: $gray;
+            }
+  
+            i {
+              width: 20px;
+            }
+          }
+        }
+        button {
+          @extend .btn--dark;
+          max-width: 220px;
+        }
+      }
+      &__services {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    &__gallery {
+      border:1px solid $cyan;
+      display: grid;
+      grid-row: 1 / 2;
+    }
+  }
+  &__map {
+    @include border-radius-all(1rem);
+    @include box-shadow(1rem, $orange);
+    display: grid;
+    height: 100%;
+    margin-right:1rem;
+    min-height: 100vh;
+    overflow: hidden;
+    position: relative;
+    img {
+      @extend .img-cover;
+    }
+    .gm-control-active {
+      box-shadow: none;
+    }
+    .gm-svpc{
+      display: none;
+    }
+    .gm-bundled-control-on-bottom {
+      bottom:initial;
+      top:0;
+    }
+  }
+
+  @media screen and (max-width: 767px){
+    &__info{
+      grid-template-rows: max-content max-content;
+      &__card {
+        &__services {
+          grid-template-columns: 1fr;
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1023px){
+    &__info {
+      &__card {
+        header {
+          grid-template-columns: 1fr max-content;
+          grid-template-rows: repeat(4, max-content);
+          h1 {
+            grid-column: 1 / 2;
+            grid-row: 1 /2;
+            margin-top: 0;
+          }
+          .rating-info {
+            grid-column: 1 / 2;
+            grid-row: 2 /3;
+          }
+          .share {
+            grid-column: 2 / 3;
+            grid-row: 1 /2;
+          }
+          address {
+            grid-column: 1 / span 2;
+            grid-row: 3 / 4;
+          }
+          button {
+            grid-column: 1 / span 2;
+            grid-row: 4 / 5;
+          }
+        }
+      }
+    }
+  }
+  
+  @media screen and (max-width: 1023px){
+    grid-template-columns: 1fr;
+    &__map{
+      height: 380px;
+    }
+  }
+
+  @media screen and (min-width: 1366px) {
+    &__info {
+      &__card {
+        header {
+          grid-template-columns: 1fr max-content;
+          grid-template-rows: repeat(4, max-content);
+          h1 {
+            grid-column: 1 / 2;
+            grid-row: 1 /2;
+            margin-top: 0;
+          }
+          .rating-info {
+            grid-column: 1 / 2;
+            grid-row: 2 /3;
+          }
+          .share {
+            grid-column: 2 / 3;
+            grid-row: 1 /2;
+          }
+          address {
+            grid-column: 1 / span 2;
+            grid-row: 3 / 4;
+          }
+          button {
+            grid-column: 1 / span 2;
+            grid-row: 4 / 5;
+          }
+        }
+      }
+    }
+  }
+}

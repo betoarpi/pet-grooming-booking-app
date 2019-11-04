@@ -25,9 +25,6 @@
 
     &:hover {
       transform: scale(1.03);
-      ~ .groomers-grid__item {
-        opacity: 0.5;
-      }
     }
 
     &__thumbnail {

@@ -10,7 +10,7 @@ const Hero = () => {
         Regístrate ya y encuentra el Grooming Salón ideal. Reserva servicios
         de baño para tu mascota, cortes de pelo, SPA y servicios premium.
       </p>
-      <a href='/' className='hero__btn'>Reservar ahora</a>
+      <a href='#filter' className='hero__btn'>Reservar ahora</a>
       <img src={WetDog} alt='Pet Grooming App' className='hero__img' />
     </div>
   );

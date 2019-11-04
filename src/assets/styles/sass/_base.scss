@@ -1,5 +1,6 @@
 html {
   font-size: 16px;
+  scroll-behavior: smooth;
   * {
     box-sizing: border-box;
   }
@@ -26,6 +27,7 @@ h4,
 h5,
 h6 {
   @extend .font-bold;
+  margin:0 0 1rem 0;
 }
 
 h1 {
@@ -160,6 +162,9 @@ a {
       background: $link-hover;
       color: $white;
     }
+  }
+  i {
+    margin-left: 0.5rem;
   }
 }
 
