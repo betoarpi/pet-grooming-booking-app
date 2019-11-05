@@ -15,3 +15,10 @@
 @mixin box-shadow($px, $color) {
   box-shadow: $px $px 0 $color;
 }
+
+@mixin background-opacity($color, $alpha) {
+  $red: red($color);
+  $green: green($color);
+  $blue: blue($color);
+  background: rgba($red, $green, $blue, $alpha);
+}
