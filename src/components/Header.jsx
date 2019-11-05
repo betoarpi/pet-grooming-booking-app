@@ -52,7 +52,7 @@ class Header extends React.Component {
               <a href='/acerca-de-groomerly'>¿Qué es Groomerly?</a>
             </li>
             <li>
-              <a href='/'>Encuentra una estética</a>
+              <a href='/#filter'>Encuentra una estética</a>
             </li>
             <li>
               <a href='/' id='register-now'>Regístrate</a>

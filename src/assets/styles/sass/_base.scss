@@ -56,6 +56,11 @@ h6 {
   font-size: 1rem;
 }
 
+::selection {
+  background: lighten($purple, 50%);
+  color: $white;
+}
+
 .main {
   box-sizing: border-box;
   max-width: 100%;
