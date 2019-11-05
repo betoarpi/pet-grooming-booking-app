@@ -6,6 +6,7 @@
   grid-template-columns: 3fr 2fr;
   margin: 0 auto;
   max-width: 1400px;
+  padding: 0 2rem;
   width: 100%;
   figure {
     border-radius: 33% 67% 71% 29% / 38% 25% 75% 62%;
@@ -26,7 +27,6 @@
 
   @media screen and (max-width: 1199px){
     grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
   }
   
   @media screen and (max-width: 1023px){

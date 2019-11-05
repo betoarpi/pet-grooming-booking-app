@@ -2,6 +2,7 @@
 
 .login {
     width: 100%;
+    min-height: calc(100vh - 319px);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -9,7 +10,6 @@
     &__container {
         display: flex;
         width: 43.75rem;
-        height: 31.25rem;
         margin-bottom: 1rem;
         @include border-radius-all(2rem);
         @include box-shadow(8px, $cyan);
@@ -89,6 +89,12 @@
         margin-left: auto;
         margin-right: auto;
         width: 200px;
+    }
+
+    &__register {
+        margin-top:2rem;
+        padding-bottom: 2rem;
+        text-align: center;
     }
 
     &__right {

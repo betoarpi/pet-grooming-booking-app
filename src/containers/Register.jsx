@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../assets/styles/sass/views/_register.scss';
 
 const Register = () => (
@@ -6,19 +7,19 @@ const Register = () => (
     <div className='register__container'>
       <div className='register__left'>
         <h3 className='register__title'>
-          Sign Up
+          Regístrate
         </h3>
         <div className='register__input-group'>
-          <label className='register__label'>Username</label>
-          <input type='text' name='username'/>
+          <label className='register__label'>Nombre de Usuario</label>
+          <input type='text' name='username' />
         </div>
         <div className='register__input-group'>
-          <label className='register__label'>Email</label>
-          <input type='email' name='email'/>
+          <label className='register__label'>Correo electrónico</label>
+          <input type='email' name='email' />
         </div>
         <div className='register__input-group'>
-          <label className='register__label'>Password</label>
-          <input type='password' name='password'/>
+          <label className='register__label'>Contraseña</label>
+          <input type='password' name='password' />
         </div>
         <div className='register__social-buttons'>
           <div className='register__facebook-button'>
@@ -30,13 +31,16 @@ const Register = () => (
             <span className='google__title'>google</span>
           </div>
         </div>
-        <div className="register__submit">
-          <button type='submit'>Continue</button>
+        <div className='register__submit'>
+          <button type='submit'>Continuar</button>
+        </div>
+        <div className="register__login">
+          <Link to='/login'>¿Ya tienes una cuenta? Inicia sesión</Link>
         </div>
       </div>
       <div className='register__right'>
         <h3 className="register__welcome">
-          Welcome
+          Bienvenido
         </h3>
         <div className="register__divider" />
       </div>

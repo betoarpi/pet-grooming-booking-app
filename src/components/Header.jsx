@@ -55,7 +55,7 @@ class Header extends React.Component {
               <a href='/#filter'>Encuentra una estética</a>
             </li>
             <li>
-              <a href='/' id='register-now'>Regístrate</a>
+              <a href='/register' id='register-now'>Regístrate</a>
             </li>
           </ul>
 
@@ -71,7 +71,7 @@ class Header extends React.Component {
             </div>
             <ul className='navigation__user__options'>
               <li>
-                <a href='/'>
+                <a href='/profile'>
                   Mi Perfil
                   <i className='fas fa-user-circle'> </i>
                 </a>
