@@ -19,7 +19,7 @@ export default {
         'http://dummyimage.com/736x1040.jpg/cc0000/ffffff',
         'http://dummyimage.com/719x884.bmp/dddddd/000000',
         'http://dummyimage.com/1005x497.jpg/ff4444/ffffff',
-      ]
+      ],
     },
     {
       'id': 2,
@@ -40,7 +40,7 @@ export default {
         'http://dummyimage.com/736x1040.jpg/cc0000/ffffff',
         'http://dummyimage.com/719x884.bmp/dddddd/000000',
         'http://dummyimage.com/1005x497.jpg/ff4444/ffffff',
-      ]
+      ],
     },
     {
       'id': 3,
@@ -61,7 +61,7 @@ export default {
         'http://dummyimage.com/736x1040.jpg/cc0000/ffffff',
         'http://dummyimage.com/719x884.bmp/dddddd/000000',
         'http://dummyimage.com/1005x497.jpg/ff4444/ffffff',
-      ]
+      ],
     },
     {
       'id': 4,
@@ -82,7 +82,7 @@ export default {
         'http://dummyimage.com/736x1040.jpg/cc0000/ffffff',
         'http://dummyimage.com/719x884.bmp/dddddd/000000',
         'http://dummyimage.com/1005x497.jpg/ff4444/ffffff',
-      ]
+      ],
     },
     {
       'id': 5,
@@ -103,7 +103,7 @@ export default {
         'http://dummyimage.com/736x1040.jpg/cc0000/ffffff',
         'http://dummyimage.com/719x884.bmp/dddddd/000000',
         'http://dummyimage.com/1005x497.jpg/ff4444/ffffff',
-      ]
+      ],
     },
     {
       'id': 6,
@@ -124,7 +124,7 @@ export default {
         'http://dummyimage.com/736x1040.jpg/cc0000/ffffff',
         'http://dummyimage.com/719x884.bmp/dddddd/000000',
         'http://dummyimage.com/1005x497.jpg/ff4444/ffffff',
-      ]
+      ],
     },
     {
       'id': 7,
@@ -145,7 +145,7 @@ export default {
         'http://dummyimage.com/736x1040.jpg/cc0000/ffffff',
         'http://dummyimage.com/719x884.bmp/dddddd/000000',
         'http://dummyimage.com/1005x497.jpg/ff4444/ffffff',
-      ]
+      ],
     },
   ],
 };

@@ -1,0 +1,18 @@
+@import './../styles.scss';
+
+.modal {
+  background:rgba($gray, 0.8);
+  left: 0;
+  min-height: 100%;
+  position: fixed;
+  top:0;
+  width: 100%;
+  &__container {
+    background: $white;
+    @include border-radius-all(1rem);
+    display: grid;
+    margin: 4rem auto 0 auto;
+    max-width: 800px;
+    padding: 2rem;
+  }
+}

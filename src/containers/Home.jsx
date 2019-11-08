@@ -11,4 +11,10 @@ const Home = () => (
   </>
 );
 
+/* const mapStateToProps = (state) => {
+  return {
+    salons: state.salons,
+  };
+}; */
+
 export default Home;
