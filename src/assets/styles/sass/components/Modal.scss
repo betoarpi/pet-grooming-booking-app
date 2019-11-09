@@ -10,9 +10,25 @@
   &__container {
     background: $white;
     @include border-radius-all(1rem);
-    display: grid;
+    display: flex;
     margin: 4rem auto 0 auto;
     max-width: 800px;
     padding: 2rem;
+    position: relative;
+  }
+
+  &__close {
+    background: transparent;
+    border:none;
+    @include border-radius-all(0);
+    box-shadow: none;
+    color: rgba($gray, 0.5);
+    right: 0.5rem;
+    position: absolute;
+    top:0.5rem;
+    &:hover {
+      background: transparent;
+      box-shadow: none;
+    }
   }
 }
