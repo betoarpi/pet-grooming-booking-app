@@ -14,7 +14,6 @@
     margin: 2rem auto 0 auto;
     max-height: calc(100vh - 4rem);
     max-width: calc(800px - 4rem);
-    overflow-y: scroll;
     padding: 2rem;
     position: relative;
   }
@@ -32,6 +31,23 @@
     &:hover {
       background: transparent;
       box-shadow: none;
+    }
+  }
+  @media screen and (max-height: 679px) {
+    &__container {
+      overflow-y: scroll;
+    }
+    &__container::-webkit-scrollbar {
+      width: 0.5rem;
+    }
+    &__container::-webkit-scrollbar-track {
+      background: rgba($gray, 0.1);
+      -webkit-box-shadow: none;
+      box-shadow: none;
+    }
+    &__container::-webkit-scrollbar-thumb {
+      background-color: rgba($gray, 0.2);
+      border-radius: 0.5rem;
     }
   }
 }

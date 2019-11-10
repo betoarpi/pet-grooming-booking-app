@@ -1,14 +1,13 @@
 import React, { useState } from 'react';
 import DatePicker from 'react-datepicker';
-import ReservationModal from './ReservationModal';
+import BookingnModal from './BookingModal';
 import '../assets/styles/sass/components/DatePicker.scss';
 
 const AvailabilityCalendar = (props) => {
   const [pickedDate, setPickedDate] = useState(new Date());
   const [modalOpen, setModalOpen] = useState(true);
-  const { onClose } = props;
 
-  function handleSelect(){
+  function handleSelect() {
     setModalOpen(true);
   }
 
@@ -18,7 +17,9 @@ const AvailabilityCalendar = (props) => {
 
   return (
     <div className='availability'>
-      <h5 className='availability__title'>Disponibilidad { modalOpen ? 'true' : 'false' }</h5>
+      <h5 className='availability__title'>
+        Disponibilidad
+      </h5>
       <DatePicker
         showPopperArrow={false}
         selected={pickedDate}
@@ -26,7 +27,7 @@ const AvailabilityCalendar = (props) => {
         onSelect={handleSelect}
         inline
       />
-      <ReservationModal modalOpen={modalOpen} onClose={handleClose} />
+      <BookingnModal modalOpen={modalOpen} onClose={handleClose} />
     </div>
   );
 };
