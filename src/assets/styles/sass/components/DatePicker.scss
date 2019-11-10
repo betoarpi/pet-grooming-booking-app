@@ -6,6 +6,7 @@
   bottom: 1rem;
   box-shadow: 0 0 1rem rgba($gray, 0.25);
   left: 50%;
+  max-width: 450px;
   padding:2rem;
   position: absolute;
   transform: translateX(-50%);
@@ -99,5 +100,8 @@
         border-left: 1px solid lighten($gray, 55%);
       }
     }
+  }
+  @media screen and (max-width: 359px) {
+    width: 100%;
   }
 }
