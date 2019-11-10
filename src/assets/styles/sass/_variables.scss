@@ -6,8 +6,8 @@ $orange: #fbd1b7;
 $purple: #4a148c;
 $yellow: #fee9b2;
 $white: #ffffff;
-$link-hover:darken($cyan, 45%);
-$light-gray: #D5D5D5;
+$link-hover: darken($cyan, 45%);
+$light-gray: #d5d5d5;
 
 /* Font Variables */
 $font-cortado: cortado, sans-serif;
@@ -24,3 +24,10 @@ $font-montserrat: montserrat, sans-serif;
 .font-bold {
   @include font-family($font-montserrat, 700, normal);
 }
+
+//break points
+
+$mobile: 479px;
+$tablet: 767px;
+$laptop: 1023px;
+$desktop: 1365px;
