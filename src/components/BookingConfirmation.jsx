@@ -2,7 +2,7 @@ import React from 'react';
 
 const BookingConfirmation = () => {
   return (
-    <div className='booking-confirmation active'>
+    <div className='booking-confirmation'>
       <h4 className='booking-confirmation__title'>Confirma tu Servicio</h4>
 
       <div className='booking-confirmation__container'>
