@@ -2,17 +2,19 @@
 
 .modal {
   background:rgba($gray, 0.8);
+  bottom:0;
   left: 0;
-  min-height: 100vh;
   position: fixed;
+  overflow-y: auto;
+  right: 0;
   top:0;
   width: 100%;
   &__container {
     background: $white;
     @include border-radius-all(1rem);
+    box-shadow: 0.5rem 0.5rem 0 $orange;
     display: flex;
-    margin: 2rem auto 0 auto;
-    max-height: calc(100vh - 4rem);
+    margin: 2rem auto 2rem auto;
     max-width: calc(800px - 4rem);
     padding: 2rem;
     position: relative;
@@ -32,23 +34,6 @@
     &:hover {
       background: transparent;
       box-shadow: none;
-    }
-  }
-  @media screen and (max-height: 679px) {
-    &__container {
-      overflow-y: scroll;
-    }
-    &__container::-webkit-scrollbar {
-      width: 0.5rem;
-    }
-    &__container::-webkit-scrollbar-track {
-      background: rgba($gray, 0.1);
-      -webkit-box-shadow: none;
-      box-shadow: none;
-    }
-    &__container::-webkit-scrollbar-thumb {
-      background-color: rgba($gray, 0.2);
-      border-radius: 0.5rem;
     }
   }
 }

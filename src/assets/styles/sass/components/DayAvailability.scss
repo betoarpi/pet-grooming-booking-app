@@ -1,7 +1,7 @@
 @import './../styles.scss';
 
 .day-availability {
-    display: grid;
+    display: none;
     grid-template-columns: 1fr;
     margin-bottom: -2rem;
     width: 100%;
@@ -110,5 +110,9 @@
             border-right: none;
             text-align: left;
         }
+    }
+
+    &.active {
+        display: grid;
     }
 }
