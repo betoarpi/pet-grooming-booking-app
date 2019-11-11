@@ -1,8 +1,15 @@
 import React from 'react';
 
 const BookingConfirmation = () => {
+  function handleClick(e) {
+    e.preventDefault();
+    const bookingConfirmationContainer = document.getElementById('booking-confirmation');
+    const bookingSuccessContainer = document.getElementById('booking-success');
+    bookingConfirmationContainer.classList.remove('active');
+    bookingSuccessContainer.classList.add('active');
+  }
   return (
-    <div className='booking-confirmation'>
+    <div className='booking-confirmation' id='booking-confirmation'>
       <h4 className='booking-confirmation__title'>Confirma tu Servicio</h4>
 
       <div className='booking-confirmation__container'>
@@ -107,7 +114,7 @@ const BookingConfirmation = () => {
             <span className='price'>
               Costo: $250.00 MXN
             </span>
-            <button type='submit' className='btn btn--dark'>
+            <button type='submit' className='btn btn--dark' onClick={(e) => handleClick(e)}>
               Agendar Servicio
             </button>
           </div>

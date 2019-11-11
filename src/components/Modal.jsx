@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import '../assets/styles/sass/components/Modal.scss';
 
 const Modal = (props) => {
-  const {modalOpen, onClose} = props;
+  const { modalOpen, onClose } = props;
   if (!modalOpen) {
     return null;
   }

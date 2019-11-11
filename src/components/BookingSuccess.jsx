@@ -2,7 +2,7 @@ import React from 'react';
 
 const BookingSuccess = () => {
   return (
-    <div className='booking-confirmation active'>
+    <div className='booking-confirmation booking-confirmation--success' id='booking-success'>
       <h4 className='booking-confirmation__title'>¡Tu servicio está confirmado!</h4>
 
       <div className='booking-confirmation__container'>
@@ -56,9 +56,9 @@ const BookingSuccess = () => {
           <span className='price'>
             Por pagar: $250.00 MXN
           </span>
-          <button type='submit' className='btn btn--dark'>
+          <a href='/#filter' className='btn btn--dark'>
             Agendar otro servicio
-          </button>
+          </a>
         </div>
       </div>
     </div>
