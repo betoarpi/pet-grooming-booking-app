@@ -1,0 +1,9 @@
+{
+  "_id": {
+    "$oid": "5dca0071fc13ae0a62000003"
+  },
+  "name": "Jayo",
+  "store_id": {
+    "$oid": "5dca0071fc13ae0a62000004"
+  }
+}

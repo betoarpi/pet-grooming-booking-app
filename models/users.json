@@ -1,0 +1,11 @@
+{
+  "_id": {
+    "$oid": "5dc9fc48fc13ae69bf000000"
+  },
+  "first_name": "Wallie",
+  "last_name": "Davidovitch",
+  "phone": ["436-501-7344", "436-501-7344", "436-501-7344"],
+  "address": "25 Oxford Parkway",
+  "postal_code": 5,
+  "avatar": "http://dummyimage.com/214x105.png/ff4444/ffffff"
+}

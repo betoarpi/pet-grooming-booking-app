@@ -1,0 +1,30 @@
+{
+  "_id": {
+    "$oid": "5dc9ff9ffc13ae29a1000067"
+  },
+  "name": "Eimbee",
+  "phone": ["436-501-7344", "436-501-7344", "436-501-7344"],
+  "short_description": "Secondary malignant neoplasm of left adrenal gland",
+  "long_description": "Bypass Left Common Iliac Artery to Right External Iliac Artery with Autologous Arterial Tissue, Open Approach",
+  "coords": {
+    "lat": 38.7099952,
+    "lng": 20.7141164
+  },
+  "pictures": [
+    {
+      "url": "http://dummyimage.com/214x105.png/ff4444/ffffff"
+    },
+    {
+      "url": "http://dummyimage.com/234x123.png/ff4444/ffffff"
+    },
+    {
+      "url": "http://dummyimage.com/152x236.bmp/cc0000/ffffff"
+    },
+    {
+      "url": "http://dummyimage.com/112x193.bmp/cc0000/ffffff"
+    }
+  ],
+  "owner_id": {
+    "$oid": "5dc9ff9ffc13ae29a1000068"
+  }
+}
