@@ -15,27 +15,28 @@ const HistoryItem = ({ reservation, details = false }) => (
         </div>
       </div>
 
-      <span className='divider' />
-
       <div className='profile__history-salon'>
-        <span className='font-bold'>Establishment name</span>
-        <span>Service</span>
-        <span>Service</span>
+        <span className='font-bold'>Nombre del Establecimiento</span>
+        <p>
+          Dirección del establecimiento #123,
+          <br />
+          Colonia Nombre, C.P. 757575
+        </p>
       </div>
 
-      <span className='divider' />
-
       <div className='profile__history-dates'>
-        <i className='far fa-calendar-alt' />
+        {!details && <i className='far fa-calendar-alt' />}
         <div className='profile__history-dates-info'>
           <span className='font-bold'>Fecha</span>
           <span>09 Sep 2019</span>
           <span>02:00 P.M.</span>
         </div>
-        <div className='profile__history-dates-action'>
-          <span>Detalles</span>
-          <i className='fas fa-chevron-right'></i>
-        </div>
+        {!details && (
+          <div className='profile__history-dates-action'>
+            <span>Detalles</span>
+            <i className='fas fa-chevron-right'> </i>
+          </div>
+        )}
       </div>
     </div>
 
@@ -48,11 +49,14 @@ const HistoryItem = ({ reservation, details = false }) => (
         <div className='profile__history-details-info'>
           <div className='profile__history-services'>
             <span className='font-bold'>Servicios</span>
-            <span>Servicio 1</span>
-            <span>Servicio 2</span>
+            <ul>
+              <li>Servicio</li>
+              <li>Servicio</li>
+              <li>Servicio</li>
+            </ul>
           </div>
-          <span className='divider' />
-          <div className='profile__history-comments'>
+
+          <div className='profile__history-notes'>
             <span className='font-bold'>Comments</span>
             <span>Some comments here</span>
           </div>

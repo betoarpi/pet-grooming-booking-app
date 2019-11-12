@@ -1,92 +1,141 @@
 @import './../styles.scss';
 
 .profile__history {
+  display: none;
+  grid-auto-rows: max-content;
+  &.active {
+    display: grid;
+  }
+
+  h4 {
+    margin-bottom: 2rem;
+  }
+
   &-wrapper {
+    display: grid;
+    gap:2rem;
+    margin-bottom: 2rem;
     width: 100%;
-    min-height: 6.25rem;
-    border-bottom: 2px dashed $light-gray;
-    padding: 2rem 0.5rem;
   }
 
   &-info {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: max-content 1fr max-content;
     width: 100%;
-    display: flex;
-    justify-content: space-between;
   }
 
   &-pet {
-    width: 20%;
-    display: flex;
-    justify-content: space-between;
+    border-right:2px solid rgba($gray, 0.15);
+    display: grid;
+    gap:2rem;
+    grid-template-columns: 3.75rem 1fr;
+    padding-right: 2rem;
     &-img-container {
-      width: 3.75rem;
-      height: 3.75rem;
+      align-items: center;
       background-color: $orange;
       @include border-radius-all(50%);
-      display: flex;
+      display: grid;
+      height: 3.75rem;
       justify-content: center;
-      align-items: center;
+      width: 3.75rem;
+    }
+    &-type {
+      color:$link-hover;
     }
   }
 
   &-salon {
-    width: 30%;
-    display: flex;
-    flex-direction: column;
-  }
-
-  &-dates {
-    width: 30%;
-    display: flex;
-    justify-content: space-between;
-
-    & > i {
-      color: $light-gray;
-      padding-top: 4px;
-      font-size: 1.25rem;
-    }
-
-    &-info {
-      display: flex;
-      flex-direction: column;
-    }
-
-    &-action {
-      margin-top: 1.5rem;
-      cursor: pointer;
-      :first-child {
-        padding-right: 0.5rem;
+    border-right:2px solid rgba($gray, 0.15);
+    display: grid;
+    grid-auto-rows: max-content;
+    padding-right: 2rem;
+    p {
+      &:first-of-type {
+        margin-top: 0;
+      }
+      &:last-of-type {
+        margin-bottom: 0;
       }
     }
   }
 
+  &-dates {
+    display: grid;
+
+    & > i {
+      color: $light-gray;
+      font-size: 1.25rem;
+    }
+
+    &-info {
+      display: grid;
+    }
+
+    &-action {
+      align-items: center;
+      align-self: center;
+      color: $purple;
+      cursor: pointer;
+      display: grid;
+      grid-template-columns: repeat(2, max-content);
+      justify-self: end;
+      padding-left: 1rem;
+      :first-child {
+        padding-right: 0.5rem;
+      }
+      :hover {
+        color: $link-hover;
+        ~ i {
+          color: $link-hover;
+        }
+      }
+    }
+  }
+
+  &-details {
+    background: rgba($gray, 0.05);
+    display: grid;
+    gap:1rem;
+    padding: 2rem;
+  }
+
   &-details-headers {
-    display: flex;
-    justify-content: space-between;
-    padding-left: 5.625rem;
-    margin: 1rem 0rem;
+    color:$purple;
+    display: grid;
+    grid-template-columns: 1fr max-content;
     font-size: 1.25rem;
     :last-child {
-      color: darken($cyan, 50);
+      color: $link-hover;
     }
   }
 
   &-details-info {
-    display: flex;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 
-  &-services,
-  &-comments {
-    display: flex;
-    flex-direction: column;
+  &-services, &-notes {
+    display: grid;
+    grid-template-columns: 1fr;
   }
 
-  span.divider {
-    width: 2px;
-    height: 70px;
-    border-right: 1px solid $light-gray;
-    align-self: center;
-    margin: 0rem 2rem;
+  &-services {
+    ul {
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &-notes {
+    grid-auto-rows: max-content;
+  }
+
+}
+#booking-history {
+  .profile__history-dates {
+    gap: 1rem;
+    grid-template-columns: max-content max-content max-content;
   }
 }
