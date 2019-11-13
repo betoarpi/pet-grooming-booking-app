@@ -1,0 +1,11 @@
+{
+  "_id": {
+    "$oid": "5dca05fafc13ae19e4000009"
+  },
+  "amount": "$584.43",
+  "service_id": {
+    "$oid": "5dca05fafc13ae19e400000a"
+  },
+  "created_at": "6/17/2019",
+  "deleted_at": "8/20/2019"
+}

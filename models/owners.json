@@ -1,0 +1,10 @@
+{
+  "_id": {
+    "$oid": "5dc9fd43fc13ae69bf000001"
+  },
+  "username": "gbutteris0",
+  "password": "TXSzYhPu1N",
+  "user_id": {
+    "$oid": "5dc9fd43fc13ae69bf000002"
+  }
+}

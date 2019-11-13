@@ -1,0 +1,10 @@
+{
+  "_id": {
+    "$oid": "5dca0247fc13ae69bf000003"
+  },
+  "name": "Common pheasant",
+  "type": "cat",
+  "client_id": {
+    "$oid": "5dca0247fc13ae69bf000004"
+  }
+}

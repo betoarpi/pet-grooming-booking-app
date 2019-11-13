@@ -1,0 +1,15 @@
+{
+  "_id": {
+    "$oid": "5dca0527fc13ae0a62000009"
+  },
+  "reservation_id": {
+    "$oid": "5dca0527fc13ae0a6200000a"
+  },
+  "service_id": {
+    "$oid": "5dca0527fc13ae0a6200000b"
+  },
+  "cost_id": {
+    "$oid": "5dca0527fc13ae0a6200000c"
+  },
+  "amount": 1
+}

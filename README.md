@@ -6,3 +6,19 @@ En el siguiente link se encuetra la propuesta de diseño de **pet-grooming-booki
 
 ## Modelo de datos 
 En el siguiente link se encuentra la propuesta del modelo de datos  de **pet-grooming-booking-app** [Data Model](https://drive.google.com/file/d/1v7ZfeLdGoW_drbE3MVFe_0TYpnBCRpwg/view?usp=sharing)
+
+
+### Install
+```
+npm install
+```
+
+### Execute
+```
+npm run dev
+```
+
+### Testing Connection
+```
+npm run test:dbConnection
+```
