@@ -63,13 +63,15 @@
   /*================FIRST PANEL========================*/
   &__main-info {
     border-bottom:2px solid rgba($gray, 0.15);
-    display: none;
+    display: grid;
     gap: 2rem;
     grid-template-columns: 1fr 1fr;
+    margin-bottom: 2rem;
     padding: 0 0 2rem;
   }
 
   &__info {
+    align-items: center;
     display: grid;
     gap: 2rem;
     grid-template-columns: max-content 1fr;
@@ -81,17 +83,18 @@
       @include border-radius-all(1rem);
     }
   }
-
+  
   &__user-data {
     display: grid;
     grid-auto-rows: max-content;
   }
-
+  
   &__user-data-name {
     margin: 0rem;
   }
-
+  
   &__statistics {
+    align-content: center;
     display: grid;
     grid-template-columns: repeat(3, max-content);
     grid-auto-rows: max-content;
@@ -129,6 +132,7 @@
 
     button {
       @extend .btn--dark;
+      margin-top:1rem;
       width: 200px;
     }
   }
@@ -141,4 +145,33 @@
     display: grid;
   }
 
+  @media screen and (max-width: 1023px) {
+    grid-template-columns: 1fr;
+
+    &__form-row {
+      grid-template-columns: 1fr;
+    }
+    
+    &__address {
+      grid-column: initial;
+    }
+  }
+  
+  @media screen and (max-width: 767px) {
+    &__main-info {
+      grid-template-columns: max-content;
+      justify-content: center;
+    }
+  }
+  @media screen and (max-width: 479px) {
+    &__info {
+      grid-template-columns: max-content;
+      justify-content: center;
+      text-align: center;
+    }
+
+    &__statistic-item {
+      font-size: 0.85rem;
+    }
+  }
 }

@@ -32,7 +32,7 @@ const Profile = () => (
         <HistoryItem details={true} />
       </div>
 
-      <div className='profile__history' id='booking-history'>
+      <div className='profile__history active' id='booking-history'>
         <h4>Historial de reservas</h4>
         <HistoryItem />
         <HistoryItem />

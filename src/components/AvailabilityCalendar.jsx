@@ -5,7 +5,7 @@ import '../assets/styles/sass/components/DatePicker.scss';
 
 const AvailabilityCalendar = (props) => {
   const [pickedDate, setPickedDate] = useState(new Date());
-  const [modalOpen, setModalOpen] = useState(true);
+  const [modalOpen, setModalOpen] = useState(false);
 
   function handleSelect() {
     setModalOpen(true);
