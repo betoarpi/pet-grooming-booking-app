@@ -1,12 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import { createStore } from 'redux';
+import { createStore, compose } from 'redux';
 import reducer from './reducers/index';
 import App from './routes/App';
 
 const initialState = {
   'user': {},
+  'favs': [],
   'salons': [
     {
       'id': 1,
@@ -23,11 +24,12 @@ const initialState = {
       'services': ['Baño', 'Corte', 'Limpieza Dental', 'Tratamiento anti-pulgas', 'Corte para concurso'],
       'other_services': ['Veterinaria', 'Clínica', 'Pensión', 'Hospital', 'Transporte de tu mascota para servicios veterinarios y estéticos'],
       'images': [
-        'http://dummyimage.com/951x584.bmp/cc0000/ffffff',
-        'http://dummyimage.com/736x1040.jpg/cc0000/ffffff',
+        'http://dummyimage.com/951x584.bmp/ccc/ffffff',
+        'http://dummyimage.com/736x1040.jpg/ccc/ffffff',
         'http://dummyimage.com/719x884.bmp/dddddd/000000',
         'http://dummyimage.com/1005x497.jpg/ff4444/ffffff',
       ],
+      'favorite': false,
     },
     {
       'id': 2,
@@ -44,11 +46,12 @@ const initialState = {
       'services': ['Baño', 'Corte', 'Limpieza Dental', 'Tratamiento anti-pulgas', 'Corte para concurso'],
       'other_services': ['Veterinaria', 'Clínica', 'Pensión', 'Hospital', 'Transporte de tu mascota para servicios veterinarios y estéticos'],
       'images': [
-        'http://dummyimage.com/951x584.bmp/cc0000/ffffff',
-        'http://dummyimage.com/736x1040.jpg/cc0000/ffffff',
+        'http://dummyimage.com/951x584.bmp/ccc/ffffff',
+        'http://dummyimage.com/736x1040.jpg/ccc/ffffff',
         'http://dummyimage.com/719x884.bmp/dddddd/000000',
         'http://dummyimage.com/1005x497.jpg/ff4444/ffffff',
       ],
+      'favorite': false,
     },
     {
       'id': 3,
@@ -65,11 +68,12 @@ const initialState = {
       'services': ['Baño', 'Corte', 'Limpieza Dental', 'Tratamiento anti-pulgas', 'Corte para concurso'],
       'other_services': ['Veterinaria', 'Clínica', 'Pensión', 'Hospital', 'Transporte de tu mascota para servicios veterinarios y estéticos'],
       'images': [
-        'http://dummyimage.com/951x584.bmp/cc0000/ffffff',
-        'http://dummyimage.com/736x1040.jpg/cc0000/ffffff',
+        'http://dummyimage.com/951x584.bmp/ccc/ffffff',
+        'http://dummyimage.com/736x1040.jpg/ccc/ffffff',
         'http://dummyimage.com/719x884.bmp/dddddd/000000',
         'http://dummyimage.com/1005x497.jpg/ff4444/ffffff',
       ],
+      'favorite': false,
     },
     {
       'id': 4,
@@ -86,11 +90,12 @@ const initialState = {
       'services': ['Baño', 'Corte', 'Limpieza Dental', 'Tratamiento anti-pulgas', 'Corte para concurso'],
       'other_services': ['Veterinaria', 'Clínica', 'Pensión', 'Hospital', 'Transporte de tu mascota para servicios veterinarios y estéticos'],
       'images': [
-        'http://dummyimage.com/951x584.bmp/cc0000/ffffff',
-        'http://dummyimage.com/736x1040.jpg/cc0000/ffffff',
+        'http://dummyimage.com/951x584.bmp/ccc/ffffff',
+        'http://dummyimage.com/736x1040.jpg/ccc/ffffff',
         'http://dummyimage.com/719x884.bmp/dddddd/000000',
         'http://dummyimage.com/1005x497.jpg/ff4444/ffffff',
       ],
+      'favorite': false,
     },
     {
       'id': 5,
@@ -107,11 +112,12 @@ const initialState = {
       'services': ['Baño', 'Corte', 'Limpieza Dental', 'Tratamiento anti-pulgas', 'Corte para concurso'],
       'other_services': ['Veterinaria', 'Clínica', 'Pensión', 'Hospital', 'Transporte de tu mascota para servicios veterinarios y estéticos'],
       'images': [
-        'http://dummyimage.com/951x584.bmp/cc0000/ffffff',
-        'http://dummyimage.com/736x1040.jpg/cc0000/ffffff',
+        'http://dummyimage.com/951x584.bmp/ccc/ffffff',
+        'http://dummyimage.com/736x1040.jpg/ccc/ffffff',
         'http://dummyimage.com/719x884.bmp/dddddd/000000',
         'http://dummyimage.com/1005x497.jpg/ff4444/ffffff',
       ],
+      'favorite': false,
     },
     {
       'id': 6,
@@ -128,11 +134,12 @@ const initialState = {
       'services': ['Baño', 'Corte', 'Limpieza Dental', 'Tratamiento anti-pulgas', 'Corte para concurso'],
       'other_services': ['Veterinaria', 'Clínica', 'Pensión', 'Hospital', 'Transporte de tu mascota para servicios veterinarios y estéticos'],
       'images': [
-        'http://dummyimage.com/951x584.bmp/cc0000/ffffff',
-        'http://dummyimage.com/736x1040.jpg/cc0000/ffffff',
+        'http://dummyimage.com/951x584.bmp/ccc/ffffff',
+        'http://dummyimage.com/736x1040.jpg/ccc/ffffff',
         'http://dummyimage.com/719x884.bmp/dddddd/000000',
         'http://dummyimage.com/1005x497.jpg/ff4444/ffffff',
       ],
+      'favorite': false,
     },
     {
       'id': 7,
@@ -149,16 +156,18 @@ const initialState = {
       'services': ['Baño', 'Corte', 'Limpieza Dental', 'Tratamiento anti-pulgas', 'Corte para concurso'],
       'other_services': ['Veterinaria', 'Clínica', 'Pensión', 'Hospital', 'Transporte de tu mascota para servicios veterinarios y estéticos'],
       'images': [
-        'http://dummyimage.com/951x584.bmp/cc0000/ffffff',
-        'http://dummyimage.com/736x1040.jpg/cc0000/ffffff',
+        'http://dummyimage.com/951x584.bmp/ccc/ffffff',
+        'http://dummyimage.com/736x1040.jpg/ccc/ffffff',
         'http://dummyimage.com/719x884.bmp/dddddd/000000',
         'http://dummyimage.com/1005x497.jpg/ff4444/ffffff',
       ],
+      'favorite': false,
     },
   ],
 };
 
-const store = createStore(reducer, initialState);
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+const store = createStore(reducer, initialState, composeEnhancers());
 
 ReactDOM.render(
   <Provider store={store}>

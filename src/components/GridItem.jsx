@@ -1,19 +1,34 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { setFavorite, removeFavorite } from '../actions/index';
 
 const GridItem = (props) => {
-  const { id, name, rating, shortDescription, images } = props;
+  const { id, name, rating, shortDescription, images, isFav } = props;
+
+  const handleSetFavorite = () => {
+    props.setFavorite(id);
+    const filterPosition = document.getElementById('filter');
+    filterPosition.scrollIntoView();
+  };
+
+  const handleRemoveFavorite = () => {
+    props.removeFavorite(id);
+  };
+
   return (
-    <Link to='/salon' className='groomers-grid__item' id={id}>
+    <div className='groomers-grid__item' id={id}>
       <div className='groomers-grid__item__thumbnail'>
         <div className='fav'>
-          <i className='fa fa-heart' aria-hidden='true'> </i>
+          {isFav ?
+            <i className='fas fa-heart' aria-hidden='true' onClick={() => handleRemoveFavorite(id)}> </i> :
+            <i className='far fa-heart' aria-hidden='true' onClick={handleSetFavorite}> </i>}
         </div>
         <img src={images[0]} alt='Groomers cover' />
       </div>
       <article className='groomers-grid__item__description'>
         <h4 className='groomers-grid__item__title'>
-          {name}
+          <Link to='/salon'>{name}</Link>
         </h4>
         <div className='rating'>
           <i className='fa fa-star' aria-hidden='true'> </i>
@@ -25,12 +40,17 @@ const GridItem = (props) => {
         <p>
           {shortDescription}
         </p>
-        <button type='button' className='btn'>
+        <Link to='/salon' className='btn'>
           Book now
-        </button>
+        </Link>
       </article>
-    </Link>
+    </div>
   );
 };
 
-export default GridItem;
+const mapDispatchToProps = {
+  setFavorite,
+  removeFavorite,
+};
+
+export default connect(null, mapDispatchToProps)(GridItem);

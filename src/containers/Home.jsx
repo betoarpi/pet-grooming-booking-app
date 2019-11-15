@@ -14,6 +14,7 @@ const Home = ({ salons }) => (
 
 const mapStateToProps = (state) => {
   return {
+    favs: state.favs,
     salons: state.salons,
   };
 };
