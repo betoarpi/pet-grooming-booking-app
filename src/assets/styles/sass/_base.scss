@@ -228,7 +228,9 @@ ul {
 }
 
 .rating {
-  color: darken($yellow, 10%);
+  i {
+    color: darken($yellow, 10%);
+  }
 }
 
 /// Referencia para los media queries

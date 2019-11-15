@@ -17,13 +17,15 @@
   &__item {
     border: 2px solid lighten($gray, 60%);
     @include border-radius-all(1rem);
+    color: $gray;
     cursor: pointer;
     display: grid;
     grid-template-rows: 1fr max-content;
     overflow: hidden;
     transition: all 0.3s ease;
-
+    
     &:hover {
+      color: $gray;
       transform: scale(1.03);
     }
 
