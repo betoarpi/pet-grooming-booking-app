@@ -6,8 +6,7 @@
   "scripts": {
     "build": "webpack --mode production",
     "start": "webpack-dev-server --open --mode development",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "test:dbConnection": "node ./src/test/mongoDB"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -51,12 +50,10 @@
     "webpack-dev-server": "^3.8.2"
   },
   "dependencies": {
-    "chalk": "^3.0.0",
     "dotenv": "8.2.0",
     "google-maps-react": "^2.0.2",
     "history": "^4.10.1",
     "moment": "^2.24.0",
-    "mongodb": "^3.3.4",
     "react": "^16.10.2",
     "react-big-calendar": "^0.22.1",
     "react-datepicker": "^2.9.6",
