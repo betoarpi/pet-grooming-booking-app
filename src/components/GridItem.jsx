@@ -40,7 +40,7 @@ const GridItem = (props) => {
         <p>
           {shortDescription}
         </p>
-        <Link to='/salon' className='btn'>
+        <Link to={`/salon/${id}`} className='btn'>
           Book now
         </Link>
       </article>

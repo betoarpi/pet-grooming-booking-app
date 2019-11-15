@@ -10,6 +10,11 @@ const reducer = (state, action) => {
         ...state,
         favs: state.favs.filter((items) => items.id !== action.payload.id),
       };
+    case 'GET_CURRENT':
+      return {
+        ...state,
+        currentSalon: state.salons.find((item) => item.id.toString() === action.payload) || [],
+      };
     default:
       return state;
   }
