@@ -5,14 +5,16 @@
   "main": "index.js",
   "scripts": {
     "dev": "DEBUG=app:* nodemon index",
-    "start": "NODE_ENV=production node index"
+    "start": "NODE_ENV=production node index",
+    "test:dbConnection": "node ./lib/testingMongoDB"
   },
   "keywords": [],
   "author": "Rob Arroyo & Carlos García",
   "license": "LGPL-3.0",
   "dependencies": {
     "dotenv": "^8.2.0",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "mongodb": "^3.3.4"
   },
   "devDependencies": {
     "eslint": "^6.6.0",
