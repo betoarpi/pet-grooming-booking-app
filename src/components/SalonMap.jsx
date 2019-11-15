@@ -1,14 +1,16 @@
 import React from 'react';
-import { Map, GoogleApiWrapper } from 'google-maps-react';
+import { Map, GoogleApiWrapper, Marker } from 'google-maps-react';
 
-const SalonMap = ({ google, children }) => {
+const SalonMap = ({ google, children, coords }) => {
   return (
     <div className='salon-details__map'>
       <Map
         google={google}
         zoom={18}
-        initialCenter={{ lat: 20.5847688, lng: -100.3834763 }}
-      />
+        initialCenter={{ ...coords, lat: coords.lat - 0.0011 }}
+      >
+        <Marker position={coords} />
+      </Map>
       {children}
     </div>
   );
