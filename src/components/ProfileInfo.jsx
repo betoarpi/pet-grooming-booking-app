@@ -31,7 +31,7 @@ const ProfileInfo = () => {
         </div>
       </div>
 
-      <div className='profile__form-container'>
+      <div className='profile__form-container active' id='profile-form'>
         <div className='profile__form-row'>
           <div className='profile__form-group'>
             <label htmlFor='name'>Name</label>
