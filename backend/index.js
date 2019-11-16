@@ -1,18 +1,28 @@
 const express = require('express');
 const { config } = require('./config/index');
 const clientsAPI = require('./routes/clients');
-const { errorLog, errorHandler } = require('./utils/middleware/errorHandler');
+const {
+  errorLog,
+  errorWrapper,
+  errorHandler
+} = require('./utils/middleware/errorHandler');
+
+const notFoundHandler = require('./utils/middleware/notFoundHandler');
 
 const app = express();
 
 //Body parser
 app.use(express.json());
 
-// Client Routes
+//Client Routes
 clientsAPI(app);
+
+//NotFound Catcher
+app.use(notFoundHandler);
 
 //Error Middleware
 app.use(errorLog);
+app.use(errorWrapper);
 app.use(errorHandler);
 
 app.listen(config.port, () => {
