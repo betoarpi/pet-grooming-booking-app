@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import { Router, Switch, Route } from 'react-router-dom';
 import { createBrowserHistory } from 'history';
 import Home from '../containers/Home';
@@ -16,24 +17,31 @@ history.listen((location, action) => {
   window.scrollTo(0, 0);
 });
 
-class App extends Component {
-  render() {
-    return (
-      <Router history={history}>
-        <Layout>
-          <Switch>
-            <Route exact path='/' component={Home} />
-            <Route exact path='/salon/:id' component={Salon} />
-            <Route exact path='/login' component={Login} />
-            <Route exact path='/register' component={Register} />
-            <Route exact path='/profile' component={Profile} />
-            <Route exact path='/acerca-de-groomerly' component={AboutGroomerly} />
-            <Route component={NotFound} />
-          </Switch>
-        </Layout>
-      </Router>
-    );
-  }
+const App = (props) => {
+  const { user } = props;
+  const hasUser = Object.keys(user).length > 0;
+
+  return (
+    <Router history={history}>
+      <Layout>
+        <Switch>
+          <Route exact path='/' component={Home} />
+          <Route exact path='/salon/:id' component={Salon} />
+          <Route exact path='/login' component={Login} />
+          <Route exact path='/register' component={Register} />
+          <Route exact path='/profile' component={hasUser ? Profile : Register} />
+          <Route exact path='/acerca-de-groomerly' component={AboutGroomerly} />
+          <Route component={NotFound} />
+        </Switch>
+      </Layout>
+    </Router>
+  );
 };
 
-export default App;
+const mapStateToProps = (state) => {
+  return {
+    user: state.user,
+  };
+};
+
+export default connect(mapStateToProps, null)(App);
