@@ -18,7 +18,7 @@
 .navigation {
   display: grid;
   grid-template-columns: 1fr 40px;
-  gap: 1.5rem;
+  gap: 1rem;
   justify-self: end;
   @extend .font-bold;
   &__website {
@@ -32,13 +32,22 @@
     position: relative;
     align-self: center;
     &__profile {
+      background: $cyan;
       @include border-radius-all(0.5rem);
       cursor: pointer;
       height: 40px;
       overflow: hidden;
+      position: relative;
       width: 40px;
       img {
         max-width: 100%;
+      }
+      i {
+        color:$purple;
+        left: 50%;
+        position: absolute;
+        top:50%;
+        transform: translate(-50%, -50%);
       }
     }
     &__options {
