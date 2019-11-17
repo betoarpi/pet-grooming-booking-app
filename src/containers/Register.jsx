@@ -1,23 +1,26 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useState } from 'react';
+import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { registerRequest } from '../actions/index';
 import '../assets/styles/sass/views/_register.scss';
 
-const Register = () => {
+const Register = (props) => {
   const [formValues, setFormValues] = useState({
     username: ' ',
     email: ' ',
     password: ' ',
   });
-  const handleInput = event => {
+  const handleInput = (event) => {
     setFormValues({
       ...formValues,
       [event.target.name]: event.target.value,
     });
   };
-  const handleSubmit = event => {
+  const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(formValues);
+    props.registerRequest(formValues);
+    props.history.push('/');
   };
 
   return (
@@ -64,7 +67,11 @@ const Register = () => {
         </div>
       </div>
     </section>
-  )
+  );
 };
 
-export default Register;
+const mapDispatchToProps = {
+  registerRequest,
+};
+
+export default connect(null, mapDispatchToProps)(Register);

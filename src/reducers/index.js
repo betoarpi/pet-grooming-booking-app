@@ -15,6 +15,16 @@ const reducer = (state, action) => {
         ...state,
         currentSalon: state.salons.find((item) => item.id.toString() === action.payload) || [],
       };
+    case 'LOGIN_REQUEST':
+      return {
+        ...state,
+        user: action.payload,
+      };
+    case 'REGISTER_REQUEST':
+      return {
+        ...state,
+        user: action.payload,
+      }
     default:
       return state;
   }

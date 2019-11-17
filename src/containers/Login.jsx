@@ -1,24 +1,27 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useState } from 'react';
+import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { loginRequest } from '../actions/index';
 import '../assets/styles/sass/views/_login.scss';
 
-const Login = () => {
+const Login = (props) => {
   const [fomrValues, setFormValues] = useState({
     email: ' ',
     password: ' ',
   });
 
-  const handleInput = event => {
+  const handleInput = (event) => {
     setFormValues({
       ...fomrValues,
       [event.target.name]: event.target.value,
     });
   };
 
-  const handleSubmit = event => {
+  const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(fomrValues);
+    props.loginRequest(fomrValues);
+    props.history.push('/');
   };
 
   return (
@@ -71,4 +74,8 @@ const Login = () => {
   );
 };
 
-export default Login;
+const mapDispatchToProps = {
+  loginRequest,
+};
+
+export default connect(null, mapDispatchToProps)(Login);
