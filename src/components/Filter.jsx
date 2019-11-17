@@ -7,9 +7,9 @@ const Filter = () => {
       <form action='' className='groomers-filter__form'>
         <div>
           <span>
-            Fecha:
+            Nombre
           </span>
-          <input type='date' name='date' id='date' />
+          <input type='text' name='name' id='name' />
         </div>
         <div>
           <span>

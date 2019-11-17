@@ -22,6 +22,15 @@ const Footer = () => {
           </a>
         </li>
       </ul>
+      <span className='made-with-love'>
+        Made with
+        {' '}
+        <i className='fas fa-heart'> </i>
+        {' '}
+        in
+        {' '}
+        <a href='https://platzi.com/escuela-js/' target='_blank' rel='noopener noreferrer'>Escuela de JavaScript.</a>
+      </span>
     </footer>
   );
 };

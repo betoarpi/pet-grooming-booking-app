@@ -19,7 +19,7 @@
     @include border-radius-all(1rem);
     color: $gray;
     display: grid;
-    grid-template-rows: 1fr max-content;
+    grid-template-rows: max-content 1fr;
     overflow: hidden;
     transition: all 0.3s ease;
     
@@ -30,7 +30,7 @@
 
     &__thumbnail {
       position: relative;
-      height: 360px;
+      padding-top: 100%;
       .fav {
         background: darken($orange, 15%);
         @include border-radius-all(50%);
@@ -41,6 +41,7 @@
         right: 1rem;
         top: 1rem;
         width: 32px;
+        z-index: 2;
         i {
           @extend .position-center;
         }
@@ -49,16 +50,25 @@
         display: block;
         height: 100%;
         object-fit: cover;
+        position: absolute;
+        top:0;
         width: 100%;
+        z-index: 1;
       }
     }
     &__description {
+      display: grid;
+      grid-template-rows: max-content max-content 1fr max-content;
       padding: 2rem 1rem;
     }
     &__title {
       color: $purple;
       cursor: pointer;
       margin: 0 0 0.25rem 0;
+    }
+    .btn {
+      max-width: calc(100% - 2rem);
+      width: 220px;
     }
   }
 
