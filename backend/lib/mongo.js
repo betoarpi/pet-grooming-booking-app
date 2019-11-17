@@ -22,11 +22,9 @@ class MongoConnection {
       MongoConnection.connection = new Promise((resolve, reject) => {
         this.client.connect(error => {
           if (error) {
-            console.log('    Connection is wrong :C');
-            console.log(error);
             return reject(error);
           }
-          console.log('    Connection was successfully :D');
+
           return resolve(this.client.db(this.dbName));
         });
       });

@@ -131,4 +131,22 @@ const clientMocks = [
   }
 ];
 
-module.exports = { clientMocks };
+class ClientsServiceMocks {
+  getClients() {
+    return Promise.resolve(clientMocks);
+  }
+
+  getClient() {
+    return Promise.resolve(clientMocks[0]);
+  }
+
+  createClient() {
+    return Promise.resolve(clientMocks[0]._id);
+  }
+
+  updateClient() {
+    return Promise.resolve(clientMocks[0]._id);
+  }
+}
+
+module.exports = { clientMocks, ClientsServiceMocks };

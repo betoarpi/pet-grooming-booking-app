@@ -1,5 +1,5 @@
 const express = require('express');
-const { ClientService } = require('../services/clients');
+const ClientService = require('../services/clients');
 const {
   clientIdSchema,
   createClientSchema,
