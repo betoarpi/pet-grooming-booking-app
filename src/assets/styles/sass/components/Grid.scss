@@ -70,6 +70,10 @@
       max-width: calc(100% - 2rem);
       width: 220px;
     }
+
+    &.favorited {
+      animation: favoritedPulse 1.8s ease-in-out infinite forwards;
+    }
   }
 
   // Responsive
@@ -81,6 +85,21 @@
   @media screen and (max-width: 767px){
     &__container {
       grid-template-columns: 1fr;
+    }
+  }
+
+  @keyframes favoritedPulse {
+    0% {
+      border-color:$orange;
+      box-shadow: 0 0 0 $orange;
+    }
+    50% {
+      border-color:$orange;
+      box-shadow: 0 0 1rem $orange;
+    }
+    100% {
+      border-color:$orange;
+      box-shadow: 0 0 0 $orange;
     }
   }
 }

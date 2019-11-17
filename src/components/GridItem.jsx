@@ -6,10 +6,20 @@ import { setFavorite, removeFavorite } from '../actions/index';
 const GridItem = (props) => {
   const { id, name, rating, shortDescription, images, isFav } = props;
 
-  const handleSetFavorite = () => {
+  const handleSetFavorite = (event) => {
     props.setFavorite(id);
     const filterPosition = document.getElementById('filter');
     filterPosition.scrollIntoView();
+
+    setTimeout(() => {
+      const favoriteItem = document.getElementById(id);
+      favoriteItem.classList.add('favorited');
+    }, 200);
+
+    setTimeout(() => {
+      const favoriteItem = document.getElementById(id);
+      favoriteItem.classList.remove('favorited');
+    }, 5400);
   };
 
   const handleRemoveFavorite = () => {

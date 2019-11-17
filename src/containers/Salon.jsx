@@ -77,8 +77,8 @@ const Salon = (props) => {
             <div className='services'>
               <h5>Servicios</h5>
               <ul>
-                {services.map((item) => {
-                  return <li key={item.id}>{item}</li>;
+                {services.map((item, index) => {
+                  return <li key={item[index]}>{item}</li>;
                 })}
               </ul>
             </div>
