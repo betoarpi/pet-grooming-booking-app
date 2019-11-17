@@ -35,6 +35,14 @@ const reducer = (state, action) => {
         ...state,
         user: action.payload,
       };
+    case 'SELECTED_DATE':
+      return {
+        ...state,
+        currentSalon: {
+          ...state.currentSalon,
+          selectedDate: action.payload,
+        },
+      };
     default:
       return state;
   }

@@ -1,12 +1,47 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
-const DayAvailability = () => {
+const DayAvailability = (props) => {
+  const { currentSalon, handleNext, handlePrev } = props;
   function handleClick(e) {
     e.preventDefault();
     const dayAvailabilityContainer = document.querySelector('.day-availability');
     const bookingConfirmationContainer = document.getElementById('booking-confirmation');
     dayAvailabilityContainer.classList.remove('active');
     bookingConfirmationContainer.classList.add('active');
+  }
+
+  function handleDate(date) {
+    const weekDays = [
+      'Domingo',
+      'Lunes',
+      'Martes',
+      'Miércoles',
+      'Jueves',
+      'Viernes',
+      'Sábado',
+    ];
+    const months = [
+      'Enero',
+      'Febrero',
+      'Marzo',
+      'Abril',
+      'Mayo',
+      'Junio',
+      'Julio',
+      'Agosto',
+      'Septiembre',
+      'Octubre',
+      'Noviembre',
+      'Diciembre',
+    ];
+    const setDate = new Date(date);
+    const year = setDate.getFullYear();
+    const month = setDate.getMonth();
+    const day = setDate.getDate();
+    const weekDay = setDate.getDay();
+    const fullDate = `${weekDays[weekDay]}, ${day} de ${months[month]} de ${year}`;
+    return fullDate;
   }
 
   return (
@@ -18,9 +53,9 @@ const DayAvailability = () => {
 
       <div className='day-availability__calendar'>
         <header>
-          <h5 className='day-availability__date'>Jueves 31 de Octubre del 2019</h5>
-          <div className='prev'><i className='fas fa-chevron-left'> </i></div>
-          <div className='next'><i className='fas fa-chevron-right'> </i></div>
+          <h5 className='day-availability__date'>{handleDate(currentSalon.selectedDate)}</h5>
+          <button type='button' onClick={handlePrev} className='prev'><i className='fas fa-chevron-left'> </i></button>
+          <button type='button' onClick={handleNext} className='next'><i className='fas fa-chevron-right'> </i></button>
         </header>
 
         <a href='/#' className='day-availability__hour not-available'>
@@ -105,4 +140,10 @@ const DayAvailability = () => {
   );
 };
 
-export default DayAvailability;
+const mapStateToProps = (state) => {
+  return {
+    currentSalon: state.currentSalon,
+  };
+};
+
+export default connect(mapStateToProps, null)(DayAvailability);

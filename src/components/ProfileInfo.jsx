@@ -10,6 +10,9 @@ const ProfileInfo = (props) => {
     username: user.username,
     email: user.email,
     password: user.password,
+    address: null,
+    zipcode: null,
+    phone: null,
   });
 
   const handleInput = (event) => {
@@ -70,18 +73,18 @@ const ProfileInfo = (props) => {
           </div>
           <div className='profile__form-group'>
             <label htmlFor='phone'>Phone</label>
-            <input type='text' name='phone' id='phone' value={user.phone || ''} onChange={handleInput} />
+            <input type='text' name='phone' id='phone' value={user.phone} onChange={handleInput} />
           </div>
         </div>
 
         <div className='profile__form-row'>
           <div className='profile__form-group profile__address'>
             <label htmlFor='address'>Address</label>
-            <input type='text' name='address' id='address' value={user.address || ''} onChange={handleInput} />
+            <input type='text' name='address' id='address' value={user.address} onChange={handleInput} />
           </div>
           <div className='profile__form-group'>
             <label htmlFor='zipcode'>Postal Code</label>
-            <input type='text' name='zipcode' id='zipcode' value={user.zipcode || ''} onChange={handleInput} />
+            <input type='text' name='zipcode' id='zipcode' value={user.zipcode} onChange={handleInput} />
           </div>
         </div>
 

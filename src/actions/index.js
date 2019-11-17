@@ -32,3 +32,8 @@ export const profileUpdateRequest = (payload) => ({
   type: 'PROFILE_UPDATE_REQUEST',
   payload,
 });
+
+export const selectedDate = (payload) => ({
+  type: 'SELECTED_DATE',
+  payload,
+});

@@ -7,10 +7,10 @@ import '../assets/styles/sass/components/DayAvailability.scss';
 import '../assets/styles/sass/components/BookingConfirmation.scss';
 
 const BookingModal = (props) => {
-  const { modalOpen, onClose } = props;
+  const { modalOpen, onClose, handleNext, handlePrev } = props;
   return (
     <Modal modalOpen={modalOpen} onClose={onClose}>
-      <DayAvailability />
+      <DayAvailability handleNext={handleNext} handlePrev={handlePrev} />
       <BookingConfirmation />
       <BookingSuccess />
     </Modal>

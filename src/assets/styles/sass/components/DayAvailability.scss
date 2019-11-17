@@ -26,10 +26,18 @@
                 grid-row: 1 / 2;
             }
             .prev {
+                border:none;
+                border-radius: 0;
+                box-shadow: none;
                 grid-column: 1 / 2;
+                padding: 0;
             }
             .next {
+                border:none;
+                border-radius: 0;
+                box-shadow: none;
                 grid-column: 3 / 4;
+                padding: 0;
             }
             .day-availability__date {
                 grid-column: 2 / 3;

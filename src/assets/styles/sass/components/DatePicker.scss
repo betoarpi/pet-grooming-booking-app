@@ -51,6 +51,7 @@
       font-weight: 700;
       padding-bottom: 0.5rem;
       text-align: center;
+      text-transform: capitalize;
     }
     &__day-names {
       border-top:1px solid lighten($gray, 55%);
@@ -61,7 +62,9 @@
     }
     &__day-name {
       border-right:1px solid lighten($gray, 55%);
+      font-size: 0.85rem;
       text-align: center;
+      text-transform: uppercase;
       width: 100%;
       &:first-child {
         border-left: 1px solid lighten($gray, 55%);
