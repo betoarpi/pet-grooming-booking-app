@@ -27,3 +27,8 @@ export const logoutRequest = (payload) => ({
   type: 'LOGOUT_REQUEST',
   payload,
 });
+
+export const profileUpdateRequest = (payload) => ({
+  type: 'PROFILE_UPDATE_REQUEST',
+  payload,
+});

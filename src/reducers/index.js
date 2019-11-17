@@ -30,6 +30,11 @@ const reducer = (state, action) => {
         ...state,
         user: action.payload,
       };
+    case 'PROFILE_UPDATE_REQUEST':
+      return {
+        ...state,
+        user: action.payload,
+      };
     default:
       return state;
   }
