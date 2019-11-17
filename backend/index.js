@@ -1,6 +1,7 @@
 const express = require('express');
 const { config } = require('./config/index');
 const clientsAPI = require('./routes/clients');
+const petAPI = require('./routes/pets');
 const {
   errorLog,
   errorWrapper,
@@ -16,6 +17,8 @@ app.use(express.json());
 
 //Client Routes
 clientsAPI(app);
+//Pet Routes
+petAPI(app);
 
 //NotFound Catcher
 app.use(notFoundHandler);
