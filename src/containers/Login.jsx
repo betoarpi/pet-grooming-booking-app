@@ -1,21 +1,39 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
 import '../assets/styles/sass/views/_login.scss';
 
-const Login = () => (
+const Login = () => {
+  const [fomrValues, setFormValues] = useState({
+    email: ' ',
+    password: ' ',
+  });
+
+  const handleInput = event => {
+    setFormValues({
+      ...fomrValues,
+      [event.target.name]: event.target.value,
+    })
+  };
+
+  const handleSubmit = event => {
+    event.preventDefault();
+    console.log(fomrValues);
+  };
+
+  return (
   <section className='login'>
     <div className='login__container'>
-      <div className='login__left'>
+      <form className='login__left' onSubmit={handleSubmit}>
         <h3 className='login__title'>
           Inicia Sesión
         </h3>
         <div className='login__input-group'>
           <label className='login__label'>Nombre de Usuario</label>
-          <input type='text' name='username' />
+          <input type='email' name='email' onChange={handleInput} />
         </div>
         <div className='login__input-group'>
           <label className='login__label'>Contraseña</label>
-          <input type='password' name='password' />
+          <input type='password' name='password' onChange={handleInput} />
         </div>
         <div className='login__actions'>
           <div className='login__rememberme'>
@@ -40,7 +58,7 @@ const Login = () => (
         <div className="login__register">
           <Link to='/register'>¿No tienes cuenta? Regístrate</Link>
         </div>
-      </div>
+      </form>
       <div className='login__right'>
         <h3 className="login__welcome">
           Bienvenido
@@ -49,6 +67,6 @@ const Login = () => (
       </div>
     </div>
   </section>
-);
+)};
 
 export default Login;
