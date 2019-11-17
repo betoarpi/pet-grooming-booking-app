@@ -9,9 +9,7 @@ import '../assets/styles/sass/components/Gallery.scss';
 
 const Salon = (props) => {
   const { currentSalon, match } = props;
-  const { name, rating, fullDescription, address, services, phone, images, longitude, latitude, isFav } = currentSalon;
-  const lat = parseFloat(latitude);
-  const lng = parseFloat(longitude);
+  const { name, rating, fullDescription, address, services, phone, images, coords, isFav } = currentSalon;
   const { id } = match.params;
   const isCurrent = Object.keys(currentSalon).length > 0;
 
@@ -114,7 +112,7 @@ const Salon = (props) => {
           </div>
         </div>
       </article>
-      <SalonMap lng={lng} lat={lat}>
+      <SalonMap coords={coords}>
         <AvailabilityCalendar onCloseModal={() => handleCloseModal()} />
       </SalonMap>
     </section>
