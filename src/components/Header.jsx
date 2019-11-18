@@ -1,6 +1,7 @@
 /* eslint-disable camelcase */
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { logoutRequest } from '../actions/index';
 import gravatar from '../utils/gravatar';
 import Logo from '../assets/static/img/groomerly-logo.svg';
@@ -40,25 +41,25 @@ const Header = (props) => {
 
   return (
     <header className='header'>
-      <a href='/' className='logo'>
+      <Link to='/' className='logo'>
         <img src={Logo} alt='Groomerly | Pet Grooming App' className='logo__img' />
-      </a>
+      </Link>
 
       <nav className='navigation'>
         <ul className='navigation__website'>
           <li>
-            <a href='/acerca-de-groomerly'>¿Qué es Groomerly?</a>
+            <Link to='/acerca-de-groomerly'>¿Qué es Groomerly?</Link>
           </li>
           <li>
-            <a href='/#filter'>Encuentra una estética</a>
+            <Link to='/#filter'>Encuentra una estética</Link>
           </li>
           {hasUser ? null :
             (
               <>
                 <li>
-                  <a href='/register' id='register-now'>
+                  <Link to='/register' id='register-now'>
                     Register Now
-                  </a>
+                  </Link>
                 </li>
               </>
             )}
@@ -81,37 +82,37 @@ const Header = (props) => {
               (
                 <>
                   <li>
-                    <a href='/profile'>
+                    <Link to='/profile'>
                       Mi Perfil
                       <i className='fas fa-user-circle'> </i>
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a href='/'>
+                    <Link to='/'>
                       Mis Reservas
                       <i className='fas fa-calendar-alt'> </i>
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a href='/'>
+                    <Link to='/'>
                       Mis Favoritos
                       <i className='fas fa-heart'> </i>
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a href='#logout' onClick={handleLogout}>
+                    <Link to='#logout' onClick={handleLogout}>
                       Cerrar Sesión
                       <i className='fas fa-sign-out-alt'> </i>
-                    </a>
+                    </Link>
                   </li>
                 </>
               ) :
               (
                 <li>
-                  <a href='/login'>
+                  <Link to='/login'>
                     Iniciar Sesión
                     <i className='fas fa-sign-in-alt'> </i>
-                  </a>
+                  </Link>
                 </li>
               )}
           </ul>

@@ -1,9 +1,14 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
+import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import HistoryItem from '../components/HistoryItem';
 import ProfileInfo from '../components/ProfileInfo';
+import GridItem from '../components/GridItem';
 import '../assets/styles/sass/views/_profile.scss';
 
-const Profile = () => {
+const Profile = (props) => {
+  const { favs, salons } = props;
 
   function handleClick(e) {
     e.preventDefault();
@@ -100,14 +105,42 @@ const Profile = () => {
         </div>
 
         <div className='profile__favourites' id='favourites'>
-          <h3>
-            No tienes favoritos aún
-            <span role='img' aria-label='sad face'>😢</span>
-          </h3>
+          {favs.length > 0 &&
+            <h2 className='profile__favourites__title'>Estas son tus estéticas caninas favoritas</h2>}
+          <div className='groomers-grid__container'>
+            {salons.map((item) => {
+              if (favs.includes(item.id)) {
+                return <GridItem key={item.id} isFav={true} {...item} />;
+              }
+              return null;
+            })}
+          </div>
+          {favs.length === 0 &&
+            (
+              <>
+                <h3 className='profile__favourites__title'>
+                  No tienes favoritos aún
+                  <span role='img' aria-label='sad face'>😢</span>
+                </h3>
+
+                <Link to='/#filter' className='btn'>
+                  Agrega tus favoritos
+                  {' '}
+                  <i className='fa fa-heart'> </i>
+                </Link>
+              </>
+            )}
         </div>
       </section>
     </section>
   );
 };
 
-export default Profile;
+const mapStateToProps = (state) => {
+  return {
+    favs: state.favs,
+    salons: state.salons,
+  }
+};
+
+export default connect(mapStateToProps, null)(Profile);

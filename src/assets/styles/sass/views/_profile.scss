@@ -154,6 +154,28 @@
 
   &__favourites {
     display: none;
+    &__title {
+      margin: 1rem auto;
+    }
+    .btn {
+      margin: 1rem auto;
+      max-width: 260px;
+    }
+
+    .groomers-grid {
+      &__item{
+        &__title {
+          font-size: 1.5rem;
+          text-align: center;
+        }
+      }
+
+      @media screen and(min-width: 1024px) {
+        &__container {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+    }
   }
 
   @media screen and (max-width: 1023px) {
