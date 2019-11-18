@@ -2,6 +2,7 @@ const express = require('express');
 const { config } = require('./config/index');
 const clientsAPI = require('./routes/clients');
 const petAPI = require('./routes/pets');
+const storeAPI = require('./routes/stores');
 const {
   errorLog,
   errorWrapper,
@@ -19,6 +20,8 @@ app.use(express.json());
 clientsAPI(app);
 //Pet Routes
 petAPI(app);
+//Store Routes
+storeAPI(app);
 
 //NotFound Catcher
 app.use(notFoundHandler);
