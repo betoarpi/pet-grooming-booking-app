@@ -1,6 +1,23 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
-const BookingSuccess = () => {
+const BookingSuccess = (props) => {
+  const { currentSalon, weekDays, months } = props;
+
+  function handleDay(date) {
+    const setDate = new Date(date);
+    const weekDay = setDate.getDay();
+    const renderedDay = `${weekDays[weekDay]}`;
+    return renderedDay;
+  }
+
+  function handleDateFormat(date) {
+    const setDate = new Date(date);
+    const month = setDate.getMonth();
+    const day = setDate.getDate();
+    const dateFormat = `${day} de ${months[month]}`;
+    return dateFormat;
+  }
   return (
     <div className='booking-confirmation booking-confirmation--success' id='booking-success'>
       <h4 className='booking-confirmation__title'>¡Tu servicio está confirmado!</h4>
@@ -9,8 +26,8 @@ const BookingSuccess = () => {
         <header>
           <i className='far fa-calendar-alt'> </i>
           <h2 className='booking-confirmation__date'>
-            <span className='day'>Jueves</span>
-            <span className='date'>31 de Septiembre</span>
+            <span className='day'>{handleDay(currentSalon.selectedDate)}</span>
+            <span className='date'>{handleDateFormat(currentSalon.selectedDate)}</span>
           </h2>
           <time dateTime='14:00'>14:00 P.M.</time>
         </header>
@@ -65,4 +82,10 @@ const BookingSuccess = () => {
   );
 };
 
-export default BookingSuccess;
+const mapStateToProps = (state) => {
+  return {
+    currentSalon: state.currentSalon,
+  };
+};
+
+export default connect(mapStateToProps, null)(BookingSuccess);

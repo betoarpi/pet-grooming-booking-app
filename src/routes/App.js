@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 import { Router, Switch, Route } from 'react-router-dom';
 import { createBrowserHistory } from 'history';

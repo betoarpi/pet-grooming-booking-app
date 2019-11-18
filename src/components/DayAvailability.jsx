@@ -1,40 +1,26 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { bookingTime } from '../actions/index';
 
 const DayAvailability = (props) => {
-  const { currentSalon, handleNext, handlePrev } = props;
+  const { currentSalon, handleNext, handlePrev, weekDays, months } = props;
+
+  function handleBookingTime(time) {
+    props.bookingTime(time);
+  }
+
   function handleClick(e) {
     e.preventDefault();
     const dayAvailabilityContainer = document.querySelector('.day-availability');
     const bookingConfirmationContainer = document.getElementById('booking-confirmation');
     dayAvailabilityContainer.classList.remove('active');
     bookingConfirmationContainer.classList.add('active');
+
+    const timeElement = e.target.querySelector('time').getAttribute('dateTime');
+    handleBookingTime(timeElement);
   }
 
   function handleDate(date) {
-    const weekDays = [
-      'Domingo',
-      'Lunes',
-      'Martes',
-      'Miércoles',
-      'Jueves',
-      'Viernes',
-      'Sábado',
-    ];
-    const months = [
-      'Enero',
-      'Febrero',
-      'Marzo',
-      'Abril',
-      'Mayo',
-      'Junio',
-      'Julio',
-      'Agosto',
-      'Septiembre',
-      'Octubre',
-      'Noviembre',
-      'Diciembre',
-    ];
     const setDate = new Date(date);
     const year = setDate.getFullYear();
     const month = setDate.getMonth();
@@ -60,7 +46,7 @@ const DayAvailability = (props) => {
 
         <a href='/#' className='day-availability__hour not-available'>
           <div className='day-availability__time'>
-            <time dateTime='9:00'>9:00 A.M.</time>
+            <time dateTime='09:00'>9:00 A.M.</time>
           </div>
           <div className='day-availability__booking'>
             Horario Reservado
@@ -146,4 +132,8 @@ const mapStateToProps = (state) => {
   };
 };
 
-export default connect(mapStateToProps, null)(DayAvailability);
+const mapDispatchToProps = {
+  bookingTime,
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(DayAvailability);

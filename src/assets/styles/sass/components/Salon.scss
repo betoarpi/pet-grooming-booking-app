@@ -99,7 +99,7 @@
   }
   &__map {
     @include border-radius-all(1rem);
-    @include box-shadow(1rem, $orange);
+    @include box-shadow(0.5rem, $orange);
     display: grid;
     height: 100%;
     margin-right:1rem;

@@ -37,3 +37,13 @@ export const selectedDate = (payload) => ({
   type: 'SELECTED_DATE',
   payload,
 });
+
+export const bookingTime = (payload) => ({
+  type: 'BOOKING_TIME',
+  payload,
+});
+
+export const bookingRequest = (payload) => ({
+  type: 'BOOKING_REQUEST',
+  payload,
+});

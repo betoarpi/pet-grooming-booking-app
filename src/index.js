@@ -8,6 +8,8 @@ import App from './routes/App';
 const initialState = {
   user: {},
   currentSalon: {},
+  bookingTime: '00:00',
+  bookingInformation: {},
   favs: [],
   salons: [
     {
@@ -290,5 +292,5 @@ ReactDOM.render(
   <Provider store={store}>
     <App />
   </Provider>,
-  document.getElementById('app')
+  document.getElementById('app'),
 );

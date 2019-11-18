@@ -53,6 +53,9 @@
         display: grid;
         grid-template-columns: 2fr 10fr;
         width: 100%;
+        * {
+            pointer-events: none;
+        }
         &:hover {
             background: $lemon;
             &:not(.booked):not(.not-available){

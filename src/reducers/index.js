@@ -43,6 +43,16 @@ const reducer = (state, action) => {
           selectedDate: action.payload,
         },
       };
+    case 'BOOKING_TIME':
+      return {
+        ...state,
+        bookingTime: action.payload,
+      };
+    case 'BOOKING_REQUEST':
+      return {
+        ...state,
+        bookingInformation: action.payload,
+      };
     default:
       return state;
   }

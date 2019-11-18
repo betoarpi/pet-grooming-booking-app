@@ -51,7 +51,7 @@ const GridItem = (props) => {
           {shortDescription}
         </p>
         <Link to={`/salon/${id}`} className='btn'>
-          Agenda ahora
+          Reserva ahora
         </Link>
       </article>
     </div>
