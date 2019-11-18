@@ -2,9 +2,11 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import { profileUpdateRequest } from '../actions/index';
+import gravatar from '../utils/gravatar';
 
 const ProfileInfo = (props) => {
   const { user } = props;
+  const hasUser = Object.keys(user).length > 0;
 
   const [fomrValues, setFormValues] = useState({
     username: user.username,
@@ -32,14 +34,15 @@ const ProfileInfo = (props) => {
     profileForm.appendChild(successElement);
   };
 
+  const gravatarUrl = gravatar(user.email);
+
   return (
     <>
       <div className='profile__main-info'>
         <div className='profile__info'>
-          <img
-            src='https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&s=707b9c33066bf8808c934c8ab394dff6'
-            alt='User avatar'
-          />
+          {hasUser ?
+            <img src={`${gravatarUrl}?s=120`} alt={user.email} /> :
+            <i className='fas fa-user'> </i>}
           <div className='profile__user-data'>
             <h5 className='profile__user-data-name'>User Name</h5>
             <div className='profile__user-data-address'>Toluca, Mex</div>
