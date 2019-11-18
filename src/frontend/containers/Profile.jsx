@@ -140,7 +140,7 @@ const mapStateToProps = (state) => {
   return {
     favs: state.favs,
     salons: state.salons,
-  }
+  };
 };
 
 export default connect(mapStateToProps, null)(Profile);
