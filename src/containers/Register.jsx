@@ -20,7 +20,11 @@ const Register = (props) => {
   const handleSubmit = (event) => {
     event.preventDefault();
     props.registerRequest(formValues);
-    props.history.push(props.location.pathname);
+    if (pathName !== '/register') {
+      props.history.push(props.location.pathname);
+    } else {
+      props.history.push('/');
+    }
   };
 
   return (

@@ -21,7 +21,12 @@ const Login = (props) => {
   const handleSubmit = (event) => {
     event.preventDefault();
     props.loginRequest(fomrValues);
-    props.history.push('/');
+    const pathName = props.location.pathname;
+    if (pathName !== '/login') {
+      props.history.push(props.location.pathname);
+    } else {
+      props.history.push('/');
+    }
   };
 
   return (

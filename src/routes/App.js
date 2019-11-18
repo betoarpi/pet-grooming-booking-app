@@ -29,7 +29,7 @@ const App = (props) => {
           <Route exact path='/salon/:id' component={Salon} />
           <Route exact path='/login' component={Login} />
           <Route exact path='/register' component={Register} />
-          <Route exact path='/profile' component={hasUser ? Profile : Register} />
+          <Route exact path='/profile' component={hasUser ? Profile : Login} />
           <Route exact path='/acerca-de-groomerly' component={AboutGroomerly} />
           <Route component={NotFound} />
         </Switch>
