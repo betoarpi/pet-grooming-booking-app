@@ -1,8 +1,8 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
-import { profileUpdateRequest } from '../frontend/actions/index';
-import gravatar from '../frontend/utils/gravatar';
+import { profileUpdateRequest } from '../actions/index';
+import gravatar from '../utils/gravatar';
 
 const ProfileInfo = (props) => {
   const { user } = props;
