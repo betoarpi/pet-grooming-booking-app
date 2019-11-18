@@ -1,10 +1,12 @@
 {
-  "_id": {
-    "$oid": "5dc9fd43fc13ae69bf000001"
-  },
+  "_id": "5dc9fd43fc13ae69bf000001",
+  "firstName": "Wallie",
+  "lastName": "Davidovitch",
+  "phone": ["436-501-7344", "436-501-7344", "436-501-7344"],
+  "address": "25 Oxford Parkway",
+  "postalCode": 5,
+  "avatar": "http://dummyimage.com/214x105.png/ff4444/ffffff",
+  "email": "email@app.com",
   "username": "gbutteris0",
-  "password": "TXSzYhPu1N",
-  "user_id": {
-    "$oid": "5dc9fd43fc13ae69bf000002"
-  }
+  "password": "TXSzYhPu1N"
 }

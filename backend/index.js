@@ -3,6 +3,8 @@ const { config } = require('./config/index');
 const clientsAPI = require('./routes/clients');
 const petAPI = require('./routes/pets');
 const storeAPI = require('./routes/stores');
+const ownerAPI = require('./routes/owners');
+
 const {
   errorLog,
   errorWrapper,
@@ -22,6 +24,8 @@ clientsAPI(app);
 petAPI(app);
 //Store Routes
 storeAPI(app);
+//Owner Routes
+ownerAPI(app);
 
 //NotFound Catcher
 app.use(notFoundHandler);
