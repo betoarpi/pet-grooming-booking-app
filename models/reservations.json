@@ -8,14 +8,10 @@
   "store_id": {
     "$oid": "5dca01a5fc13ae7459000002"
   },
-  "pets": [
-    {
-      "$oid": "5dca01a5fc13ae7459000003"
-    },
-    {
-      "$oid": "5dca01a5fc13ae7459000004"
-    }
-  ],
+  "pets": {
+    "$oid": "5dca01a5fc13ae7459000003"
+  },
+  "services": [{ "name": "Baño", "price": 100 }],
   "date": "5/5/2019",
   "time": "3:49 PM",
   "comments": "In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.\n\nAliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.",
