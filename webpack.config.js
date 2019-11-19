@@ -1,14 +1,14 @@
 const path = require('path');
-const HTMLWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const autoprefixer = require('autoprefixer');
 const webpack = require('webpack');
 
 module.exports = {
   entry: './src/frontend/index.js',
+  mode: 'development',
   output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js',
+    path: '/',
+    filename: 'assets/app.js',
     publicPath: '/',
   },
   resolve: {
@@ -52,20 +52,29 @@ module.exports = {
         },
       },
       {
-        test: /\.html$/,
-        use: {
-          loader: 'html-loader',
-        },
-      },
-      {
         test: /\.(s*)css$/,
         use: [
           {
             loader: MiniCssExtractPlugin.loader,
           },
           'css-loader',
-          'sass-loader',
           'postcss-loader',
+          {
+            loader: 'sass-loader',
+            options: {
+              prependData: `
+                @import "${path.resolve(__dirname, 'src/frontend/assets/styles/sass/fontawesome/fontawesome.scss')}";
+                @import "${path.resolve(__dirname, 'src/frontend/assets/styles/sass/fontawesome/solid.scss')}";
+                @import "${path.resolve(__dirname, 'src/frontend/assets/styles/sass/fontawesome/brands.scss')}";
+                @import "${path.resolve(__dirname, 'src/frontend/assets/styles/sass/fontawesome/regular.scss')}";
+                @import "${path.resolve(__dirname, 'src/frontend/assets/styles/sass/Mixins.scss')}";
+                @import "${path.resolve(__dirname, 'src/frontend/assets/styles/sass/Variables.scss')}";
+                @import "${path.resolve(__dirname, 'src/frontend/assets/styles/sass/Animations.scss')}";
+                @import "${path.resolve(__dirname, 'src/frontend/assets/styles/sass/Layout.scss')}";
+                @import "${path.resolve(__dirname, 'src/frontend/assets/styles/sass/Base.scss')}";
+              `,
+            },
+          },
         ],
       },
       {
@@ -106,12 +115,8 @@ module.exports = {
         ],
       },
     }),
-    new HTMLWebpackPlugin({
-      template: './public/index.html',
-      filename: './index.html',
-    }),
     new MiniCssExtractPlugin({
-      filename: 'assets/[name].css',
+      filename: 'assets/app.css',
     }),
   ],
 };
