@@ -1,6 +1,7 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import webpack from 'webpack';
+import main from './routes/main';
 
 dotenv.config();
 
@@ -28,29 +29,7 @@ if (ENV === 'development') {
   app.use(webpackHotMiddleware(compiler));
 }
 
-app.get('*', (req, res) => {
-  res.send(`
-    <!DOCTYPE html>
-    <html lang="en">
-    
-    <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta http-equiv="X-UA-Compatible" content="ie=edge">
-      <title>Grooming for Pets - Booking App</title>
-      <link rel="stylesheet" href="assets/app.css" type="text/css">
-    </head>
-    
-    <body>
-      <div id="app"></div>
-      <div id="modal"></div>
-      <script src="assets/app.js" type="text/javascript"></script>
-      <script src="assets/vendor.js" type="text/javascript"></script>
-    </body>
-    
-    </html>
-  `);
-});
+app.get('*', main);
 
 app.listen(PORT, ((error) => {
   if (error) console.log(error);
