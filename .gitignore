@@ -75,3 +75,5 @@ dist/
 
 #Graphic Assets
 graphic-assets/
+
+src/server/public

@@ -2,7 +2,7 @@ import Home from '../containers/Home';
 import Salon from '../containers/Salon';
 import NotFound from '../containers/NotFound';
 import AboutGroomerly from '../containers/AboutGroomerly';
-import Login from '../containers/Login';
+import Login from '../containers/Layout';
 import Register from '../containers/Register';
 import Profile from '../containers/Profile';
 
