@@ -1,21 +1,13 @@
 {
-  "_id": {
-    "$oid": "5dc9fd43fc13ae69bf000001"
+  "id": {
+    "$oid": "5dd49f85fc13ae2078000001"
   },
-  "username": "gbutteris0",
-  "password": "TXSzYhPu1N",
-  "favorites": [
-    {
-      "$oid": "5dc9ff9ffc13ae29a1000067"
-    },
-    {
-      "$oid": "5dc9ff9ffc13ae29a1000067"
-    },
-    {
-      "$oid": "5dc9ff9ffc13ae29a1000067"
-    }
-  ],
-  "user_id": {
-    "$oid": "5dc9fd43fc13ae69bf000002"
-  }
+  "fullName": "Hatty Brick",
+  "phone": "238-138-4815",
+  "address": "177 Menomonie Lane",
+  "postalCode": null,
+  "avatar": "https://robohash.org/rationedoloressit.bmp?size=50x50&set=set1",
+  "email": "hbrick0@tripod.com",
+  "username": "hbrick0",
+  "password": "Y9uZyI"
 }
