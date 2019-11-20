@@ -4,6 +4,9 @@ const boom = require('@hapi/boom');
 const jwt = require('jsonwebtoken');
 const ApiKeyService = require('../services/apiKeys');
 const { config } = require('../config/index');
+const ClientService = require('../services/clients');
+const validationHandler = require('../utils/middleware/validationHandler');
+const { createClientSchema } = require('../utils/schemas/client');
 
 // Basic strategy
 require('../utils/auth/strategies/basic');
@@ -11,6 +14,8 @@ require('../utils/auth/strategies/basic');
 function authAPI(app) {
   const router = express.Router();
   const apiKeyService = new ApiKeyService();
+  const clientService = new ClientService();
+
   app.use('/api/auth', router);
 
   router.post('/sign-in', async function(request, response, next) {
@@ -57,6 +62,23 @@ function authAPI(app) {
         next(error);
       }
     })(request, response, next);
+  });
+
+  router.post('/sign-up', validationHandler(createClientSchema), async function(
+    request,
+    response,
+    next
+  ) {
+    const { body: client } = request;
+    try {
+      const createdClientId = await clientService.createClient({ client });
+      response.status(201).json({
+        data: createdClientId,
+        message: 'client created'
+      });
+    } catch (error) {
+      next(error);
+    }
   });
 }
 
