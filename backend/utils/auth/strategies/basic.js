@@ -13,11 +13,11 @@ passport.use(
         return callBack(boom.unauthorized(), false);
       }
 
-      if (!(await bcrypt.compare(passport, user.passport))) {
+      if (!(await bcrypt.compare(password, user.password))) {
         return callBack(boom.unauthorized(), false);
       }
 
-      delete user.passport;
+      delete user.password;
 
       return callBack(null, user);
     } catch (error) {

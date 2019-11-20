@@ -18,7 +18,7 @@ class ClientService {
   }
 
   async getClientByEmail({ email }) {
-    const client = await this.mongoDB.getAll(this.collection, { email });
+    const [client] = await this.mongoDB.getAll(this.collection, { email });
     return client || {};
   }
 

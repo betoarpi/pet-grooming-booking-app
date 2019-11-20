@@ -8,7 +8,7 @@ const clientMocks = [
     avatar: 'https://robohash.org/rationedoloressit.bmp?size=50x50&set=set1',
     email: 'hbrick0@tripod.com',
     username: 'hbrick0',
-    password: '$2y$12$Nas/IhjSGurh.K.bTFNOOu4xTI2.UGwKnRWUzx99FPHuDwMYNf4/q',
+    password: '$2b$12$m8k/OTXOz0uGptbZI22kSeLJJvFBRZCb851qCd2y7Kva.n1QwbJHe',
     isAdmin: true
   },
   {
@@ -20,7 +20,7 @@ const clientMocks = [
     avatar: 'https://robohash.org/velfacerenihil.jpg?size=50x50&set=set1',
     email: 'jwillwood1@aol.com',
     username: 'jwillwood1',
-    password: '$2y$12$Nas/IhjSGurh.K.bTFNOOu4xTI2.UGwKnRWUzx99FPHuDwMYNf4/q',
+    password: '$2b$12$m8k/OTXOz0uGptbZI22kSeLJJvFBRZCb851qCd2y7Kva.n1QwbJHe',
     isAdmin: false
   },
   {
@@ -32,7 +32,7 @@ const clientMocks = [
     avatar: 'https://robohash.org/autconsecteturomnis.png?size=50x50&set=set1',
     email: 'frock2@springer.com',
     username: 'frock2',
-    password: '$2y$12$Nas/IhjSGurh.K.bTFNOOu4xTI2.UGwKnRWUzx99FPHuDwMYNf4/q',
+    password: '$2b$12$m8k/OTXOz0uGptbZI22kSeLJJvFBRZCb851qCd2y7Kva.n1QwbJHe',
     isAdmin: false
   },
   {
@@ -44,7 +44,7 @@ const clientMocks = [
     avatar: 'https://robohash.org/nonassumendaut.bmp?size=50x50&set=set1',
     email: 'dsaltmarsh3@businessins_ider.com',
     username: 'dsaltmarsh3',
-    password: '$2y$12$Nas/IhjSGurh.K.bTFNOOu4xTI2.UGwKnRWUzx99FPHuDwMYNf4/q',
+    password: '$2b$12$m8k/OTXOz0uGptbZI22kSeLJJvFBRZCb851qCd2y7Kva.n1QwbJHe',
     isAdmin: false
   }
 ];

@@ -5,6 +5,7 @@ const petAPI = require('./routes/pets');
 const storeAPI = require('./routes/stores');
 const ownerAPI = require('./routes/owners');
 const reservationAPI = require('./routes/reservations');
+const authAPI = require('./routes/auth');
 
 const {
   errorLog,
@@ -29,6 +30,8 @@ storeAPI(app);
 ownerAPI(app);
 //Reservation Routes
 reservationAPI(app);
+//Auth Routes
+authAPI(app);
 
 //NotFound Catcher
 app.use(notFoundHandler);
