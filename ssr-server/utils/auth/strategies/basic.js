@@ -7,7 +7,7 @@ const { config } = require('../../../config');
 passport.use(
   new BasicStrategy(async (email, password, callBack) => {
     try {
-      const { data, status } = axios({
+      const { data, status } = await axios({
         url: `${config.apiUrl}/api/auth/sign-in`,
         method: 'post',
         auth: {
@@ -18,6 +18,7 @@ passport.use(
           apiKeyToken: config.clientApiKeyToken,
         },
       });
+      console.log(data);
       if (!data || status !== 200) {
         return callBack(boom.unauthorized(), false);
       }
@@ -26,5 +27,6 @@ passport.use(
     } catch (error) {
       return callBack(error);
     }
+    // eslint-disable-next-line comma-dangle
   })
 );
