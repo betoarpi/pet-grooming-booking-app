@@ -25,7 +25,7 @@ const storeMocks = [
       'http://dummyimage.com/719x884.bmp/dddddd/000000',
       'http://dummyimage.com/1005x497.jpg/ff4444/ffffff'
     ],
-    owner_id: '5dc9ff9ffc13ae29a1000068'
+    owner_id: '5dd2d7a0fc13ae0ead000000'
   },
   {
     _id: '5dd20f5a88f14c03e76bd929',
@@ -64,7 +64,7 @@ const storeMocks = [
       'http://dummyimage.com/719x884.bmp/dddddd/000000',
       'http://dummyimage.com/1005x497.jpg/ff4444/ffffff'
     ],
-    owner_id: '5dc9ff9ffc13ae29a1000068'
+    owner_id: '5dd2d7a0fc13ae0ead000001'
   },
   {
     _id: '5dd210fc8372c403f41ea899',
@@ -103,7 +103,7 @@ const storeMocks = [
       'http://dummyimage.com/719x884.bmp/dddddd/000000',
       'http://dummyimage.com/1005x497.jpg/ff4444/ffffff'
     ],
-    owner_id: '5dc9ff9ffc13ae29a1000068'
+    owner_id: '5dd2d7a0fc13ae0ead000002'
   },
   {
     _id: '5dd2114dd4ffa90401a479a0',
@@ -142,7 +142,7 @@ const storeMocks = [
       'http://dummyimage.com/719x884.bmp/dddddd/000000',
       'http://dummyimage.com/1005x497.jpg/ff4444/ffffff'
     ],
-    owner_id: '5dc9ff9ffc13ae29a1000068'
+    owner_id: '5dd2d7a0fc13ae0ead000003'
   },
   {
     _id: '5dd21198d4ffa90401a479a1',
@@ -182,7 +182,7 @@ const storeMocks = [
       'http://dummyimage.com/719x884.bmp/dddddd/000000',
       'http://dummyimage.com/1005x497.jpg/ff4444/ffffff'
     ],
-    owner_id: '5dc9ff9ffc13ae29a1000068'
+    owner_id: '5dd2d7a0fc13ae0ead000004'
   },
   {
     _id: '5dd211c72b2de7040eeb2d77',
@@ -222,7 +222,7 @@ const storeMocks = [
       'http://dummyimage.com/719x884.bmp/dddddd/000000',
       'http://dummyimage.com/1005x497.jpg/ff4444/ffffff'
     ],
-    owner_id: '5dc9ff9ffc13ae29a1000068'
+    owner_id: '5dd2d7a0fc13ae0ead000005'
   },
   {
     _id: '5dd212092b2de7040eeb2d78',
@@ -262,7 +262,7 @@ const storeMocks = [
       'http://dummyimage.com/719x884.bmp/dddddd/000000',
       'http://dummyimage.com/1005x497.jpg/ff4444/ffffff'
     ],
-    owner_id: '5dc9ff9ffc13ae29a1000068'
+    owner_id: '5dd307aba01a2001b51805d2'
   }
 ];
 

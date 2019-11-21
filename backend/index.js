@@ -3,6 +3,10 @@ const { config } = require('./config/index');
 const clientsAPI = require('./routes/clients');
 const petAPI = require('./routes/pets');
 const storeAPI = require('./routes/stores');
+const ownerAPI = require('./routes/owners');
+const reservationAPI = require('./routes/reservations');
+const authAPI = require('./routes/auth');
+
 const {
   errorLog,
   errorWrapper,
@@ -22,6 +26,12 @@ clientsAPI(app);
 petAPI(app);
 //Store Routes
 storeAPI(app);
+//Owner Routes
+ownerAPI(app);
+//Reservation Routes
+reservationAPI(app);
+//Auth Routes
+authAPI(app);
 
 //NotFound Catcher
 app.use(notFoundHandler);

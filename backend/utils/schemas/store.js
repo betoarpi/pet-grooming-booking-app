@@ -52,7 +52,7 @@ const otherServicesSchema = joi
   .min(1);
 const imagesSchema = joi
   .array()
-  .items(joi.string().max(100))
+  .items(joi.string().max(500))
   .min(4);
 
 const ownerSchemaId = joi.string().regex(idStructure);

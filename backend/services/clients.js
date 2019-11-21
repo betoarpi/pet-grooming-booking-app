@@ -1,3 +1,4 @@
+const bcrypt = require('bcrypt');
 const { MongoConnection } = require('../lib/mongo');
 
 class ClientService {
@@ -16,8 +17,19 @@ class ClientService {
     return client || {};
   }
 
+  async getClientByEmail({ email }) {
+    const [client] = await this.mongoDB.getAll(this.collection, { email });
+    return client || {};
+  }
+
   async createClient({ client }) {
-    const createdId = await this.mongoDB.create(this.collection, client);
+    const { email, username, password } = client;
+    const passwordCrypt = await bcrypt.hash(password, 12);
+    const createdId = await this.mongoDB.create(this.collection, {
+      email,
+      username,
+      password: passwordCrypt
+    });
     return createdId;
   }
 

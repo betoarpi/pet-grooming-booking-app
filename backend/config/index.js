@@ -7,7 +7,11 @@ const config = {
   dbPort: process.env.DB_PORT,
   dbName: process.env.DB_NAME,
   dbUsername: process.env.DB_USERNAME,
-  dbPassword: process.env.DB_PASSWORD
+  dbPassword: process.env.DB_PASSWORD,
+  authJwtSecret: process.env.AUTH_JWT_SECRET,
+  adminApiKeyToken: process.env.ADMIN_API_KEY_TOKEN,
+  ownerApiKeyToken: process.env.OWNER_API_KEY_TOKEN,
+  clientApiKeyToken: process.env.CLIENT_API_KEY_TOKEN
 };
 
 module.exports = { config };
