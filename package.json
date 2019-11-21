@@ -4,7 +4,7 @@
   "description": "This is an app for booking grooming services for your beloved pets.",
   "main": "index.js",
   "scripts": {
-    "build": "webpack-cli --config webpack.config.js --colors",
+    "build": "webpack --mode production",
     "start:prod": "node src/server/index.js",
     "start:dev": "nodemon src/server/index.js --exact babel-node",
     "test:dbConnection": "node ./src/test/mongoDB"

@@ -1,30 +1,26 @@
 {
-  "_id": {
-    "$oid": "5dc9ff9ffc13ae29a1000067"
-  },
-  "name": "Eimbee",
+  "_id": "5dc9ff9ffc13ae29a1000067",
+  "name": "Estética Canina Ginari",
   "phone": ["436-501-7344", "436-501-7344", "436-501-7344"],
-  "short_description": "Secondary malignant neoplasm of left adrenal gland",
-  "long_description": "Bypass Left Common Iliac Artery to Right External Iliac Artery with Autologous Arterial Tissue, Open Approach",
+  "address": "Enrique Rébsamen 221, Narvarte Poniente, 03020 Ciudad de México, CDMX",
   "coords": {
-    "lat": 38.7099952,
-    "lng": 20.7141164
+    "lat": 19.399934,
+    "lng": -99.158848
   },
-  "pictures": [
-    {
-      "url": "http://dummyimage.com/214x105.png/ff4444/ffffff"
-    },
-    {
-      "url": "http://dummyimage.com/234x123.png/ff4444/ffffff"
-    },
-    {
-      "url": "http://dummyimage.com/152x236.bmp/cc0000/ffffff"
-    },
-    {
-      "url": "http://dummyimage.com/112x193.bmp/cc0000/ffffff"
-    }
+  "short_description": "Secondary malignant neoplasm of left adrenal gland",
+  "full_description": "Bypass Left Common Iliac Artery to Right External Iliac Artery with Autologous Arterial Tissue, Open Approach",
+  "services": [
+    "Baño",
+    "Corte",
+    "Limpieza Dental",
+    "Tratamiento anti-pulgas",
+    "Corte para concurso"
   ],
-  "owner_id": {
-    "$oid": "5dc9ff9ffc13ae29a1000068"
-  }
+  "pictures": [
+    "http://dummyimage.com/951x584.bmp/cc0000/ffffff",
+    "http://dummyimage.com/736x1040.jpg/cc0000/ffffff",
+    "http://dummyimage.com/719x884.bmp/dddddd/000000",
+    "http://dummyimage.com/1005x497.jpg/ff4444/ffffff"
+  ],
+  "owner_id": "5dc9ff9ffc13ae29a1000068"
 }
