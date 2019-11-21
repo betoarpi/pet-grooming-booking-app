@@ -1,0 +1,279 @@
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  * {
+    box-sizing: border-box;
+  }
+}
+
+body {
+  color: $gray;
+  font-size: 1rem;
+  @extend .font-regular;
+  line-height: 1.5;
+  margin: 0;
+  max-width: 100%;
+  overflow-x: hidden;
+  position: relative;
+  width: 100%;
+}
+
+h2 {
+  @extend .font-title;
+  @include text-shadow(0.1em, $cyan);
+}
+
+h3,
+h4,
+h5,
+h6 {
+  @extend .font-bold;
+  margin:0 0 1rem 0;
+}
+
+h1 {
+  font-size: 4.209rem;
+  @include text-shadow(0.1em, $yellow);
+  line-height: 1.15;
+}
+
+h2 {
+  font-size: 3.157rem;
+}
+
+h3 {
+  font-size: 2.369rem;
+}
+
+h4 {
+  font-size: 1.777rem;
+}
+
+h5 {
+  font-size: 1.333rem;
+}
+
+h6 {
+  font-size: 1rem;
+}
+
+::selection {
+  background: lighten($purple, 50%);
+  color: $white;
+}
+
+.main {
+  box-sizing: border-box;
+  max-width: 100%;
+  overflow-x: hidden;
+  position: relative;
+  width: 100%;
+  &::before {
+    //background: url('../../static/img/geometric-items.svg') center center no-repeat;
+    background-size: contain;
+    content: " ";
+    height: 296px;
+    left: -134px;
+    position: absolute;
+    top: 0;
+    width: 360px;
+    z-index: -1;
+  }
+  &::after {
+    //background: url('../../static/img/zig-zag.svg') center center no-repeat;
+    background-size: contain;
+    content: " ";
+    height: 71px;
+    right: -50px;
+    opacity: 0.8;
+    position: absolute;
+    bottom: 250px;
+    width: 300px;
+    z-index: -1;
+  }
+}
+
+// Estilos responsive para tipografía
+@media screen and (max-width: 1023px) {
+  h1 {
+    font-size: 3.052rem;
+  }
+  h2 {
+    font-size: 2.441rem;
+  }
+  h3 {
+    font-size: 1.9531rem;
+  }
+  h4 {
+    font-size: 1.563rem;
+  }
+  h5 {
+    font-size: 1.25rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  h1 {
+    font-size: 2.488rem;
+  }
+  h2 {
+    font-size: 2.047rem;
+  }
+  h3 {
+    font-size: 1.728rem;
+  }
+  h4 {
+    font-size: 1.44rem;
+  }
+  h5 {
+    font-size: 1.2rem;
+  }
+}
+
+a {
+  color: $purple;
+  text-decoration: none;
+  &:hover {
+    color:$link-hover;
+    //text-shadow: 0.1em 0.1em 0 $orange;
+  }
+}
+
+.btn {
+  background: $white;
+  border: 2px solid $purple;
+  @include border-radius-all(2rem);
+  @include box-shadow(3px, $orange);
+  color: $purple;
+  cursor: pointer;
+  @extend .font-bold;
+  font-size: 1rem;
+  outline: none;
+  padding: 0.5rem 1rem;
+  position: relative;
+  text-align: center;
+  z-index: 0;
+  &:hover {
+    border-color: $link-hover;
+    @include box-shadow(3px, $cyan);
+    color: $link-hover;
+    text-decoration: none;
+    text-shadow: none;
+  }
+  &--dark {
+    background: $purple;
+    color: $white;
+    @extend .btn;
+    &:hover {
+      background: $link-hover;
+      color: $white;
+    }
+  }
+  i {
+    margin-left: 0.5rem;
+  }
+}
+
+button {
+  @extend .btn;
+}
+
+// images
+img {
+  max-width: 100%;
+}
+
+.img-cover {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+// Form elements
+input:not([type='checkbox']):not([type='radio']),
+select,
+textarea {
+  @extend .btn;
+  font-size: 1rem;
+  text-align: left;
+  width: 100%;
+}
+textarea {
+  @include border-radius-all(1rem);
+  font-weight: 400;
+  padding: 1rem;
+}
+fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  margin-top:0.5rem;
+  padding: 0;
+  list-style-position: inside;
+}
+
+.no-style-lists {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.position-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.rating {
+  i {
+    color: darken($yellow, 10%);
+  }
+}
+
+/// Referencia para los media queries
+///*******************************************************************
+/* @media screen and (max-width: 479px){
+  //este lo uso para dispositivos móviles
+}
+
+@media screen and (max-width: 767px){
+  //este lo uso para dispositivos móviles de pantalla
+  //más grande, pero más chicos que una tablet
+}
+
+@media screen and (max-width: 1023px){
+  //este lo uso para tablets
+}
+
+@media screen and (max-width: 1365px) {
+  //para tablets grandes o laptops pequeñas
+} */
+
+// para mobile first, se supone que los estilos sin media queries
+// están enfocados a dispositivos móviles, menores de 480px, por
+// lo que los media queries se declararían con min-width, para
+// modificar la apariencia en dispositivos conforme va creciendo la pantalla
+
+/* @media screen and (min-width: 480px){
+  //este lo uso para dispositivos móviles de pantalla
+  //más grande, pero más chicos que una tablet
+}
+
+@media screen and (min-width: 768px){
+  //este lo uso para tablets
+}
+
+@media screen and (min-width: 1024px){
+  //para tablets grandes o laptops pequeñas
+}
+
+@media screen and (min-width: 1366px) {
+  //para dispositivos desktop
+} */
+
+// nótese que varía un px porque quieres afectar el tamaño mínimo de pantalla del
+// dispositivo que estás fijando como objetivo

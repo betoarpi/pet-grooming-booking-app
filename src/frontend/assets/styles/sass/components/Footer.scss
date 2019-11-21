@@ -1,0 +1,44 @@
+.footer {
+  background: $cyan;
+  @include border-radius-all(1rem);
+  grid-template-columns: 1fr max-content;
+  justify-self: center;
+  margin: 2rem auto 4rem auto;
+  max-width: calc(100% - 4rem);
+  padding: 2rem;
+  position: relative;
+  width: 1400px;
+  &__nav {
+    @extend .no-style-lists;
+    li {
+      display: inline-block;
+      margin: 0 0.3rem;
+    }
+  }
+
+  .made-with-love {
+    bottom:-2.25rem;
+    color: lighten($gray, 30%);
+    font-size: 0.9rem;
+    left:50%;
+    position: absolute;
+    transform: translateX(-50%);
+    a {
+      color: lighten($gray, 30%);
+    }
+    &:hover {
+      color: $purple;
+      a {
+        color: $purple;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  @media screen and (max-width: 1023px) {
+    gap: 1rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr max-content;
+    text-align: center;
+  }
+}

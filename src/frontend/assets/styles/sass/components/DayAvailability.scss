@@ -1,0 +1,127 @@
+.day-availability {
+    display: none;
+    grid-template-columns: 1fr;
+    margin-bottom: -2rem;
+    width: 100%;
+    h2 {
+        margin: 0 0 1rem;
+        text-align: center;
+        i {
+            margin-right: 1rem;
+        }
+    }
+    &__calendar {
+        display: grid;
+        grid-template-columns: 1fr;
+        margin-bottom: 2rem;
+        width: 100%;
+        header {
+            align-items: center;
+            display: grid;
+            grid-template-columns: 16px 1fr 16px;
+            width: 100%;
+            .prev, .next, .day-availability__date {
+                grid-row: 1 / 2;
+            }
+            .prev {
+                border:none;
+                border-radius: 0;
+                box-shadow: none;
+                grid-column: 1 / 2;
+                padding: 0;
+            }
+            .next {
+                border:none;
+                border-radius: 0;
+                box-shadow: none;
+                grid-column: 3 / 4;
+                padding: 0;
+            }
+            .day-availability__date {
+                grid-column: 2 / 3;
+                font-weight: 400;
+                margin:0 0 1rem;
+                text-align: center;
+            }
+        }
+    }
+    &__hour {
+        border-bottom: 1px solid rgba($gray, 0.2);
+        cursor: pointer;
+        display: grid;
+        grid-template-columns: 2fr 10fr;
+        width: 100%;
+        * {
+            pointer-events: none;
+        }
+        &:hover {
+            background: $lemon;
+            &:not(.booked):not(.not-available){
+                .day-availability__booking {
+                    position: relative;
+                    &:before {
+                        content: 'Elegir este horario';
+                        left: 1rem;
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%);
+                    }
+                    &:after {
+                        color: $purple;
+                        content: 'Confirmar';
+                        right: 1rem;
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%);
+                    }
+                }
+            }
+        }
+        &:first-of-type {
+            border-top: 1px solid rgba($gray, 0.2);
+        }
+    }
+    &__time {
+        border-right: 1px solid rgba($gray, 0.2);
+        font-size: 0.9rem;
+        padding: 0.5rem 1rem;
+        text-align: right;
+    }
+    &__booking {
+        padding: 0.5rem 1rem;
+    }
+    .not-available {
+        cursor: initial;
+        &:hover {
+            background: rgba($gray, 0.07);
+        }
+        .day-availability__booking {
+            color: $orange;
+        }
+    }
+    .booked {
+        background: $cyan;
+        color: $link-hover;
+        .day-availability__booking {
+            font-weight: 700;
+            span {
+                float: right;
+                font-weight: 400;
+            }
+        }
+    }
+    @media screen and (max-width: 589px) {
+        &__hour {
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr;
+        }
+        &__time {
+            border-right: none;
+            text-align: left;
+        }
+    }
+
+    &.active {
+        display: grid;
+    }
+}

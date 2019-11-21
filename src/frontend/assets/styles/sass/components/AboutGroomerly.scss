@@ -1,0 +1,40 @@
+.about {
+  display: grid;
+  gap:2rem;
+  grid-template-columns: 3fr 2fr;
+  margin: 0 auto;
+  max-width: 1400px;
+  padding: 0 2rem;
+  width: 100%;
+  figure {
+    border-radius: 33% 67% 71% 29% / 38% 25% 75% 62%;
+    box-shadow: 5px 5px 0 $orange;
+    margin: 1rem;
+    max-height: 600px;
+    overflow: hidden;
+    position: relative;
+    img {
+      left:0;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      top:0;
+      width: 100%;
+    }
+  }
+
+  @media screen and (max-width: 1199px){
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  @media screen and (max-width: 1023px){
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 400px;
+    figure {
+      margin: 0 auto;
+      max-height: 395px;
+      max-width: 400px;
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,51 @@
+.groomers-filter {
+  background: $orange url('../../../static/img/geometric-patterns.png') repeat center center;
+  background-size: 200px 200px;
+  color: $purple;
+  margin: 3rem 0 2rem 0;
+  padding: 2rem;
+  &__form {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(3, 1fr) 220px;
+    div {
+      align-items: center;
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: max-content 1fr;
+    }
+    button {
+      align-self: end;
+      @extend .btn--dark;
+      max-height: 40px;
+    }
+  }
+
+  @media screen and (max-width: 1365px){
+    form {
+      div {
+        gap: 0;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+      }
+    }
+  }
+  @media screen and (max-width: 1023px){
+    form {
+      gap:1rem;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+    }
+  }
+  @media screen and (max-width: 767px){
+    form {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
+      div {
+        gap: 1rem;
+        grid-template-columns: 80px 1fr;
+        grid-template-rows: 1fr;
+      }
+    }
+  }
+}

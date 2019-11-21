@@ -1,0 +1,299 @@
+.booking-confirmation {
+  display:none;
+  
+  &__title {
+    color: $purple;
+    margin: 0 auto 1rem;
+  }
+
+  &__container {
+    display: grid;
+    gap: 1rem;
+
+    header {
+      align-items:end;
+      display: grid;
+      gap: 0.75rem;
+      grid-template-columns: max-content 1fr max-content;
+      i {
+        color:$orange;
+        font-size: 5.5rem;
+      }
+      .booking-confirmation__date {
+        display: grid;
+        text-shadow: none;
+        @extend .font-regular;
+        grid-template-columns: 1fr;
+        grid-template-rows: max-content max-content;
+        margin:0;
+        .day {
+          font-size: 1.75rem;
+        }
+        .date {
+          font-weight: 700;
+          line-height: 1em;
+          margin: -0.25rem 0 0;
+        }
+      }
+      time {
+        font-size: 1.75rem;
+      }
+    }
+  }
+
+  &__form {
+    display: grid;
+    gap:1rem;
+    grid-template-columns: 1fr;
+  }
+
+  &__pet-type {
+    align-items: center;
+    border-bottom:2px solid rgba($gray, 0.15);
+    border-top:2px solid rgba($gray, 0.15);
+    display: grid;
+    grid-template-columns: 1fr 1rem max-content;
+    h6 {
+      margin:0;
+    }
+    select {
+      border:none;
+      @include border-radius-all(0);
+      box-shadow: none;
+      color: $gray;
+      font-weight: 400;
+      &:hover {
+        box-shadow: none;
+      }
+    }
+  }
+
+  &__pet-info {
+    display: grid;
+    gap:2rem;
+    grid-template-columns: 1fr 1fr;
+    label {
+      > span {
+        color: $purple;
+        margin-left:0.5rem;
+      }
+      input, select {
+        margin-top:0.5rem;
+      }
+    }
+  }
+
+  &__services {
+    display: grid;
+    &__checkboxes {
+      display: grid;
+      gap:2rem;
+      grid-template-columns: 1fr 1fr;
+      .col {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-auto-rows: max-content;
+        label {
+          display: grid;
+          gap:0.5rem;
+          grid-template-columns: 1rem 1fr;
+          span {
+            position: relative;
+            i {
+              &.fa-check-square {
+                color: $link-hover;
+              }
+              &::before {
+                transition: all ease-in-out 0.15s;
+              }
+            }
+            input {
+              height: 100%;
+              left:0;
+              margin:0;
+              opacity: 0;
+              position: absolute;
+              top:0;
+              width: 100%;
+              &:checked {
+                + i {
+                  &:before {
+                    color: $link-hover;
+                    content: '\f14a';
+                    font-weight: 900;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__submit {
+    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr max-content;
+    .price {
+      color: $link-hover;
+      font-size: 1.375rem;
+    }
+  }
+
+  &__details {
+    border-top:2px solid rgba($gray, 0.15);
+    display: grid;
+    grid-template-columns: 1fr;
+    padding-top: 1rem;
+    width: 100%;
+    &__title {
+      color:$purple;
+      font-weight: 400;
+      margin: 1rem 0;
+    }
+    .row {
+      display: grid;
+      grid-template-columns: 5fr 6fr;
+      .col {
+        padding: 0 1rem;
+        &:first-child {
+          border-right:2px solid rgba($gray, 0.15);
+        }
+      }
+      .pet-info {
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: 3.75rem 1fr;
+        &__avatar {
+          color: $purple;
+          font-size: 1.75rem;
+          i {
+            background: $orange;
+            @include border-radius-all(50%);
+            height: 3.75rem;
+            position: relative;
+            width: 3.75rem;
+            &::before {
+              left:50%;
+              position: absolute;
+              top:50%;
+              transform: translate(-50%, -50%);
+            }
+          }
+        }
+      }
+      .salon-info {
+        display: grid;
+        gap:0.5rem;
+        grid-template-columns: 1fr;
+        grid-auto-rows: max-content max-content;
+      }
+      .services-notes {
+        display: grid;
+        gap:0.5rem;
+        grid-template-columns: 1fr;
+        grid-auto-rows: max-content max-content;
+      }
+    }
+  }
+
+  &.active {
+    display: grid;
+  }
+
+  @media screen and (min-width: 1024px) {
+    .booking-confirmation__date {
+      font-size: 3rem;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    &__container {
+      header {
+        i {
+          font-size: 4rem;
+        }
+        time {
+          font-size: 1.125rem;
+        }
+      }
+    }
+    &__details {
+      margin-bottom: 1rem;
+      .row {
+        align-items: center;
+        gap:1rem;
+        grid-template-columns: 1fr;
+        .col {
+          &:first-child {
+            border-right:none;
+          }
+        }
+        .pet-info {
+          align-items: center;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 579px) {
+    &__container {
+      header {
+        align-items: start;
+        grid-template-columns: max-content 1fr;
+        i {
+          font-size: 2rem;
+        }
+        .booking-confirmation__date {
+          .day {
+            font-size: 1rem;
+          }
+          .date {
+            font-size: 1.25rem;
+          }
+        }
+        time {
+          grid-column: 2/3;
+        }
+      }
+    }
+    &__pet-type {
+      grid-template-columns: 1rem 1fr;
+      grid-template-rows: max-content max-content;
+      padding: 0.5rem 0;
+      h6 {
+        grid-column: 1 / 3;
+      }
+    }
+    &__pet-info {
+      gap:0.5rem;
+      grid-template-columns: 1fr;
+    }
+    &__services {
+      &__checkboxes {
+        gap:0;
+        grid-template-columns: 1fr;
+      }
+    }
+    &__notes {
+      textarea {
+        height: 100px;
+      }
+    }
+    &__submit {
+      gap:0.5rem;
+      grid-template-columns: 1fr;
+    }
+    &__details {
+      .row {
+        .col {
+          padding: 0;
+        }
+        .pet-info {
+          grid-template-columns: 1fr;
+        }
+      }
+    }
+  }
+}

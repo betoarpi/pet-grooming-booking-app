@@ -1,0 +1,231 @@
+.header {
+  align-items: center;
+  grid-template-columns: 300px 1fr;
+  grid-template-rows: 1fr;
+  margin-bottom: 2rem;
+  padding: 1rem 1.5rem;
+}
+
+.logo {
+  img {
+    max-width: 300px;
+    width: 100%;
+  }
+}
+
+.navigation {
+  display: grid;
+  grid-template-columns: 1fr 40px;
+  gap: 1rem;
+  justify-self: end;
+  @extend .font-bold;
+  &__website {
+    @extend .no-style-lists;
+    li {
+      display: inline-block;
+      margin: 0.5rem;
+    }
+  }
+  &__user {
+    position: relative;
+    align-self: center;
+    &__profile {
+      background: $cyan;
+      @include border-radius-all(0.5rem);
+      cursor: pointer;
+      height: 40px;
+      overflow: hidden;
+      position: relative;
+      width: 40px;
+      img {
+        max-width: 100%;
+      }
+      i {
+        color:$purple;
+        left: 50%;
+        position: absolute;
+        top:50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+    &__options {
+      background: $cyan;
+      @include border-radius-all(0.75rem);
+      cursor: pointer;
+      display: none;
+      @extend .no-style-lists;
+      right: 0;
+      padding: 1rem 2rem;
+      position: absolute;
+      text-align: right;
+      top: 56px;
+      width: 210px;
+      z-index: 1;
+      &:before {
+        content: ' ';
+        display: block;
+        left: 0;
+        height: 2rem;
+        position: absolute;
+        top: -2rem;
+        width: 100%;
+      }
+      li {
+        margin-bottom: 0.5rem;
+        i {
+          margin-left: 1rem;
+        }
+        &:last-child {
+          margin: 0;
+        }
+      }
+    }
+
+    &:hover {
+      .navigation__user__options {
+        display: block;
+      }
+    }
+  }
+  &__mobile {
+    border: none;
+    border-radius: none;
+    box-shadow: none;
+    display: none;
+    font-size: 2rem;
+    height: 40px;
+    position: relative;
+    width: 32px;
+    &:hover {
+      border: none;
+      border-radius: none;
+      box-shadow: none;
+    }
+    .bars {
+      background: $purple;
+      @include border-radius-all(2px);
+      display: block;
+      left: 0;
+      height: 4px;
+      overflow: hidden;
+      position: absolute;
+      top: 20%;
+      width: 32px;
+      &__2 {
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      &__3 {
+        bottom: 20%;
+        top: initial;
+      }
+    }
+    &.active {
+      z-index: 1;
+      .bars {
+        &__1 {
+          animation: x-animation-1 1s ease;
+          animation-fill-mode: forwards;
+          animation-iteration-count: 1;
+          transition: all 0.1s ease-in-out;
+        }
+        &__2 {
+          left: -100%;
+          transition: all 0.3s ease-in-out;
+          opacity: 0;
+        }
+        &__3 {
+          animation: x-animation-2 1s ease;
+          animation-fill-mode: forwards;
+          animation-iteration-count: 1;
+          transition: all 0.1s ease-in-out;
+        }
+      }
+    }
+    &.inactive {
+      .bars {
+        &__1 {
+          animation: x-animation-1-reverse 1s ease;
+          animation-iteration-count: 1;
+          transition: all 0.1s ease-in-out;
+        }
+        &__2 {
+          left: 0;
+          transition: all 0.3s ease-in-out;
+          transition-delay: 0.5s;
+          opacity: 1;
+        }
+        &__3 {
+          animation: x-animation-2-reverse 1s ease;
+          animation-iteration-count: 1;
+          transition: all 0.1s ease-in-out;
+        }
+      }
+    }
+  }
+}
+
+#register-now {
+  background: $orange;
+  @include border-radius-all(1rem);
+  padding: 0.5rem 1rem;
+  &:hover {
+    background: $purple;
+    color: $white;
+  }
+}
+
+.mobile-active {
+  transform: scale(0.9) translateZ(-100px);
+  opacity: 0.05;
+  z-index: -1;
+}
+
+// Responsive para elementos del header
+@media screen and (max-width: 1023px) {
+  .header {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .navigation {
+    &__website {
+      background: white;
+      font-size: 1.25rem;
+      height: 100vh;
+      left: -200%;
+      opacity: 0;
+      padding-top:5rem;
+      position: absolute;
+      top: 0;
+      transition: all 0.5s ease;
+      width: 100vw;
+      li {
+        display: block;
+        margin: 0 0 1rem 2rem;
+      }
+      &.active {
+        opacity: 1;
+        left:0;
+      }
+    }
+    &__mobile {
+      display: inline-block;
+    }
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .header {
+    grid-template-columns: 160px 1fr;
+  }
+
+  .navigation {
+    grid-template-columns: 1fr 32px;
+    &__user {
+      &__profile {
+        height: 32px;
+        width: 32px;
+      }
+    }
+  }
+}
