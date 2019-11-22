@@ -1,3 +1,4 @@
+/* eslint-disable comma-dangle */
 const express = require('express');
 const passport = require('passport');
 const cookieParser = require('cookie-parser');
@@ -13,10 +14,11 @@ app.use(express.json());
 app.use(cookieParser());
 //BASIC STRATEGY
 require('./utils/auth/strategies/basic');
+//OAUTH STRATEGY
+require('./utils/auth/strategies/oauth');
 
 app.post('/auth/sign-in', async (request, response, next) => {
   passport.authenticate('basic', (error, data) => {
-    console.log(data);
     try {
       if (error || !data) {
         next(boom.unauthorized());
@@ -56,6 +58,32 @@ app.post('/auth/sign-up', async (request, response, next) => {
     next(error);
   }
 });
+
+app.get(
+  '/auth/google-oauth/',
+  passport.authenticate('google-oauth', {
+    scope: ['email', 'profile', 'openid'],
+  })
+);
+
+app.get(
+  '/auth/google-oauth/callback',
+  passport.authenticate('google-oauth', { session: false }),
+  (request, response, next) => {
+    if (!request.user) {
+      next(boom.unauthorized());
+    }
+
+    const { token, ...user } = request.user;
+
+    response.cookie('token', token, {
+      httpOnly: !config.dev,
+      secure: !config.dev,
+    });
+
+    response.status(200).json(user);
+  }
+);
 
 app.listen(config.port, () => {
   console.log(`Listening http://localhost:${config.port}`);

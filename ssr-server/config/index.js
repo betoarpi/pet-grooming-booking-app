@@ -5,6 +5,8 @@ const config = {
   port: process.env.PORT,
   apiUrl: process.env.API_URL,
   clientApiKeyToken: process.env.CLIENT_API_KEY_TOKEN,
+  googleClientId: process.env.GOOGLE_CLIENT_ID,
+  googleClientSecret: process.env.GOOGLE_CLIENT_SECRET,
 };
 
 module.exports = { config };

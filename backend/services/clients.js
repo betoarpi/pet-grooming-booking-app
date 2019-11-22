@@ -17,6 +17,21 @@ class ClientService {
     return client || {};
   }
 
+  async getOrCreateClient({ client }) {
+    const [result] = await this.mongoDB.getAll(this.collection, {
+      email: client.email
+    });
+
+    const queriedClient = result;
+    if (queriedClient) {
+      return queriedClient;
+    }
+
+    const clientId = await this.createClient({ client });
+    // eslint-disable-next-line no-return-await
+    return await this.mongoDB.getById(this.collection, clientId);
+  }
+
   async getClientByEmail({ email }) {
     const [client] = await this.mongoDB.getAll(this.collection, { email });
     return client || {};

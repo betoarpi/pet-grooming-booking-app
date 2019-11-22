@@ -27,7 +27,20 @@ const createClientSchema = {
   email: emailSchema.required(),
   username: usernameSchema.required(),
   password: passwordSchema.required(),
-  isAdmin: isAdminSchema.required()
+  isAdmin: isAdminSchema
+};
+
+const createProviderClientSchema = {
+  fullName: fullNameSchema,
+  phone: phoneSchema,
+  address: addressSchema,
+  postalCode: postalCodeSchema,
+  avatar: avatarSchema,
+  email: emailSchema.required(),
+  username: usernameSchema.required(),
+  password: passwordSchema.required(),
+  isAdmin: isAdminSchema,
+  apiKeyToken: joi.string().required()
 };
 
 const updateClientSchema = {
@@ -42,4 +55,9 @@ const updateClientSchema = {
   isAdmin: isAdminSchema
 };
 
-module.exports = { clientIdSchema, createClientSchema, updateClientSchema };
+module.exports = {
+  clientIdSchema,
+  createClientSchema,
+  updateClientSchema,
+  createProviderClientSchema
+};
