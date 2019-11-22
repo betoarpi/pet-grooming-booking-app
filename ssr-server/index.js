@@ -16,6 +16,8 @@ app.use(cookieParser());
 require('./utils/auth/strategies/basic');
 //OAUTH STRATEGY
 require('./utils/auth/strategies/oauth');
+//FACEBOOK STRATEGY
+require('./utils/auth/strategies/facebook');
 
 app.post('/auth/sign-in', async (request, response, next) => {
   passport.authenticate('basic', (error, data) => {
@@ -69,6 +71,27 @@ app.get(
 app.get(
   '/auth/google-oauth/callback',
   passport.authenticate('google-oauth', { session: false }),
+  (request, response, next) => {
+    if (!request.user) {
+      next(boom.unauthorized());
+    }
+
+    const { token, ...user } = request.user;
+
+    response.cookie('token', token, {
+      httpOnly: !config.dev,
+      secure: !config.dev,
+    });
+
+    response.status(200).json(user);
+  }
+);
+
+app.get('/auth/facebook', passport.authenticate('facebook'));
+
+app.get(
+  '/auth/facebook/callback',
+  passport.authenticate('facebook', { session: false }),
   (request, response, next) => {
     if (!request.user) {
       next(boom.unauthorized());
